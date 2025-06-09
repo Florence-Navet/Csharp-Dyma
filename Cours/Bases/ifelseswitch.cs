@@ -2,6 +2,7 @@
 
 using System.ComponentModel.Design;
 using System.Net.Http.Headers;
+using System.Security.Cryptography.X509Certificates;
 
 Console.WriteLine("Bonjour ! Comment t'appelles-tu ?");
 
@@ -119,6 +120,27 @@ if(rep == "O")
 }
 //Operateur ternaire
 //bool reduc = (rep == "O") ? true : false;
+
+
+Console.ReadLine();
+
+Console.WriteLine("Je suis un test");
+Console.WriteLine("Je suis un test2");
+
+
+
+Console.WriteLine($"Demndez un chifre en 1 et 10 :");
+string input = Console.ReadLine();
+int x = int.Parse(input);
+
+if (x <= 1)
+{
+    Console.WriteLine("Tu es un noob");
+}
+else
+{
+    Console.WriteLine("Tu es le meilleur");
+}
 
 
 
