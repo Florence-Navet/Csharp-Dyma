@@ -1,0 +1,134 @@
+//chaines interpolees
+
+using System.ComponentModel.Design;
+using System.Net.Http.Headers;
+
+Console.WriteLine("Bonjour ! Comment t'appelles-tu ?");
+
+//pour recupérer données utilisateur
+string? rep = Console.ReadLine();
+
+Console.WriteLine("Bonjour " + rep + "!");
+
+
+Console.WriteLine("Quel est ton année de naissance ?");
+
+
+string repAnn = Console.ReadLine();
+
+int anneeNais = int.Parse(repAnn);
+
+
+
+int age = DateTime.Today.Year - anneeNais;
+
+Console.WriteLine(anneeNais);
+
+
+
+Console.WriteLine($"{rep},tu vas avoir {age} ans en {DateTime.Today.Year}.");
+
+
+//if(age<25)
+//{
+//    Console.WriteLine("Ta tranche d'age est : moins de 25 ans");
+//} else if (age >=25 && age < 40)
+//{
+//    Console.WriteLine("Ta tranche d'age est :25 - 40 ans.");
+//} else if 
+//{
+//    Console.WriteLine("Ta tranche d'age est : 40 - 55 ans.");
+//} else
+//{
+//    Console.WriteLine("Ta tanche d'age est : plus de 55 ans.");
+//}
+
+/*if (anneeNais >= 1900 && anneeNais <= DateTime.Today.Year)
+
+{
+    string tranche = string.Empty;
+    if (age < 25)
+    {
+        tranche = "moins de 25 ans";
+    }
+    else if (age >= 25 && age < 40)
+    {
+        tranche = "25 - 40 ans";
+    }
+    else if (age >= 40 && age < 55)
+    {
+        tranche = "40 - 55 ans";
+    }
+    else
+    {
+        tranche = "pluse de 55 ans";
+    }
+    Console.WriteLine($"Ta tranche d'âge est : {tranche}.");
+
+} else
+{
+    Console.WriteLine($"Ton année de  naissance doit être comprise entre 1900 et {DateTime.Today.Year}");
+}*/
+//string tranche = string.Empty;
+//switch (age)
+//{
+//    case < 25:
+//        tranche = "moins de 25 ans";
+//        break;
+
+//    case < 40:
+//        tranche = " 25 - 40 ans";
+//        break;
+
+
+//    case < 55;
+//        tranche = "40 - 55 ans":
+//        break;
+
+//    default:
+//        tranche = "plus de 55 ans";
+//        break;
+//}
+
+//Console.WriteLine($"La tranche d'âge est : {tranche}.");
+string tranche = age switch
+{
+    < 25 => "moins de 25 ans",
+    < 40 => "25 - 40 ans",
+    < 55 => "40 - 55 ans",
+    _ => "plus de 55 ans"
+};
+
+Console.WriteLine($"La tranche d'âge est : {tranche}.");
+
+
+
+
+
+
+Console.WriteLine("As-tu un bon de reduction (O/N) ?");
+rep = Console.ReadLine();
+
+bool reduc;
+if(rep == "O")
+{
+    reduc = true;
+} else
+{
+    reduc = false;
+}
+//Operateur ternaire
+//bool reduc = (rep == "O") ? true : false;
+
+
+
+
+
+
+
+
+
+
+
+
+
