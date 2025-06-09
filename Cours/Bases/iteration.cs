@@ -11,7 +11,7 @@ scoresJ1[4] = 6;
 
 
 
-scoresJ2[0] = 9;
+//scoresJ2[0] = 9;
 
 
 for (int s = 0; s < scoresJ1.Length; s++)
@@ -57,7 +57,8 @@ for (int s = 0; s < scoresJ1.Length; s++)
 
 
     Console.WriteLine($"set {s + 1}");
-
+    Console.WriteLine($"set {s+1}");
+    
 
 }
 
@@ -74,29 +75,29 @@ foreach (byte score in scoresJ1)
 Console.WriteLine($"Le premier joueur a remporté {nbJeux}jeux.");
 
 //***************do while**************************
-//bool saisieOk = false;
+bool saisieOk = false;
 
 
 
-//do
-//{
-//    Console.WriteLine("Saisissez un chiffre entre 1 et 2 :");
-//    string? rep = Console.ReadLine();
+do
+{
+    Console.WriteLine("Saisissez un chiffre entre 1 et 2 :");
+    string? rep = Console.ReadLine();
 
-//    if (rep == "1" || rep == "2" || rep == "3")
-//        saisieOk = true;
+    if (rep == "1" || rep == "2" || rep == "3")
+        saisieOk = true;
 
-//}
-//while (!saisieOk);
+}
+while (!saisieOk);
 
 
 /**************************************/
-//while (!saisieOk)
-//{
-//    Console.WriteLine("Saisissez un chiffre entre 1 et 2 :");
-//    string? rep = Console.ReadLine();
-//    if (rep == "1" || rep == "2" || rep == "3")
-//        saisieOk = true;
-//}
+while (!saisieOk)
+{
+    Console.WriteLine("Saisissez un chiffre entre 1 et 2 :");
+    string? rep = Console.ReadLine();
+    if (rep == "1" || rep == "2" || rep == "3")
+        saisieOk = true;
+}
 
 
