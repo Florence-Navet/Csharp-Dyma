@@ -1,0 +1,28 @@
+# Dossiers générés par Visual Studio
+.vs/
+*.user
+*.suo
+
+# Dossiers de build
+bin/
+obj/
+
+# Fichiers de log et de cache
+*.log
+*.cache
+*.pdb
+
+# Fichiers de configuration spécifiques à l'utilisateur
+*.csproj.user
+*.dbmdl
+
+# Fichiers temporaires
+*.tmp
+*.temp
+*.bak
+
+# Fichiers de publication
+*.Publish.xml
+
+# Dossiers de dépendances
+packages/
