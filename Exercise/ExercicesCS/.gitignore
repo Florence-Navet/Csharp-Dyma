@@ -1,0 +1,29 @@
+# Dossiers de build
+bin/
+obj/
+
+# Fichiers et dossiers de Visual Studio
+.vs/
+*.user
+*.suo
+
+# Dossiers de build spécifiques à .NET
+*.dll
+*.exe
+*.pdb
+*.apphost.exe
+
+# Dossiers de dépendances ou caches
+packages/
+TestResults/
+.vscode/
+
+# Fichiers système
+Thumbs.db
+.DS_Store
+*.log
+
+# Fichiers générés par le debug
+*.cache
+*.db
+*.sln.ide
