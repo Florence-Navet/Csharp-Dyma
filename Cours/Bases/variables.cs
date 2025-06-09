@@ -8,16 +8,16 @@
 
 //Console.WriteLine(scoreJ1M2);
 
-string mot = "choupette";
+//string mot = "choupette";
 
-if (mot != null)
-{
-    string s2 = mot.ToUpper();
+//if (mot != null)
+//{
+//    string s2 = mot.ToUpper();
 
-    Console.WriteLine(s2);
+//    Console.WriteLine(s2);
 
-}
-string s = string.Empty;
+//}
+//string s = string.Empty;
 
 
 
