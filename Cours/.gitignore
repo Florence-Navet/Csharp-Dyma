@@ -1,4 +1,4 @@
-# Dossiers générés par Visual Studio
+# Dossiers gï¿½nï¿½rï¿½s par Visual Studio
 .vs/
 *.user
 *.suo
@@ -12,7 +12,7 @@ obj/
 *.cache
 *.pdb
 
-# Fichiers de configuration spécifiques à l'utilisateur
+# Fichiers de configuration spï¿½cifiques ï¿½ l'utilisateur
 *.csproj.user
 *.dbmdl
 
@@ -24,5 +24,5 @@ obj/
 # Fichiers de publication
 *.Publish.xml
 
-# Dossiers de dépendances
+# Dossiers de dï¿½pendances
 packages/

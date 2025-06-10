@@ -7,4 +7,14 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="array.cs" />
+    <Compile Remove="chaineinterpolees.cs" />
+    <Compile Remove="ifelseswitch.cs" />
+    <Compile Remove="iteration.cs" />
+    <Compile Remove="test.cs" />
+    <Compile Remove="typevariables.cs" />
+    <Compile Remove="variables.cs" />
+  </ItemGroup>
+
 </Project>

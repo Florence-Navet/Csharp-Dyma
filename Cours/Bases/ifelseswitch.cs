@@ -6,13 +6,13 @@
 
 //Console.WriteLine("Bonjour ! Comment t'appelles-tu ?");
 
-//pour recupérer données utilisateur
+//pour recupï¿½rer donnï¿½es utilisateur
 /*string? rep = Console.ReadLine();
 
 Console.WriteLine("Bonjour " + rep + "!");
 
 
-Console.WriteLine("Quel est ton année de naissance ?");
+Console.WriteLine("Quel est ton annï¿½e de naissance ?");
 
 
 string repAnn = Console.ReadLine();
@@ -64,11 +64,11 @@ Console.WriteLine($"{rep},tu vas avoir {age} ans en {DateTime.Today.Year}.");*/
     {
         tranche = "pluse de 55 ans";
     }
-    Console.WriteLine($"Ta tranche d'âge est : {tranche}.");
+    Console.WriteLine($"Ta tranche d'ï¿½ge est : {tranche}.");
 
 } else
 {
-    Console.WriteLine($"Ton année de  naissance doit être comprise entre 1900 et {DateTime.Today.Year}");
+    Console.WriteLine($"Ton annï¿½e de  naissance doit ï¿½tre comprise entre 1900 et {DateTime.Today.Year}");
 }*/
 //string tranche = string.Empty;
 //switch (age)
@@ -91,7 +91,7 @@ Console.WriteLine($"{rep},tu vas avoir {age} ans en {DateTime.Today.Year}.");*/
 //        break;
 //}
 
-//Console.WriteLine($"La tranche d'âge est : {tranche}.");
+//Console.WriteLine($"La tranche d'ï¿½ge est : {tranche}.");
 //string tranche = age switch
 //{
 //    < 25 => "moins de 25 ans",
@@ -100,7 +100,7 @@ Console.WriteLine($"{rep},tu vas avoir {age} ans en {DateTime.Today.Year}.");*/
 //    _ => "plus de 55 ans"
 //};
 
-//Console.WriteLine($"La tranche d'âge est : {tranche}.");
+//Console.WriteLine($"La tranche d'ï¿½ge est : {tranche}.");
 
 
 

@@ -2,13 +2,13 @@
 
 //Console.WriteLine("Bonjour ! Comment t'appelles-tu ?");
 
-//pour recupérer données utilisateur
+//pour recupï¿½rer donnï¿½es utilisateur
 //string? rep = Console.ReadLine();
 
 //Console.WriteLine("Bonjour " + rep + "!");
 
 
-//Console.WriteLine("Quel est ton année de naissance ?");
+//Console.WriteLine("Quel est ton annï¿½e de naissance ?");
 
 
 //string repAnn = Console.ReadLine();
