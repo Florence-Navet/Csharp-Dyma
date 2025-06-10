@@ -1,3 +1,10 @@
+.vs/
+
+
+
+# Pour ignorer le dossier Visual Studio peu importe sa profondeur
+**/.vs/
+
 # Dossiers de build
 bin/
 obj/
