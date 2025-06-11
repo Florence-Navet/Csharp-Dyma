@@ -1,14 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\enola\\OneDrive\\Desktop\\Githubplateforme\\2025\\C#\\Cours\\",
+  "WorkspaceRootPath": "E:\\CODEGITHUB\\Codelaplateforme\\2025githubflopython\\Csharp-Dyma\\Cours\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C75C5AB2-CCE7-4246-B035-49113AA61C64}|Bases\\Bases.csproj|c:\\users\\enola\\onedrive\\desktop\\githubplateforme\\2025\\c#\\cours\\bases\\outilsmaths.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C75C5AB2-CCE7-4246-B035-49113AA61C64}|Bases\\Bases.csproj|e:\\codegithub\\codelaplateforme\\2025githubflopython\\csharp-dyma\\cours\\bases\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C75C5AB2-CCE7-4246-B035-49113AA61C64}|Bases\\Bases.csproj|solutionrelative:bases\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C75C5AB2-CCE7-4246-B035-49113AA61C64}|Bases\\Bases.csproj|e:\\codegithub\\codelaplateforme\\2025githubflopython\\csharp-dyma\\cours\\bases\\outilsmaths.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C75C5AB2-CCE7-4246-B035-49113AA61C64}|Bases\\Bases.csproj|solutionrelative:bases\\outilsmaths.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9C8CB701-102D-CF49-A3E0-89AC09D42C2C}|\u00C9l\u00E9ments de solution{9C8CB701-102D-CF49-A3E0-89AC09D42C2C}|C:\\Users\\enola\\OneDrive\\Desktop\\Githubplateforme\\2025\\C#\\Cours\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9C8CB701-102D-CF49-A3E0-89AC09D42C2C}|\u00C9l\u00E9ments de solution{9C8CB701-102D-CF49-A3E0-89AC09D42C2C}|solutionrelative:Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C75C5AB2-CCE7-4246-B035-49113AA61C64}|Bases\\Bases.csproj|e:\\codegithub\\codelaplateforme\\2025githubflopython\\csharp-dyma\\cours\\bases\\iteration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C75C5AB2-CCE7-4246-B035-49113AA61C64}|Bases\\Bases.csproj|solutionrelative:bases\\iteration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C75C5AB2-CCE7-4246-B035-49113AA61C64}|Bases\\Bases.csproj|e:\\codegithub\\codelaplateforme\\2025githubflopython\\csharp-dyma\\cours\\bases\\array.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C75C5AB2-CCE7-4246-B035-49113AA61C64}|Bases\\Bases.csproj|solutionrelative:bases\\array.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -20,14 +28,6 @@
           "DockedWidth": 200,
           "SelectedChildIndex": 7,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
@@ -46,27 +46,54 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\enola\\OneDrive\\Desktop\\Githubplateforme\\2025\\C#\\Cours\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\enola\\OneDrive\\Desktop\\Githubplateforme\\2025\\C#\\Cours\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABAAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "array.cs",
+              "DocumentMoniker": "E:\\CODEGITHUB\\Codelaplateforme\\2025githubflopython\\Csharp-Dyma\\Cours\\Bases\\array.cs",
+              "RelativeDocumentMoniker": "Bases\\array.cs",
+              "ToolTip": "E:\\CODEGITHUB\\Codelaplateforme\\2025githubflopython\\Csharp-Dyma\\Cours\\Bases\\array.cs",
+              "RelativeToolTip": "Bases\\array.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T06:20:59.067Z"
+              "WhenOpened": "2025-06-11T11:42:18.143Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "iteration.cs",
+              "DocumentMoniker": "E:\\CODEGITHUB\\Codelaplateforme\\2025githubflopython\\Csharp-Dyma\\Cours\\Bases\\iteration.cs",
+              "RelativeDocumentMoniker": "Bases\\iteration.cs",
+              "ToolTip": "E:\\CODEGITHUB\\Codelaplateforme\\2025githubflopython\\Csharp-Dyma\\Cours\\Bases\\iteration.cs",
+              "RelativeToolTip": "Bases\\iteration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-11T11:37:30.571Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "OutilsMaths.cs",
+              "DocumentMoniker": "E:\\CODEGITHUB\\Codelaplateforme\\2025githubflopython\\Csharp-Dyma\\Cours\\Bases\\OutilsMaths.cs",
+              "RelativeDocumentMoniker": "Bases\\OutilsMaths.cs",
+              "ToolTip": "E:\\CODEGITHUB\\Codelaplateforme\\2025githubflopython\\Csharp-Dyma\\Cours\\Bases\\OutilsMaths.cs*",
+              "RelativeToolTip": "Bases\\OutilsMaths.cs*",
+              "ViewState": "AgIAABUAAAAAAAAAAAAYwCEAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-11T11:11:08Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "OutilsMaths.cs",
-              "DocumentMoniker": "C:\\Users\\enola\\OneDrive\\Desktop\\Githubplateforme\\2025\\C#\\Cours\\Bases\\OutilsMaths.cs",
-              "RelativeDocumentMoniker": "Bases\\OutilsMaths.cs",
-              "ToolTip": "C:\\Users\\enola\\OneDrive\\Desktop\\Githubplateforme\\2025\\C#\\Cours\\Bases\\OutilsMaths.cs",
-              "RelativeToolTip": "Bases\\OutilsMaths.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAqwBkAAAAeAAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\CODEGITHUB\\Codelaplateforme\\2025githubflopython\\Csharp-Dyma\\Cours\\Bases\\Program.cs",
+              "RelativeDocumentMoniker": "Bases\\Program.cs",
+              "ToolTip": "E:\\CODEGITHUB\\Codelaplateforme\\2025githubflopython\\Csharp-Dyma\\Cours\\Bases\\Program.cs*",
+              "RelativeToolTip": "Bases\\Program.cs*",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAAABwAAABLAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T06:08:37.825Z",
+              "WhenOpened": "2025-06-11T11:09:14.221Z",
               "EditorCaption": ""
             }
           ]
