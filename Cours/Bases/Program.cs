@@ -2,6 +2,7 @@
 using Fonctions;
 using Bidule;
 using System.Drawing;
+using System.ComponentModel;
 
 namespace Fonctions
 {
@@ -28,6 +29,21 @@ namespace Fonctions
             OutilMaths.GetValeursMinMax(out double mini, out double maxi, 1.2, 3.7, 5.8, 9.4);
             Console.WriteLine($"valeurs mini et maxi sont {mini} et {maxi}.");
 
+
+            //Utiliser un paramètre en out + return
+            bool repOk;
+            do
+            {
+                Console.WriteLine("Saisissez un nombre compris entre 1 et 10 :");
+                string.Compare rep = Console.ReadLine();
+                repOk = int.TryParse(repOk, out int nombre) && nombre >= 1 && nombre <= 10;
+
+            }
+            while (!repOk);
+
+
         }
+
+
     }
 }
