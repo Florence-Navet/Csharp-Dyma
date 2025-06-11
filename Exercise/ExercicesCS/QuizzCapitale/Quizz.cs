@@ -74,19 +74,20 @@ namespace Functions
         }
         public static (int, int, int) Saisir3Numeros()
         {
+            (int num1, int num2, int num3) numeros;
             Console.WriteLine("Saisis le premier numéro (entre 1 et 10) :");
-            int num1 = SaisirNombre(1, 10);
+            numeros.num1 = SaisirNombre(1, 10);
 
             Console.WriteLine("Saisis le deuxième numéro (entre 1 et 10) :");
-            int num2 = SaisirNombre(1, 10);
+            numeros.num2 = SaisirNombre(1, 10);
 
             Console.WriteLine("Saisis le troisième numéro (entre 1 et 10) :");
-            int num3 = SaisirNombre(1, 10);
+            numeros.num3 = SaisirNombre(1, 10);
 
-            return (num1, num2, num3);
+            return numeros;
 
         }
-       
+
 
         public static int SaisirNombre(int min, int max)
         {
