@@ -2,28 +2,28 @@
 
 //Console.WriteLine("Bonjour ! Comment t'appelles-tu ?");
 
-//pour recupérer données utilisateur
-string? rep = Console.ReadLine();
+//pour recupï¿½rer donnï¿½es utilisateur
+//string? rep = Console.ReadLine();
 
-Console.WriteLine("Bonjour " + rep + "!");
-
-
-//Console.WriteLine("Quel est ton année de naissance ?");
+//Console.WriteLine("Bonjour " + rep + "!");
 
 
-string repAnn = Console.ReadLine();
+//Console.WriteLine("Quel est ton annï¿½e de naissance ?");
 
-int anneeNais = int.Parse(repAnn);
 
-int age = 2024 - anneeNais;
+//string repAnn = Console.ReadLine();
 
-int age = DateTime.Today.Year - anneeNais;
+//int anneeNais = int.Parse(repAnn);
 
-Console.WriteLine(anneeNais);
+//int age = 2024 - anneeNais;
 
-Console.WriteLine("Tu vas avoir " + age + " ans.");
+//int age = DateTime.Today.Year - anneeNais;
 
-Console.WriteLine($"{rep},tu vas avoir {age} ans en {DateTime.Today.Year}.");
+//Console.WriteLine(anneeNais);
+
+//Console.WriteLine("Tu vas avoir " + age + " ans.");
+
+//Console.WriteLine($"{rep},tu vas avoir {age} ans en {DateTime.Today.Year}.");
 
 
 

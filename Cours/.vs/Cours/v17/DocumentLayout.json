@@ -1,18 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\CODEGITHUB\\Codelaplateforme\\2025githubflopython\\Csharp-Dyma\\Cours\\",
+  "WorkspaceRootPath": "C:\\Users\\enola\\OneDrive\\Desktop\\Githubplateforme\\2025\\C#\\Cours\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C75C5AB2-CCE7-4246-B035-49113AA61C64}|Bases\\Bases.csproj|e:\\codegithub\\codelaplateforme\\2025githubflopython\\csharp-dyma\\cours\\bases\\iteration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C75C5AB2-CCE7-4246-B035-49113AA61C64}|Bases\\Bases.csproj|solutionrelative:bases\\iteration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C75C5AB2-CCE7-4246-B035-49113AA61C64}|Bases\\Bases.csproj|c:\\users\\enola\\onedrive\\desktop\\githubplateforme\\2025\\c#\\cours\\bases\\outilsmaths.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C75C5AB2-CCE7-4246-B035-49113AA61C64}|Bases\\Bases.csproj|solutionrelative:bases\\outilsmaths.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C75C5AB2-CCE7-4246-B035-49113AA61C64}|Bases\\Bases.csproj|e:\\codegithub\\codelaplateforme\\2025githubflopython\\csharp-dyma\\cours\\bases\\variables.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C75C5AB2-CCE7-4246-B035-49113AA61C64}|Bases\\Bases.csproj|solutionrelative:bases\\variables.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C75C5AB2-CCE7-4246-B035-49113AA61C64}|Bases\\Bases.csproj|e:\\codegithub\\codelaplateforme\\2025githubflopython\\csharp-dyma\\cours\\bases\\ifelseswitch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C75C5AB2-CCE7-4246-B035-49113AA61C64}|Bases\\Bases.csproj|solutionrelative:bases\\ifelseswitch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9C8CB701-102D-CF49-A3E0-89AC09D42C2C}|\u00C9l\u00E9ments de solution{9C8CB701-102D-CF49-A3E0-89AC09D42C2C}|C:\\Users\\enola\\OneDrive\\Desktop\\Githubplateforme\\2025\\C#\\Cours\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C8CB701-102D-CF49-A3E0-89AC09D42C2C}|\u00C9l\u00E9ments de solution{9C8CB701-102D-CF49-A3E0-89AC09D42C2C}|solutionrelative:Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,33 +18,15 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 7,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "iteration.cs",
-              "DocumentMoniker": "E:\\CODEGITHUB\\Codelaplateforme\\2025githubflopython\\Csharp-Dyma\\Cours\\Bases\\iteration.cs",
-              "RelativeDocumentMoniker": "Bases\\iteration.cs",
-              "ToolTip": "E:\\CODEGITHUB\\Codelaplateforme\\2025githubflopython\\Csharp-Dyma\\Cours\\Bases\\iteration.cs",
-              "RelativeToolTip": "Bases\\iteration.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAEwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-09T18:39:55.527Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ifelseswitch.cs",
-              "DocumentMoniker": "E:\\CODEGITHUB\\Codelaplateforme\\2025githubflopython\\Csharp-Dyma\\Cours\\Bases\\ifelseswitch.cs",
-              "RelativeDocumentMoniker": "Bases\\ifelseswitch.cs",
-              "ToolTip": "E:\\CODEGITHUB\\Codelaplateforme\\2025githubflopython\\Csharp-Dyma\\Cours\\Bases\\ifelseswitch.cs",
-              "RelativeToolTip": "Bases\\ifelseswitch.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-09T18:28:24.984Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
             },
             {
               "$type": "Bookmark",
@@ -69,19 +47,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "variables.cs",
-              "DocumentMoniker": "E:\\CODEGITHUB\\Codelaplateforme\\2025githubflopython\\Csharp-Dyma\\Cours\\Bases\\variables.cs",
-              "RelativeDocumentMoniker": "Bases\\variables.cs",
-              "ToolTip": "E:\\CODEGITHUB\\Codelaplateforme\\2025githubflopython\\Csharp-Dyma\\Cours\\Bases\\variables.cs",
-              "RelativeToolTip": "Bases\\variables.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAmwBQAAAAAAAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\enola\\OneDrive\\Desktop\\Githubplateforme\\2025\\C#\\Cours\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\enola\\OneDrive\\Desktop\\Githubplateforme\\2025\\C#\\Cours\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-09T18:17:40Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-11T06:20:59.067Z"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "OutilsMaths.cs",
+              "DocumentMoniker": "C:\\Users\\enola\\OneDrive\\Desktop\\Githubplateforme\\2025\\C#\\Cours\\Bases\\OutilsMaths.cs",
+              "RelativeDocumentMoniker": "Bases\\OutilsMaths.cs",
+              "ToolTip": "C:\\Users\\enola\\OneDrive\\Desktop\\Githubplateforme\\2025\\C#\\Cours\\Bases\\OutilsMaths.cs",
+              "RelativeToolTip": "Bases\\OutilsMaths.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAqwBkAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-11T06:08:37.825Z",
+              "EditorCaption": ""
             }
           ]
         }
