@@ -61,11 +61,12 @@ namespace Functions
         }
         public static (int, int, int) Generer3Numeros()
         {
+            (int num1, int num2, int num3) numeros;
             Random rand = new Random();
-            int num1 = rand.Next(1, 11);
-            int num2 = rand.Next(1, 11);
-            int num3 = rand.Next(1, 11);
-            return (num1, num2, num3);
+            numeros.num1 = rand.Next(1, 11);
+            numeros.num2 = rand.Next(1, 11);
+            numeros.num3 = rand.Next(1, 11);
+            return numeros;
 
 
 
@@ -89,7 +90,20 @@ namespace Functions
 
         public static int SaisirNombre(int min, int max)
         {
-            int nombre = 0;
+            Console.WriteLine($"Entre un nombre valide entre {min} et {max}:");
+            bool repOk;
+            int num;
+            do
+            {
+                string? rep = Console.ReadLine();
+                repOk = int.TryParse(rep, out num) && num >= min && num <= max;
+            }
+            while (!repOk);
+
+            return num;
+
+
+            /*int nombre = 0;
             bool valide = false;
 
             do
@@ -115,7 +129,7 @@ namespace Functions
                
 
             } while (!valide);
-             return nombre;
+             return nombre;*/
         }
 
 
