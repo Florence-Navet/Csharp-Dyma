@@ -1,23 +1,34 @@
 ﻿
 //le ? veut dire que la valeur est nullable est accepte la valeur nulle
-//int? scoreJ1M2 = null;
+using System;
 
-//Console.WriteLine(scoreJ1M2);
+namespace Variables
+{
+    internal class Affichage
+    {
+        public void EcrireTerminal()
+        {
+            int? scoreJ1M2 = null;
 
-//scoreJ1M2 = 0;
+            Console.WriteLine(scoreJ1M2);
 
-//Console.WriteLine(scoreJ1M2);
+            scoreJ1M2 = 0;
 
-//string mot = "choupette";
+            Console.WriteLine(scoreJ1M2);
 
-//if (mot != null)
-//{
-//    string s2 = mot.ToUpper();
+            string mot = "choupette";
 
-//    Console.WriteLine(s2);
+            if (mot != null)
+            {
+                string s2 = mot.ToUpper();
 
-//}
-//string s = string.Empty;
+                Console.WriteLine(s2);
+
+            }
+            string s = string.Empty;
+        }
+    }
+}
 
 
 

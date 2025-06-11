@@ -1,5 +1,7 @@
 using System;
 
+//new namespace pour tester
+
 namespace Bidule
 {
     internal class WhileFor

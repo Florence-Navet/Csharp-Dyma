@@ -31,6 +31,7 @@ namespace Fonctions
             return (min, max);
         }
 
+        //new function pour test
         public static void GetValeursMinMax(out double min, out double max, params double[] nombres)
         {
             min = double.MaxValue;
@@ -42,9 +43,10 @@ namespace Fonctions
                 if (nombre < min) min = nombre;
             }
 
+
+
    
         }
-
 
 
     }

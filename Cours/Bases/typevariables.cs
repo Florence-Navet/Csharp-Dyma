@@ -1,28 +1,39 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-//string mot;
-//mot = "voiture";
+using System;
 
-//const string mot2 = "moto";
+namespace TypeVariables
+{
+    internal class DifferentesVariables
+    {
+        public void Tester()
+        {
+            string mot;
+            mot = "voiture";
 
-//Console.WriteLine(mot, mot2);
-//cw tab tab : racourci pour console writeline
-//Console.WriteLine($"{mot} et {mot2}");
+            const string mot2 = "moto";
 
-//Console.WriteLine(mot2);
+            Console.WriteLine(mot, mot2);
+            //cw tab tab : racourci pour console writeline
+            Console.WriteLine($"{mot} et {mot2}");
 
-//int i = 3;
-//byte y = 3;
-//short s = 3;
-//long l = 3;
-//double d1 = 0.012;
-//double d2 = 1.0E-2; //forme exponentielle
+            Console.WriteLine(mot2);
 
-//float f = 0.012F;
+            int i = 3;
+            byte y = 3;
+            short s = 3;
+            long l = 3;
+            double d1 = 0.012;
+            double d2 = 1.0E-2; //forme exponentielle
 
-//decimal d = 0.012M;
+            float f = 0.012F;
 
-//char c = 'a';
-//char x = 'b';
+            decimal d = 0.012M;
 
-//Animal a;
+            char c = 'a';
+            char x = 'b';
+
+            //Animal a;
+        }
+    }
+}

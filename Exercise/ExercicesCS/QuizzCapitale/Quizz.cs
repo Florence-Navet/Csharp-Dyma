@@ -1,4 +1,5 @@
 using System;
+using System.Net.WebSockets;
 
 namespace Functions
 {
@@ -12,18 +13,19 @@ namespace Functions
 
         public static void Jouer()
         {
-            //bool rejouer = true;
+            bool rejouer = true;
 
-            //while (rejouer)
-            //{
-            //    int bonRep = PoserQuestions();
-            //    AfficherScore(bonRep);
+            while (rejouer)
+            {
+                int bonRep = PoserQuestions();
+                AfficherScore(bonRep);
 
-            //    rejoue
-            //    r = DemanderRejouer();
-            //}
+              
+                rejouer = DemanderRejouer();
+                
+            }
 
-            Jouer(Enumerable.Range(0, pays.Length).ToArray()); // Appelle la version avec toutes les questions
+            //Jouer(Enumerable.Range(0, pays.Length).ToArray()); // Appelle la version avec toutes les questions
         }
         public static void Jouer(params int[] numQuestions)
         {
@@ -31,12 +33,12 @@ namespace Functions
 
             foreach (int index in numQuestions)
             {
-                if (index >= 1 && index <= 10) // 🔹 Correction : Vérifier si l'index est bien dans [1, 10]
+                if (index >= 1 && index <= 10) //Correction : Vérifier si l'index est bien dans [1, 10]
                 {
-                    int tableauIndex = index - 1; // 🔹 Ajustement de l’index (1 devient 0, 2 devient 1, etc.)
+                    int tableauIndex = index - 1; //Ajustement de l’index (1 devient 0, 2 devient 1, etc.)
 
                     Console.WriteLine($"\nQuelle est la capitale de {pays[tableauIndex]} ?");
-                    string repPays = Console.ReadLine();
+                    string? repPays = Console.ReadLine();
 
                     if (repPays.Equals(capitale[tableauIndex], StringComparison.OrdinalIgnoreCase))
                     {
@@ -50,12 +52,85 @@ namespace Functions
                 }
                 else
                 {
-                    Console.WriteLine($"⚠️ Numéro de question {index} incorrect. Veuillez choisir entre 1 et 10.");
+                    Console.WriteLine($"Numéro de question {index} incorrect. Veuillez choisir entre 1 et 10.");
                 }
             }
 
             AfficherScore(bonRep);
             DemanderRejouer();
+        }
+        public static (int, int, int) Generer3Numeros()
+        {
+            (int num1, int num2, int num3) numeros;
+            Random rand = new Random();
+            numeros.num1 = rand.Next(1, 11);
+            numeros.num2 = rand.Next(1, 11);
+            numeros.num3 = rand.Next(1, 11);
+            return numeros;
+
+
+
+
+        }
+        public static (int, int, int) Saisir3Numeros()
+        {
+            (int num1, int num2, int num3) numeros;
+            Console.WriteLine("Saisis le premier numéro (entre 1 et 10) :");
+            numeros.num1 = SaisirNombre(1, 10);
+
+            Console.WriteLine("Saisis le deuxième numéro (entre 1 et 10) :");
+            numeros.num2 = SaisirNombre(1, 10);
+
+            Console.WriteLine("Saisis le troisième numéro (entre 1 et 10) :");
+            numeros.num3 = SaisirNombre(1, 10);
+
+            return numeros;
+
+        }
+
+
+        public static int SaisirNombre(int min, int max)
+        {
+            Console.WriteLine($"Entre un nombre valide entre {min} et {max}:");
+            bool repOk;
+            int num;
+            do
+            {
+                string? rep = Console.ReadLine();
+                repOk = int.TryParse(rep, out num) && num >= min && num <= max;
+            }
+            while (!repOk);
+
+            return num;
+
+
+            /*int nombre = 0;
+            bool valide = false;
+
+            do
+            {
+                Console.WriteLine($"Entre un nombre valide entre {min} et {max}:");
+                string? saisie = Console.ReadLine();
+
+                //convertir entier en entier
+                if (int.TryParse(saisie, out nombre))
+                {
+                    if (nombre >=min && nombre <= max)
+                    {
+                        valide = true;
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Erreur : Le nombre doit être entre {min} et {max}.");
+                    }
+                } else
+                {
+                    Console.WriteLine("Erreur : Veuillez saisir un nombre valide.");
+                }
+               
+
+            } while (!valide);
+             return nombre;*/
         }
 
 
@@ -103,8 +178,12 @@ namespace Functions
 
             Console.WriteLine("Merci d'avoir joué ! À bientôt !");
             return false;
-        }
+        } 
 
-        
+
+
+
+
+
     }
 }
