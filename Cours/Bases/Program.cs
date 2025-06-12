@@ -8,6 +8,7 @@ using ChaineInterpolees;
 using Echanges;
 using Variables;
 using TypeVariables;
+using Chaines;
 
 namespace Fonctions
 {
@@ -16,6 +17,10 @@ namespace Fonctions
         static void Main(string[] args)
 
         {
+
+            Console.WriteLine("=== Test sur chaine de caracteres ===");
+            ChaineCaracteres chai = new ChaineCaracteres(); // créer une instance
+            chai.AfficherChaines();
 
             Console.WriteLine("=== Test du type de variables ===");
             DifferentesVariables var = new DifferentesVariables(); // créer une instance

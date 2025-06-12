@@ -22,7 +22,7 @@ namespace Array
             string[] courses = { "chou", "carotte", "viande" };
             string phrase = "J'aime ma chouquette";
             char car = phrase[2];
-            Console.WriteLine($"Le 3e caractère est : {car}");
+            Console.WriteLine($"Le 3e caractï¿½re est : {car}");
 
             byte?[,] scores = new byte?[2, 5];
 
