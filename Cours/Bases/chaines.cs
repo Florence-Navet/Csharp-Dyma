@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 
 namespace Chaines
 {
@@ -19,7 +20,7 @@ namespace Chaines
             Console.WriteLine(s3);
             Console.WriteLine();
 
-            string s4 = "Chemiin complet du fichier \"essai\":\n" +
+            string s4 = "Chemin complet du fichier \"essai\":\n" +
                 "c:\\Temp\\essai.txt";
 
             Console.WriteLine(s4);
@@ -40,6 +41,25 @@ namespace Chaines
 
             Console.WriteLine(texte2);
 
+            Console.WriteLine();
+
+
+            Console.OutputEncoding = new UnicodeEncoding();
+
+            string symboles = "🖫 🖉 🗑 ✓ 🛈 🗙 ⭮ ⭯";
+            string flèches = "⏶ ⏷ ⏴ ⏵";
+
+            Console.WriteLine(symboles);
+            Console.WriteLine(flèches);
+
+
+            Console.OutputEncoding = new UnicodeEncoding();
+
+            string symboles2 = "\u2713 \u2B6E \u2B6F";
+            Console.WriteLine(symboles2);
+
+
+            Console.WriteLine();
         }
     }
 }
