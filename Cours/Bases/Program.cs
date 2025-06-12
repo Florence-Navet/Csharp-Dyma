@@ -9,6 +9,7 @@ using Echanges;
 using Variables;
 using TypeVariables;
 using Chaines;
+using ChainesString;
 
 namespace Fonctions
 {
@@ -17,6 +18,23 @@ namespace Fonctions
         static void Main(string[] args)
 
         {
+            Console.WriteLine("=== DemoString ===");
+            DemoString dem = new DemoString(); // créer une instance
+            dem.ConstruireChaines();
+
+            Console.WriteLine("=== Test sur chaine de caracteres ===");
+            DemoString dem1 = new DemoString(); // créer une instance
+            dem1.TesterMethodeStatique();
+
+            Console.WriteLine("=== Test sur chaine de caracteres ===");
+            DemoString dem2 = new DemoString(); // créer une instance
+            dem2.TesterMethodesInstances();
+
+
+            Console.WriteLine("=== Test sur chaine de caracteres ===");
+            DemoString dem3 = new DemoString(); // créer une instance
+            dem3.Couperchaines();
+
 
             Console.WriteLine("=== Test sur chaine de caracteres ===");
             ChaineCaracteres chai = new ChaineCaracteres(); // créer une instance
