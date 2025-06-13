@@ -3,85 +3,55 @@
 namespace RelevesMeteo
 {
     internal class Program
-    {
-        static void Main(string[] args)
+    //{
+        static void Main()
         {
-            Console.WriteLine("Bienvenue dans la meteo !");
-            Program p = new Program();
+            Console.WriteLine("Bienvenue dans la météo !");
 
-            p.DecoupeChaine();
+            string cheminFichier = "MeteoParis.csv"; 
 
-            p.RemplaceTexte("pluie", "soleil");
-
-        }
-
-        public void AfficherListe()
-        {
-            string cheminFichier = "MeteoParis.csv";
-
-            if (!File.Exists(cheminFichier))
+            if (File.Exists(cheminFichier))
             {
-                Console.WriteLine($"le fichier {cheminFichier} est introuvable.");
+                AfficherListe(cheminFichier); 
             }
             else
             {
-                return;
+                Console.WriteLine(" Fichier introuvable !");
             }
-
-            string[] lignes = File.ReadAllLines(cheminFichier);
-            Console.WriteLine(cheminFichier);
-
-
-        }
-        public void DecoupeChaine()
-        {
-            string cheminFichier = "MeteoParis.csv";
-
-            // Lire toutes les lignes du fichier CSV
-            string[] lignes = File.ReadAllLines(cheminFichier);
-
-            foreach (string ligne in lignes)
-            {
-                // Séparer les colonnes avec le point-virgule
-                string[] colonnes = ligne.Split(';');
-
-                Console.WriteLine("Contenu de la ligne :");
-
-                // Afficher chaque colonne avec un espace
-                foreach (string col in colonnes)
-                {
-                    Console.Write(col + " ");
-                }
-
-                Console.WriteLine(); // retour à la ligne
-                Console.WriteLine("-------------------");
-            }
-
         }
 
-        public void RemplaceTexte(string ancienMot, string NouveauMot)
-        {
-            string cheminFichier = "MeteoParis.csv";
 
+
+        public static string AfficheData(string[] valeurs)
+        {
+            string date = valeurs[0] + "/" + valeurs[1]; 
+            string temperatures = "[" + valeurs[2] + " ; " + valeurs[3] + "]°C";
+            string soleil = valeurs[5].Replace(" ", ""); 
+            string pluie = valeurs[6] + " mm de pluie";
+
+            return $"{date} : {temperatures}        {soleil} de soleil {pluie}";
+        }
+
+
+        public static void AfficherListe(string cheminFichier)
+        {
             if (!File.Exists(cheminFichier))
             {
                 Console.WriteLine($"Le fichier {cheminFichier} est introuvable.");
                 return;
             }
+
             string[] lignes = File.ReadAllLines(cheminFichier);
 
-            foreach(string ligne in lignes)
+         
+            for (int i = 1; i < lignes.Length; i++)
             {
-                string[] colonne = ligne.Split(",");
+                string[] valeurs = lignes[i].Split(';'); 
+                string resultat = AfficheData(valeurs);  
 
-                if (colonne.Length > 0)
-                {
-                    colonne[0] = colonne[0].Replace(ancienMot, NouveauMot);
-                    string nouvelleLigne = string.Join(",", colonne);
-                    Console.WriteLine(nouvelleLigne);
-                }
+                Console.WriteLine(resultat);
             }
-
         }
+
     }
 }
