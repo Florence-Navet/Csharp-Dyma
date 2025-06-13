@@ -5,11 +5,11 @@ namespace Functions
 {
     internal class Quizz
     {
-        public static string?[] pays = { "Albanie", "Allemagne", "Andorre", "Autriche", "Belgique", "Biélorussie",
-                                         "Bosnie-Herzégovine", "Bulgarie", "Chypre", "Croatie" };
+        public static string?[] pays = { "Albanie", "Allemagne", "Corée du Sud", "Autriche", "Belgique", "Espagne",
+                                         "Bosnie-Herzégovine", "Bulgarie", "Australie", "Danemark" };
 
-        public static string?[] capitale = { "Tirana", "Berlin", "Andorre-La-Vieille", "Vienne",
-                                              "Bruxelles", "Minsk", "Sarajevo", "Sofia", "Nicosie", "Zagreb" };
+        public static string?[] capitale = { "Tirana", "Berlin", "Séoul", "Vienne",
+                                              "Bruxelles", "Madrid", "Sarajevo", "Sofia", "Canberra", "Copenhague" };
 
         public static void Jouer()
         {
