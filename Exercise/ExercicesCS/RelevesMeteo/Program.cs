@@ -24,7 +24,7 @@ namespace RelevesMeteo
         {
             string date = valeurs[0] + "/" + valeurs[1];
             string temperatures = "[" + valeurs[2] + " ; " + valeurs[3] + "]°C";
-            string soleil = valeurs[5].Replace(" ", "");
+            string soleil = valeurs[5].Replace("h ", "h");
             string pluie = valeurs[6] + " mm de pluie";
 
             return $"{date} : {temperatures}        {soleil} de soleil {pluie}";
@@ -40,30 +40,58 @@ namespace RelevesMeteo
 
             string[] lignes = File.ReadAllLines(cheminFichier);
 
-            double SommeTemp = 0;
-            int NbValeurs = 0;
+            float sommeTemp = 0;
+            int nbValeurs = 0;
 
-            for (int i = 1; i < lignes.Length; i++)
+            for (int i = 0; i < lignes.Length; i++)
             {
-                string[] valeurs = lignes[i].Split(';');
-                if (double.TryParse(valeurs[2], out double tMin) && double.TryParse(valeurs[3], out double tMax))
+                string ligne = lignes[i].Replace("h ", "h").Replace("min", "");
+                string[] infos = ligne.Split(";");
+
+                Console.WriteLine($"{infos[0]}/{infos[1]} : [{infos[2]} ; {infos[3]}]°C\t" +
+                                  $"{infos[6]} de soleil\t{infos[7]} mm de pluie");
+
+                if (float.TryParse(infos[4], out float temp))
                 {
-                    SommeTemp += tMin + tMax;
-                    NbValeurs += 2;
+                    sommeTemp += temp;
+                    nbValeurs++;
                 }
-                string resultat = AfficheData(valeurs);
-
-                Console.WriteLine(resultat);
             }
-            if (NbValeurs > 0)
+            Console.WriteLine();
+            if(nbValeurs > 0)
             {
-                double moyenne = SommeTemp / NbValeurs;
-                Console.WriteLine($"Température moyenne égale : {moyenne}");
-
+                Console.WriteLine($"T° moyenne globale : {sommeTemp / nbValeurs:F2}");
             } else
             {
-                Console.WriteLine("Aucune température valide trouvée.");
+                Console.WriteLine("Aucune température moyenne valide trouvée.");
             }
+
+            //double SommeTemp = 0;
+
+
+            //int NbValeurs = 0;
+
+            //for (int i = 1; i < lignes.Length; i++)
+            //{
+            //    string[] valeurs = lignes[i].Split(';');
+            //    if (double.TryParse(valeurs[2], out double tMin) && double.TryParse(valeurs[3], out double tMax))
+            //    {
+            //        SommeTemp += tMin + tMax;
+            //        NbValeurs += 2;
+            //    }
+            //    string resultat = AfficheData(valeurs);
+
+            //    Console.WriteLine(resultat);
+            //}
+            //if (NbValeurs > 0)
+            //{
+            //    double moyenne = SommeTemp / NbValeurs;
+            //    Console.WriteLine($"Température moyenne égale : {moyenne}");
+
+            //} else
+            //{
+            //    Console.WriteLine("Aucune température valide trouvée.");
+            //}
         }
        
 
