@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\enola\\Desktop\\LAPLATEFORMEEXERCICE\\LAPLATEFORME2025\\Csharp-Dyma\\Cours\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C75C5AB2-CCE7-4246-B035-49113AA61C64}|Bases\\Bases.csproj|c:\\users\\enola\\desktop\\laplateformeexercice\\laplateforme2025\\csharp-dyma\\cours\\bases\\chaines.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C75C5AB2-CCE7-4246-B035-49113AA61C64}|Bases\\Bases.csproj|solutionrelative:bases\\chaines.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C75C5AB2-CCE7-4246-B035-49113AA61C64}|Bases\\Bases.csproj|c:\\users\\enola\\desktop\\laplateformeexercice\\laplateforme2025\\csharp-dyma\\cours\\bases\\chaineinterpolees.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C75C5AB2-CCE7-4246-B035-49113AA61C64}|Bases\\Bases.csproj|solutionrelative:bases\\chaineinterpolees.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C75C5AB2-CCE7-4246-B035-49113AA61C64}|Bases\\Bases.csproj|c:\\users\\enola\\desktop\\laplateformeexercice\\laplateforme2025\\csharp-dyma\\cours\\bases\\variables.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C75C5AB2-CCE7-4246-B035-49113AA61C64}|Bases\\Bases.csproj|solutionrelative:bases\\variables.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C75C5AB2-CCE7-4246-B035-49113AA61C64}|Bases\\Bases.csproj|c:\\users\\enola\\desktop\\laplateformeexercice\\laplateforme2025\\csharp-dyma\\cours\\bases\\chaines.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C75C5AB2-CCE7-4246-B035-49113AA61C64}|Bases\\Bases.csproj|solutionrelative:bases\\chaines.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9C8CB701-102D-CF49-A3E0-89AC09D42C2C}|\u00C9l\u00E9ments de solution{9C8CB701-102D-CF49-A3E0-89AC09D42C2C}|C:\\Users\\enola\\Desktop\\LAPLATEFORMEEXERCICE\\LAPLATEFORME2025\\Csharp-Dyma\\Cours\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
@@ -26,37 +26,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "chaineinterpolees.cs",
               "DocumentMoniker": "C:\\Users\\enola\\Desktop\\LAPLATEFORMEEXERCICE\\LAPLATEFORME2025\\Csharp-Dyma\\Cours\\Bases\\chaineinterpolees.cs",
               "RelativeDocumentMoniker": "Bases\\chaineinterpolees.cs",
               "ToolTip": "C:\\Users\\enola\\Desktop\\LAPLATEFORMEEXERCICE\\LAPLATEFORME2025\\Csharp-Dyma\\Cours\\Bases\\chaineinterpolees.cs",
               "RelativeToolTip": "Bases\\chaineinterpolees.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAQwEAAAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAQwEMAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-14T14:34:53.76Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "chaines.cs",
               "DocumentMoniker": "C:\\Users\\enola\\Desktop\\LAPLATEFORMEEXERCICE\\LAPLATEFORME2025\\Csharp-Dyma\\Cours\\Bases\\chaines.cs",
               "RelativeDocumentMoniker": "Bases\\chaines.cs",
-              "ToolTip": "C:\\Users\\enola\\Desktop\\LAPLATEFORMEEXERCICE\\LAPLATEFORME2025\\Csharp-Dyma\\Cours\\Bases\\chaines.cs*",
-              "RelativeToolTip": "Bases\\chaines.cs*",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAQwBcAAAAiAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\enola\\Desktop\\LAPLATEFORMEEXERCICE\\LAPLATEFORME2025\\Csharp-Dyma\\Cours\\Bases\\chaines.cs",
+              "RelativeToolTip": "Bases\\chaines.cs",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAQwEwAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-14T13:37:11.864Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "variables.cs",
               "DocumentMoniker": "C:\\Users\\enola\\Desktop\\LAPLATEFORMEEXERCICE\\LAPLATEFORME2025\\Csharp-Dyma\\Cours\\Bases\\variables.cs",
               "RelativeDocumentMoniker": "Bases\\variables.cs",
