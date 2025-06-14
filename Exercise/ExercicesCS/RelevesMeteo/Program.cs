@@ -3,35 +3,32 @@
 namespace RelevesMeteo
 {
     internal class Program
-    //{
+    {
         static void Main()
         {
             Console.WriteLine("Bienvenue dans la météo !");
 
-            string cheminFichier = "MeteoParis.csv"; 
+            string cheminFichier = "MeteoParis.csv";
 
             if (File.Exists(cheminFichier))
             {
-                AfficherListe(cheminFichier); 
+                AfficherListe(cheminFichier);
             }
             else
             {
-                Console.WriteLine(" Fichier introuvable !");
+                Console.WriteLine("Fichier introuvable !");
             }
         }
 
-
-
         public static string AfficheData(string[] valeurs)
         {
-            string date = valeurs[0] + "/" + valeurs[1]; 
+            string date = valeurs[0] + "/" + valeurs[1];
             string temperatures = "[" + valeurs[2] + " ; " + valeurs[3] + "]°C";
-            string soleil = valeurs[5].Replace(" ", ""); 
+            string soleil = valeurs[5].Replace("h ", "h");
             string pluie = valeurs[6] + " mm de pluie";
 
             return $"{date} : {temperatures}        {soleil} de soleil {pluie}";
         }
-
 
         public static void AfficherListe(string cheminFichier)
         {
@@ -43,15 +40,61 @@ namespace RelevesMeteo
 
             string[] lignes = File.ReadAllLines(cheminFichier);
 
-         
-            for (int i = 1; i < lignes.Length; i++)
-            {
-                string[] valeurs = lignes[i].Split(';'); 
-                string resultat = AfficheData(valeurs);  
+            float sommeTemp = 0;
+            int nbValeurs = 0;
 
-                Console.WriteLine(resultat);
+            for (int i = 0; i < lignes.Length; i++)
+            {
+                string ligne = lignes[i].Replace("h ", "h").Replace("min", "");
+                string[] infos = ligne.Split(";");
+
+                Console.WriteLine($"{infos[0]}/{infos[1]} : [{infos[2]} ; {infos[3]}]°C\t" +
+                                  $"{infos[6]} de soleil\t{infos[7]} mm de pluie");
+
+                if (float.TryParse(infos[4], out float temp))
+                {
+                    sommeTemp += temp;
+                    nbValeurs++;
+                }
             }
+            Console.WriteLine();
+            if(nbValeurs > 0)
+            {
+                Console.WriteLine($"T° moyenne globale : {sommeTemp / nbValeurs:F2}");
+            } else
+            {
+                Console.WriteLine("Aucune température moyenne valide trouvée.");
+            }
+
+            //double SommeTemp = 0;
+
+
+            //int NbValeurs = 0;
+
+            //for (int i = 1; i < lignes.Length; i++)
+            //{
+            //    string[] valeurs = lignes[i].Split(';');
+            //    if (double.TryParse(valeurs[2], out double tMin) && double.TryParse(valeurs[3], out double tMax))
+            //    {
+            //        SommeTemp += tMin + tMax;
+            //        NbValeurs += 2;
+            //    }
+            //    string resultat = AfficheData(valeurs);
+
+            //    Console.WriteLine(resultat);
+            //}
+            //if (NbValeurs > 0)
+            //{
+            //    double moyenne = SommeTemp / NbValeurs;
+            //    Console.WriteLine($"Température moyenne égale : {moyenne}");
+
+            //} else
+            //{
+            //    Console.WriteLine("Aucune température valide trouvée.");
+            //}
         }
+       
+
 
     }
 }

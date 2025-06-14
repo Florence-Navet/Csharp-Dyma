@@ -5,11 +5,11 @@ namespace Functions
 {
     internal class Quizz
     {
-        public static string?[] pays = { "Albanie", "Allemagne", "Andorre", "Autriche", "Belgique", "Biélorussie",
-                                         "Bosnie-Herzégovine", "Bulgarie", "Chypre", "Croatie" };
+        public static string?[] pays = { "Albanie", "Allemagne", "Corée du Sud", "Autriche", "Belgique", "Espagne",
+                                         "Bosnie-Herzégovine", "Bulgarie", "Australie", "Danemark" };
 
-        public static string?[] capitale = { "Tirana", "Berlin", "Andorre-La-Vieille", "Vienne",
-                                              "Bruxelles", "Minsk", "Sarajevo", "Sofia", "Nicosie", "Zagreb" };
+        public static string?[] capitale = { "Tirana", "Berlin", "Séoul", "Vienne",
+                                              "Bruxelles", "Madrid", "Sarajevo", "Sofia", "Canberra", "Copenhague" };
 
         public static void Jouer()
         {
@@ -33,9 +33,9 @@ namespace Functions
 
             foreach (int index in numQuestions)
             {
-                if (index >= 1 && index <= 10) //Correction : Vérifier si l'index est bien dans [1, 10]
+                if (index >= 1 && index <= 10) 
                 {
-                    int tableauIndex = index - 1; //Ajustement de l’index (1 devient 0, 2 devient 1, etc.)
+                    int tableauIndex = index - 1; 
 
                     Console.WriteLine($"\nQuelle est la capitale de {pays[tableauIndex]} ?");
                     string? repPays = Console.ReadLine();
@@ -57,7 +57,7 @@ namespace Functions
             }
 
             AfficherScore(bonRep);
-            DemanderRejouer();
+            //DemanderRejouer();
         }
         public static (int, int, int) Generer3Numeros()
         {
@@ -67,6 +67,8 @@ namespace Functions
             numeros.num2 = rand.Next(1, 11);
             numeros.num3 = rand.Next(1, 11);
             return numeros;
+
+  
 
 
 
@@ -165,7 +167,7 @@ namespace Functions
         }
 
         // 🔹 Méthode pour demander si l'utilisateur veut rejouer
-        private static bool DemanderRejouer()
+        public static bool DemanderRejouer()
         {
             Console.WriteLine("Veux-tu rejouer ? (o/O pour oui, autre touche pour non)");
             string reponse = Console.ReadLine();
