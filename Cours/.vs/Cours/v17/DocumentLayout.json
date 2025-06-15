@@ -1,22 +1,30 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\enola\\Desktop\\LAPLATEFORMEEXERCICE\\LAPLATEFORME2025\\Csharp-Dyma\\Cours\\",
+  "WorkspaceRootPath": "E:\\CODEGITHUB\\Codelaplateforme\\2025githubflopython\\Csharp-Dyma\\Cours\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C75C5AB2-CCE7-4246-B035-49113AA61C64}|Bases\\Bases.csproj|c:\\users\\enola\\desktop\\laplateformeexercice\\laplateforme2025\\csharp-dyma\\cours\\bases\\chaineinterpolees.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C75C5AB2-CCE7-4246-B035-49113AA61C64}|Bases\\Bases.csproj|solutionrelative:bases\\chaineinterpolees.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C75C5AB2-CCE7-4246-B035-49113AA61C64}|Bases\\Bases.csproj|e:\\codegithub\\codelaplateforme\\2025githubflopython\\csharp-dyma\\cours\\bases\\demostring.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C75C5AB2-CCE7-4246-B035-49113AA61C64}|Bases\\Bases.csproj|solutionrelative:bases\\demostring.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C75C5AB2-CCE7-4246-B035-49113AA61C64}|Bases\\Bases.csproj|c:\\users\\enola\\desktop\\laplateformeexercice\\laplateforme2025\\csharp-dyma\\cours\\bases\\variables.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C75C5AB2-CCE7-4246-B035-49113AA61C64}|Bases\\Bases.csproj|e:\\codegithub\\codelaplateforme\\2025githubflopython\\csharp-dyma\\cours\\bases\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C75C5AB2-CCE7-4246-B035-49113AA61C64}|Bases\\Bases.csproj|solutionrelative:bases\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C75C5AB2-CCE7-4246-B035-49113AA61C64}|Bases\\Bases.csproj|e:\\codegithub\\codelaplateforme\\2025githubflopython\\csharp-dyma\\cours\\bases\\typevariables.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C75C5AB2-CCE7-4246-B035-49113AA61C64}|Bases\\Bases.csproj|solutionrelative:bases\\typevariables.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C75C5AB2-CCE7-4246-B035-49113AA61C64}|Bases\\Bases.csproj|e:\\codegithub\\codelaplateforme\\2025githubflopython\\csharp-dyma\\cours\\bases\\variables.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C75C5AB2-CCE7-4246-B035-49113AA61C64}|Bases\\Bases.csproj|solutionrelative:bases\\variables.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C75C5AB2-CCE7-4246-B035-49113AA61C64}|Bases\\Bases.csproj|c:\\users\\enola\\desktop\\laplateformeexercice\\laplateforme2025\\csharp-dyma\\cours\\bases\\chaines.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C75C5AB2-CCE7-4246-B035-49113AA61C64}|Bases\\Bases.csproj|solutionrelative:bases\\chaines.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C75C5AB2-CCE7-4246-B035-49113AA61C64}|Bases\\Bases.csproj|e:\\codegithub\\codelaplateforme\\2025githubflopython\\csharp-dyma\\cours\\bases\\outilsmaths.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C75C5AB2-CCE7-4246-B035-49113AA61C64}|Bases\\Bases.csproj|solutionrelative:bases\\outilsmaths.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9C8CB701-102D-CF49-A3E0-89AC09D42C2C}|\u00C9l\u00E9ments de solution{9C8CB701-102D-CF49-A3E0-89AC09D42C2C}|C:\\Users\\enola\\Desktop\\LAPLATEFORMEEXERCICE\\LAPLATEFORME2025\\Csharp-Dyma\\Cours\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{9C8CB701-102D-CF49-A3E0-89AC09D42C2C}|\u00C9l\u00E9ments de solution{9C8CB701-102D-CF49-A3E0-89AC09D42C2C}|solutionrelative:.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+      "AbsoluteMoniker": "D:0:0:{C75C5AB2-CCE7-4246-B035-49113AA61C64}|Bases\\Bases.csproj|e:\\codegithub\\codelaplateforme\\2025githubflopython\\csharp-dyma\\cours\\bases\\ifelseswitch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C75C5AB2-CCE7-4246-B035-49113AA61C64}|Bases\\Bases.csproj|solutionrelative:bases\\ifelseswitch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,56 +34,97 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "chaineinterpolees.cs",
-              "DocumentMoniker": "C:\\Users\\enola\\Desktop\\LAPLATEFORMEEXERCICE\\LAPLATEFORME2025\\Csharp-Dyma\\Cours\\Bases\\chaineinterpolees.cs",
-              "RelativeDocumentMoniker": "Bases\\chaineinterpolees.cs",
-              "ToolTip": "C:\\Users\\enola\\Desktop\\LAPLATEFORMEEXERCICE\\LAPLATEFORME2025\\Csharp-Dyma\\Cours\\Bases\\chaineinterpolees.cs",
-              "RelativeToolTip": "Bases\\chaineinterpolees.cs",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAQwEMAAAAcAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "variables.cs",
+              "DocumentMoniker": "E:\\CODEGITHUB\\Codelaplateforme\\2025githubflopython\\Csharp-Dyma\\Cours\\Bases\\variables.cs",
+              "RelativeDocumentMoniker": "Bases\\variables.cs",
+              "ToolTip": "E:\\CODEGITHUB\\Codelaplateforme\\2025githubflopython\\Csharp-Dyma\\Cours\\Bases\\variables.cs",
+              "RelativeToolTip": "Bases\\variables.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-14T14:34:53.76Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-11T17:00:40.573Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "chaines.cs",
-              "DocumentMoniker": "C:\\Users\\enola\\Desktop\\LAPLATEFORMEEXERCICE\\LAPLATEFORME2025\\Csharp-Dyma\\Cours\\Bases\\chaines.cs",
-              "RelativeDocumentMoniker": "Bases\\chaines.cs",
-              "ToolTip": "C:\\Users\\enola\\Desktop\\LAPLATEFORMEEXERCICE\\LAPLATEFORME2025\\Csharp-Dyma\\Cours\\Bases\\chaines.cs",
-              "RelativeToolTip": "Bases\\chaines.cs",
-              "ViewState": "AgIAAE8AAAAAAAAAAAAQwEwAAAAiAAAAAAAAAA==",
+              "Title": "typevariables.cs",
+              "DocumentMoniker": "E:\\CODEGITHUB\\Codelaplateforme\\2025githubflopython\\Csharp-Dyma\\Cours\\Bases\\typevariables.cs",
+              "RelativeDocumentMoniker": "Bases\\typevariables.cs",
+              "ToolTip": "E:\\CODEGITHUB\\Codelaplateforme\\2025githubflopython\\Csharp-Dyma\\Cours\\Bases\\typevariables.cs",
+              "RelativeToolTip": "Bases\\typevariables.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAswCMAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-14T13:37:11.864Z"
+              "WhenOpened": "2025-06-11T17:00:30.256Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DemoString.cs",
+              "DocumentMoniker": "E:\\CODEGITHUB\\Codelaplateforme\\2025githubflopython\\Csharp-Dyma\\Cours\\Bases\\DemoString.cs",
+              "RelativeDocumentMoniker": "Bases\\DemoString.cs",
+              "ToolTip": "E:\\CODEGITHUB\\Codelaplateforme\\2025githubflopython\\Csharp-Dyma\\Cours\\Bases\\DemoString.cs",
+              "RelativeToolTip": "Bases\\DemoString.cs",
+              "ViewState": "AgIAADgAAAAAAAAAAAAwwGEAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T12:53:59.063Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "variables.cs",
-              "DocumentMoniker": "C:\\Users\\enola\\Desktop\\LAPLATEFORMEEXERCICE\\LAPLATEFORME2025\\Csharp-Dyma\\Cours\\Bases\\variables.cs",
-              "RelativeDocumentMoniker": "Bases\\variables.cs",
-              "ToolTip": "C:\\Users\\enola\\Desktop\\LAPLATEFORMEEXERCICE\\LAPLATEFORME2025\\Csharp-Dyma\\Cours\\Bases\\variables.cs",
-              "RelativeToolTip": "Bases\\variables.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\CODEGITHUB\\Codelaplateforme\\2025githubflopython\\Csharp-Dyma\\Cours\\Bases\\Program.cs",
+              "RelativeDocumentMoniker": "Bases\\Program.cs",
+              "ToolTip": "E:\\CODEGITHUB\\Codelaplateforme\\2025githubflopython\\Csharp-Dyma\\Cours\\Bases\\Program.cs",
+              "RelativeToolTip": "Bases\\Program.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAowCMAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-09T11:11:29.101Z"
+              "WhenOpened": "2025-06-11T11:09:14.221Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": ".gitignore",
-              "DocumentMoniker": "C:\\Users\\enola\\Desktop\\LAPLATEFORMEEXERCICE\\LAPLATEFORME2025\\Csharp-Dyma\\Cours\\.gitignore",
-              "RelativeDocumentMoniker": ".gitignore",
-              "ToolTip": "C:\\Users\\enola\\Desktop\\LAPLATEFORMEEXERCICE\\LAPLATEFORME2025\\Csharp-Dyma\\Cours\\.gitignore",
-              "RelativeToolTip": ".gitignore",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-06-09T08:04:31.492Z"
+              "DocumentIndex": 5,
+              "Title": "ifelseswitch.cs",
+              "DocumentMoniker": "E:\\CODEGITHUB\\Codelaplateforme\\2025githubflopython\\Csharp-Dyma\\Cours\\Bases\\ifelseswitch.cs",
+              "RelativeDocumentMoniker": "Bases\\ifelseswitch.cs",
+              "ToolTip": "E:\\CODEGITHUB\\Codelaplateforme\\2025githubflopython\\Csharp-Dyma\\Cours\\Bases\\ifelseswitch.cs",
+              "RelativeToolTip": "Bases\\ifelseswitch.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAgAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-11T17:00:07.956Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "OutilsMaths.cs",
+              "DocumentMoniker": "E:\\CODEGITHUB\\Codelaplateforme\\2025githubflopython\\Csharp-Dyma\\Cours\\Bases\\OutilsMaths.cs",
+              "RelativeDocumentMoniker": "Bases\\OutilsMaths.cs",
+              "ToolTip": "E:\\CODEGITHUB\\Codelaplateforme\\2025githubflopython\\Csharp-Dyma\\Cours\\Bases\\OutilsMaths.cs",
+              "RelativeToolTip": "Bases\\OutilsMaths.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-11T11:11:08Z"
             }
           ]
         }

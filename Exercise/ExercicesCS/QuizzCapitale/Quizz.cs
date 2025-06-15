@@ -1,5 +1,7 @@
 using System;
 using System.Net.WebSockets;
+using System.Globalization;
+using System.Text;
 
 namespace Functions
 {
@@ -40,9 +42,10 @@ namespace Functions
                     Console.WriteLine($"\nQuelle est la capitale de {pays[tableauIndex]} ?");
                     string? repPays = Console.ReadLine();
 
-                    if (repPays.Equals(capitale[tableauIndex], StringComparison.OrdinalIgnoreCase))
-                    {
-                        bonRep++;
+                    if (Normaliser(repPays) == Normaliser(capitale[tableauIndex]))
+
+                        {
+                            bonRep++;
                         Console.WriteLine($"Bravo ! {repPays} est bien la capitale de {pays[tableauIndex]}");
                     }
                     else
@@ -165,6 +168,25 @@ namespace Functions
         {
             Console.WriteLine($"Vous avez {bonRep} bonnes réponses.");
         }
+        private static string Normaliser(string? texte)
+        {
+            if (string.IsNullOrEmpty(texte)) return "";
+
+            string normalise = texte.Normalize(NormalizationForm.FormD);
+            StringBuilder sb = new StringBuilder();
+
+            foreach (char c in normalise)
+            {
+                UnicodeCategory uc = CharUnicodeInfo.GetUnicodeCategory(c);
+                if (uc != UnicodeCategory.NonSpacingMark)
+                {
+                    sb.Append(c);
+                }
+            }
+
+            return sb.ToString().ToLower().Normalize(NormalizationForm.FormC);
+        }
+
 
         // 🔹 Méthode pour demander si l'utilisateur veut rejouer
         public static bool DemanderRejouer()
@@ -179,8 +201,12 @@ namespace Functions
             }
 
             Console.WriteLine("Merci d'avoir joué ! À bientôt !");
+            Environment.Exit(0);
             return false;
-        } 
+            
+        }
+
+        // Méthode de normalisation (supprime les accents, met en minuscules)
 
 
 
