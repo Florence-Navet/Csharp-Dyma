@@ -10,6 +10,7 @@ using Variables;
 using TypeVariables;
 using Chaines;
 using ChainesString;
+using DatesDurees;
 
 namespace Fonctions
 {
@@ -18,6 +19,10 @@ namespace Fonctions
         static void Main(string[] args)
 
         {
+            Console.WriteLine("=== Durees et Dates ===");
+            DureesEtDates dur = new DureesEtDates(); // créer une instance
+            dur.AfficherDatesEtDurees();
+
             Console.WriteLine("=== DemoString ===");
             DemoString dem = new DemoString(); // créer une instance
             dem.ConstruireChaines();
