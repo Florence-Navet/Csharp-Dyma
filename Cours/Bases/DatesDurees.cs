@@ -106,6 +106,90 @@ namespace DatesDurees
 
 
             Console.WriteLine("------------------------------");
+            Console.WriteLine("######################################");
+
+
+            DateTimeOffset dt03 = new DateTimeOffset(2030, 1, 31, 22, 45, 58, new TimeSpan(0, 0, 0));
+            Console.WriteLine($"DateTimeOffset: {dt03}");
+
+            Console.WriteLine("\nRécupération des différentes parties :");
+
+            Console.WriteLine($"Date : {dt03.Date}");
+            Console.WriteLine($"TimeOfDay : {dt03.TimeOfDay}");
+            Console.WriteLine($"Offset : {dt03.Offset}");
+            
+
+            Console.WriteLine("{0}/{1}/{2} {3}:{4}:{5}:{6}", 
+                dt03.Year, dt03.Month, dt03.Day, dt03.Hour, dt03.Minute, dt03.Second, dt03.Millisecond);
+
+            Console.WriteLine("\nRécupération de la partie date/ Heure dans differents systems de temps :");
+
+
+            Console.WriteLine($"DateTime : {dt01.DateTime}");
+            Console.WriteLine($"LocalDateTime : {dt01.LocalDateTime}");
+            Console.WriteLine($"UtcDatetime : {dt01.UtcDateTime}");
+            
+            //recupération du jour dans la semaine ou l'année
+            Console.WriteLine(dt03.DayOfWeek);  // Thursday
+            Console.WriteLine(dt03.DayOfYear);   // 31
+
+
+            //DateTimeOffset.MinValue
+            //DateTimeOffset.MaxValue
+
+            //Methode
+
+            DateTimeOffset dto1 = new DateTimeOffset(2030, 1, 31, 22, 45, 58, new TimeSpan());
+            Console.WriteLine(dto1);   // 31/01/2030 22:45:58 +00:00
+
+            DateTimeOffset dto2 = dto1.AddYears(-1).AddMonths(-1).AddHours(-1);
+            Console.WriteLine(dto2);   // 31/12/28 21:45:58 +00:00
+
+
+            //exemple d'ajout de temps
+            TimeSpan ts9 = new TimeSpan(1, 1, 1, 1); // 1j, 1h, 1min, 1s
+            Console.WriteLine(dto1 + ts9);   // 01/02/30 23:46:59 +00:00
+            Console.WriteLine(dto1 - ts9);   // 30/01/30 21:44:57 +00:00
+
+            Console.WriteLine("\nComparaisons:");
+            TimeSpan tsDecalage = new TimeSpan(3, 0, 0);
+            DateTimeOffset dto3 = new DateTimeOffset(dto1.DateTime, tsDecalage);
+            Console.WriteLine(dto3 < dto1);  // True
+
+            Console.WriteLine("\nConversion dans un systeme de temps différents");
+            DateTimeOffset dto11 = new DateTimeOffset(2030, 1, 31, 22, 45, 58, new TimeSpan());
+            Console.WriteLine(dto11);                     // 31/01/30 22:45:58 +00:00
+            Console.WriteLine(dto11.ToLocalTime());       // 31/01/30 23:45:58 +01:00
+            Console.WriteLine(dto11.ToUniversalTime());   // 31/01/30 22:45:58 +00:00
+
+            Console.WriteLine(dto11.DateTime);            // 31/01/30 22:45:58
+            Console.WriteLine(dto11.LocalDateTime);       // 31/01/30 23:45:58
+            Console.WriteLine(dto11.UtcDateTime);         // 31/01/30 22:45:58
+
+            //------------------------------------
+            Console.WriteLine("\ncas particulier du passage à l'heure d'été");
+            // Date/heure correspondant au passage à l'heure d'été en Fance
+            DateTime dt = new DateTime(2030, 3, 31, 2, 0, 0); // 31/03/2030 à 2:00
+            TimeSpan ts = new TimeSpan(1, 0, 0); // décalage de 1h par rapport au temps UTC
+            DateTimeOffset dtoHeureEté = new DateTimeOffset(dt, ts);
+
+            Console.WriteLine(dtoHeureEté.ToLocalTime());      // 31/03/30 03:00:00 +02:00
+            Console.WriteLine(dtoHeureEté.ToUniversalTime());  // 31/03/30 01:00:00 +00:00
+
+
+
+
+
+
+
+
+
+            Console.WriteLine("######################################");
+
+
+
+
+
 
 
         }
