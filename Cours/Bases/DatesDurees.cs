@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Dynamic;
+using System.Globalization;
+using System.Net.WebSockets;
 
 namespace DatesDurees
 {
@@ -49,6 +52,56 @@ namespace DatesDurees
             TimeOnly to2 = TimeOnly.FromDateTime(DateTime.Now);
 
             Console.WriteLine("{0}\n{1}\n{2}", to0, to1, to2);
+            Console.WriteLine();
+
+
+            Console.WriteLine("------------------------------");
+
+            const string erreur = "impossible d'interprêter la chaine en date";
+            bool res;
+
+            string sdt10 = "25/12/2030 22:30:45"; //format par defaut de la culture courante(fr-FR)
+            res = DateTime.TryParse(sdt10, out DateTime dt10);
+            Console.WriteLine(res ? dt10 : erreur);
+
+            string sdt11 = "25 12 2030 22:30:45"; //autre separateur
+            res = DateTime.TryParse(sdt11, out DateTime dt11);
+            Console.WriteLine(res ? dt11 : erreur);
+
+            string std12 = "12/25/2030 10:30:45 PM";
+            res = DateTime.TryParse(std12, CultureInfo.GetCultureInfo("en-US"), DateTimeStyles.None, out DateTime dt12);
+            Console.WriteLine(res ? dt12 : erreur);
+
+            string std13 = "2030-12-25 22:30:45";
+            res = DateTime.TryParse(std13,CultureInfo.InvariantCulture, out DateTime dt13);
+            Console.WriteLine(res ? dt13 : erreur);
+
+
+            string std14 = "12-25-2030 22:30:45";
+            res = DateTime.TryParse(std14, CultureInfo.GetCultureInfo("en-US"), DateTimeStyles.None, out DateTime dt14);
+            Console.WriteLine(res ? dt14 : erreur);
+
+            string sdtp = "Mercredi 25 déc. 2030 22:30";
+            string format = "dddd dd MMM yyyy HH:mm";
+            res = DateTime.TryParseExact(sdtp, format, CultureInfo.GetCultureInfo("fr-FR"),
+                DateTimeStyles.AllowInnerWhite, out DateTime dtp);
+            Console.WriteLine(res ? dtp : erreur);
+
+            string std0 = "2030-12-25 22:30:45 +04:30";
+            res = DateTimeOffset.TryParse(std0, CultureInfo.InvariantCulture, out DateTimeOffset dto);
+            Console.WriteLine(res ? dto : erreur);
+
+            string sdo = "2030-12-25";
+            res = DateOnly.TryParse(sdo, CultureInfo.InvariantCulture, out DateOnly don);
+            Console.WriteLine(res ? don : erreur);
+
+            string sto = "22:30:45";
+            res = TimeOnly.TryParse(sto, CultureInfo.InvariantCulture, out TimeOnly stu);
+            Console.WriteLine(res ? stu : erreur);
+
+
+
+
             Console.WriteLine();
 
 
