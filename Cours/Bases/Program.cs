@@ -11,14 +11,24 @@ using TypeVariables;
 using Chaines;
 using ChainesString;
 using DatesDurees;
+using Span;
+using FuseauHoraire;
 
 namespace Fonctions
 {
     internal class Program
     {
-        static void Main(string[] args)
+        static void Main(string[] args) {
 
-        {
+            Console.WriteLine("=== Afficher les fuseau Horaires ===");
+            DifferentsFuseauxHoraires fs = new DifferentsFuseauxHoraires(); // créer une instance
+            fs.AfficherFuseaux();
+
+            Console.WriteLine("=== La Structure TimeSpan ===");
+            ProprietesSpan dar = new ProprietesSpan(); // créer une instance
+            dar.AfficherSpan();
+
+
             Console.WriteLine("=== Durees et Dates ===");
             DureesEtDates dur = new DureesEtDates(); // créer une instance
             dur.AfficherDatesEtDurees();

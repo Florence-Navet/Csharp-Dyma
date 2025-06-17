@@ -1,14 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\CODEGITHUB\\Codelaplateforme\\2025githubflopython\\Csharp-Dyma\\Cours\\",
+  "WorkspaceRootPath": "C:\\Users\\enola\\OneDrive\\Desktop\\Githubplateforme\\2025\\C#\\Cours\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C75C5AB2-CCE7-4246-B035-49113AA61C64}|Bases\\Bases.csproj|e:\\codegithub\\codelaplateforme\\2025githubflopython\\csharp-dyma\\cours\\bases\\datesdurees.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C75C5AB2-CCE7-4246-B035-49113AA61C64}|Bases\\Bases.csproj|solutionrelative:bases\\datesdurees.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C75C5AB2-CCE7-4246-B035-49113AA61C64}|Bases\\Bases.csproj|c:\\users\\enola\\onedrive\\desktop\\githubplateforme\\2025\\c#\\cours\\bases\\furseauhoraire.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C75C5AB2-CCE7-4246-B035-49113AA61C64}|Bases\\Bases.csproj|solutionrelative:bases\\furseauhoraire.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C75C5AB2-CCE7-4246-B035-49113AA61C64}|Bases\\Bases.csproj|e:\\codegithub\\codelaplateforme\\2025githubflopython\\csharp-dyma\\cours\\bases\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C75C5AB2-CCE7-4246-B035-49113AA61C64}|Bases\\Bases.csproj|c:\\users\\enola\\onedrive\\desktop\\githubplateforme\\2025\\c#\\cours\\bases\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C75C5AB2-CCE7-4246-B035-49113AA61C64}|Bases\\Bases.csproj|solutionrelative:bases\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C75C5AB2-CCE7-4246-B035-49113AA61C64}|Bases\\Bases.csproj|c:\\users\\enola\\onedrive\\desktop\\githubplateforme\\2025\\c#\\cours\\bases\\span.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C75C5AB2-CCE7-4246-B035-49113AA61C64}|Bases\\Bases.csproj|solutionrelative:bases\\span.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,8 +22,16 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 6,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
@@ -39,25 +51,38 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "DatesDurees.cs",
-              "DocumentMoniker": "E:\\CODEGITHUB\\Codelaplateforme\\2025githubflopython\\Csharp-Dyma\\Cours\\Bases\\DatesDurees.cs",
-              "RelativeDocumentMoniker": "Bases\\DatesDurees.cs",
-              "ToolTip": "E:\\CODEGITHUB\\Codelaplateforme\\2025githubflopython\\Csharp-Dyma\\Cours\\Bases\\DatesDurees.cs*",
-              "RelativeToolTip": "Bases\\DatesDurees.cs*",
-              "ViewState": "AgIAAI4AAAAAAAAAAADwv7EAAAAAAAAAAAAAAA==",
+              "Title": "FurseauHoraire.cs",
+              "DocumentMoniker": "C:\\Users\\enola\\OneDrive\\Desktop\\Githubplateforme\\2025\\C#\\Cours\\Bases\\FurseauHoraire.cs",
+              "RelativeDocumentMoniker": "Bases\\FurseauHoraire.cs",
+              "ToolTip": "C:\\Users\\enola\\OneDrive\\Desktop\\Githubplateforme\\2025\\C#\\Cours\\Bases\\FurseauHoraire.cs*",
+              "RelativeToolTip": "Bases\\FurseauHoraire.cs*",
+              "ViewState": "AgIAABsAAAAAAAAAAAAmwCIAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T15:41:36.694Z",
+              "WhenOpened": "2025-06-17T07:57:12.973Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Span.cs",
+              "DocumentMoniker": "C:\\Users\\enola\\OneDrive\\Desktop\\Githubplateforme\\2025\\C#\\Cours\\Bases\\Span.cs",
+              "RelativeDocumentMoniker": "Bases\\Span.cs",
+              "ToolTip": "C:\\Users\\enola\\OneDrive\\Desktop\\Githubplateforme\\2025\\C#\\Cours\\Bases\\Span.cs",
+              "RelativeToolTip": "Bases\\Span.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADIAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-17T05:48:12.499Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Program.cs",
-              "DocumentMoniker": "E:\\CODEGITHUB\\Codelaplateforme\\2025githubflopython\\Csharp-Dyma\\Cours\\Bases\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\enola\\OneDrive\\Desktop\\Githubplateforme\\2025\\C#\\Cours\\Bases\\Program.cs",
               "RelativeDocumentMoniker": "Bases\\Program.cs",
-              "ToolTip": "E:\\CODEGITHUB\\Codelaplateforme\\2025githubflopython\\Csharp-Dyma\\Cours\\Bases\\Program.cs",
+              "ToolTip": "C:\\Users\\enola\\OneDrive\\Desktop\\Githubplateforme\\2025\\C#\\Cours\\Bases\\Program.cs",
               "RelativeToolTip": "Bases\\Program.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAowCMAAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-11T11:09:14.221Z",
               "EditorCaption": ""
