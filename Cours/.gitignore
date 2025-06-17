@@ -14,23 +14,23 @@ obj/
 *.user
 *.suo
 
-# Dossiers de build spécifiques à .NET
+# Dossiers de build spï¿½cifiques ï¿½ .NET
 *.dll
 *.exe
 *.pdb
 *.apphost.exe
 
-# Dossiers de dépendances ou caches
+# Dossiers de dï¿½pendances ou caches
 packages/
 TestResults/
 .vscode/
 
-# Fichiers système
+# Fichiers systï¿½me
 Thumbs.db
 .DS_Store
 *.log
 
-# Fichiers générés par le debug
+# Fichiers gï¿½nï¿½rï¿½s par le debug
 *.cache
 *.db
 *.sln.ide
