@@ -118,7 +118,7 @@ namespace CalendrierPerpetuel
             return $"{jourSemaine} {date.Day} {mois}";
         }
 
-        // ✅ MÉTHODE MANQUANTE : demander JJ/MM
+        
         static (int jour, int mois) DemanderDateAnniversaire()
         {
             while (true)
