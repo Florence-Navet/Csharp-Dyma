@@ -1,18 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\CODEGITHUB\\Codelaplateforme\\2025githubflopython\\Csharp-Dyma\\Cours\\",
+  "WorkspaceRootPath": "C:\\Users\\enola\\Desktop\\LAPLATEFORMEEXERCICE\\LAPLATEFORME2025\\Csharp-Dyma\\Cours\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C75C5AB2-CCE7-4246-B035-49113AA61C64}|Bases\\Bases.csproj|e:\\codegithub\\codelaplateforme\\2025githubflopython\\csharp-dyma\\cours\\bases\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C75C5AB2-CCE7-4246-B035-49113AA61C64}|Bases\\Bases.csproj|solutionrelative:bases\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{493B751D-B76F-40B8-A1FF-2A2F8703E3DA}|Enumeration\\Enumeration.csproj|c:\\users\\enola\\desktop\\laplateformeexercice\\laplateforme2025\\csharp-dyma\\cours\\enumeration\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{493B751D-B76F-40B8-A1FF-2A2F8703E3DA}|Enumeration\\Enumeration.csproj|solutionrelative:enumeration\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C75C5AB2-CCE7-4246-B035-49113AA61C64}|Bases\\Bases.csproj|e:\\codegithub\\codelaplateforme\\2025githubflopython\\csharp-dyma\\cours\\bases\\demoenums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C75C5AB2-CCE7-4246-B035-49113AA61C64}|Bases\\Bases.csproj|solutionrelative:bases\\demoenums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C75C5AB2-CCE7-4246-B035-49113AA61C64}|Bases\\Bases.csproj|e:\\codegithub\\codelaplateforme\\2025githubflopython\\csharp-dyma\\cours\\bases\\furseauhoraire.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C75C5AB2-CCE7-4246-B035-49113AA61C64}|Bases\\Bases.csproj|solutionrelative:bases\\furseauhoraire.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{493B751D-B76F-40B8-A1FF-2A2F8703E3DA}|Enumeration\\Enumeration.csproj|c:\\users\\enola\\desktop\\laplateformeexercice\\laplateforme2025\\csharp-dyma\\cours\\enumeration\\demoenumsperso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{493B751D-B76F-40B8-A1FF-2A2F8703E3DA}|Enumeration\\Enumeration.csproj|solutionrelative:enumeration\\demoenumsperso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,61 +18,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:131:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FurseauHoraire.cs",
-              "DocumentMoniker": "E:\\CODEGITHUB\\Codelaplateforme\\2025githubflopython\\Csharp-Dyma\\Cours\\Bases\\FurseauHoraire.cs",
-              "RelativeDocumentMoniker": "Bases\\FurseauHoraire.cs",
-              "ToolTip": "E:\\CODEGITHUB\\Codelaplateforme\\2025githubflopython\\Csharp-Dyma\\Cours\\Bases\\FurseauHoraire.cs",
-              "RelativeToolTip": "Bases\\FurseauHoraire.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-18T09:25:19.569Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "DemoEnums.cs",
-              "DocumentMoniker": "E:\\CODEGITHUB\\Codelaplateforme\\2025githubflopython\\Csharp-Dyma\\Cours\\Bases\\DemoEnums.cs",
-              "RelativeDocumentMoniker": "Bases\\DemoEnums.cs",
-              "ToolTip": "E:\\CODEGITHUB\\Codelaplateforme\\2025githubflopython\\Csharp-Dyma\\Cours\\Bases\\DemoEnums.cs*",
-              "RelativeToolTip": "Bases\\DemoEnums.cs*",
-              "ViewState": "AgIAACQAAAAAAAAAAAAwwEcAAAAAAAAAAAAAAA==",
+              "Title": "DemoEnumsPerso.cs",
+              "DocumentMoniker": "C:\\Users\\enola\\Desktop\\LAPLATEFORMEEXERCICE\\LAPLATEFORME2025\\Csharp-Dyma\\Cours\\Enumeration\\DemoEnumsPerso.cs",
+              "RelativeDocumentMoniker": "Enumeration\\DemoEnumsPerso.cs",
+              "ToolTip": "C:\\Users\\enola\\Desktop\\LAPLATEFORMEEXERCICE\\LAPLATEFORME2025\\Csharp-Dyma\\Cours\\Enumeration\\DemoEnumsPerso.cs",
+              "RelativeToolTip": "Enumeration\\DemoEnumsPerso.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAgwCwAAABRAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-18T08:39:40.024Z",
+              "WhenOpened": "2025-06-18T12:25:11.151Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "E:\\CODEGITHUB\\Codelaplateforme\\2025githubflopython\\Csharp-Dyma\\Cours\\Bases\\Program.cs",
-              "RelativeDocumentMoniker": "Bases\\Program.cs",
-              "ToolTip": "E:\\CODEGITHUB\\Codelaplateforme\\2025githubflopython\\Csharp-Dyma\\Cours\\Bases\\Program.cs*",
-              "RelativeToolTip": "Bases\\Program.cs*",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\enola\\Desktop\\LAPLATEFORMEEXERCICE\\LAPLATEFORME2025\\Csharp-Dyma\\Cours\\Enumeration\\Program.cs",
+              "RelativeDocumentMoniker": "Enumeration\\Program.cs",
+              "ToolTip": "C:\\Users\\enola\\Desktop\\LAPLATEFORMEEXERCICE\\LAPLATEFORME2025\\Csharp-Dyma\\Cours\\Enumeration\\Program.cs",
+              "RelativeToolTip": "Enumeration\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T11:09:14.221Z",
+              "WhenOpened": "2025-06-18T12:17:33.088Z",
               "EditorCaption": ""
             }
           ]
