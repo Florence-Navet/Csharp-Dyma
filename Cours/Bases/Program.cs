@@ -13,12 +13,20 @@ using ChainesString;
 using DatesDurees;
 using Span;
 using FuseauHoraire;
+using Bases;
 
 namespace Fonctions
 {
     internal class Program
     {
         static void Main(string[] args) {
+
+            Console.WriteLine("=== Afficher Les jours en couleurs ===");
+            // Appel direct de la méthode statique sans créer d'instance
+            DemoEnums.TesterEnums();
+
+            // Par exemple, appeler TesterItérationEnum avec un int (ici 0)
+            DemoEnums.TesterItérationEnum(0);
 
             Console.WriteLine("=== Afficher les fuseau Horaires ===");
             DifferentsFuseauxHoraires fs = new DifferentsFuseauxHoraires(); // créer une instance
