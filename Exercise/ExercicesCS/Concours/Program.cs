@@ -7,7 +7,10 @@ namespace Concours
 {
     internal class Program
     {
-        public static (string nomComplet, double moyenne)[] Etudiants;
+        /// <summary>
+        /// mettre nullable pour eviter le soulignement
+        /// </summary>
+        public static (string nomComplet, double moyenne)[]? Etudiants;
 
         static void Main()
         {
@@ -30,6 +33,7 @@ namespace Concours
             Console.ReadKey();
         }
 
+        //charge le f iche des étudiants dans de tableau de tuples
         public static void ChargerDonnees(string chemin)
         {
             string[] lignes = File.ReadAllLines(chemin);
@@ -38,7 +42,7 @@ namespace Concours
             for (int i = 1; i < lignes.Length; i++) // Commencer à 1 pour sauter l'en-tête
             {
                 string[] infos = lignes[i].Split(';');
-                string nomComplet = infos[1] + " " + infos[0]; // Prénom Nom
+                string nomComplet = infos[1] + " " + infos[0]; // Prénom Nom et infos et le nom de tableau de renvoi
                 double moyenne = double.Parse(infos[4].Replace(',', '.'), CultureInfo.InvariantCulture);
 
                 Etudiants[i - 1] = (nomComplet, moyenne);
@@ -64,20 +68,28 @@ namespace Concours
             }
 
             string[] lignes = File.ReadAllLines(cheminFichier);
+            const int NbAdmis = 50;
+            int compteurAdmis = 0;
 
-            
-
-            foreach (var (nom, moyenne) in Etudiants)
+            if (Etudiants == null) return;
             {
-                var mention = Notation.GetMention(moyenne);
-                string res = moyenne >= 10 ? "Admis" : "";
-                Console.WriteLine($"{nom,-20} : {moyenne,5:N1}  {mention.Item2,-12} {res}");
 
+                foreach (var (nom, moyenne) in Etudiants)
+                {
+                    var mention = Notation.GetMention(moyenne);
+                    string res = "";
+                    if (moyenne >= 10 && compteurAdmis < NbAdmis)
+                    {
+                        res = "Admis";
+                        compteurAdmis++;
+                    }
+                    Console.WriteLine($"{nom,-20} : {moyenne,5:N1}  {mention.Item2,-12} {res}");
+
+                    //string res = moyenne >= 10 ? "Admis" : "";
+                    //Console.WriteLine($"{nom,-20} : {moyenne,5:N1}  {mention.Item2,-12} {res}");
+
+                }
             }
-
-
-
-
 
 
 
@@ -85,3 +97,11 @@ namespace Concours
         }
     }
 }
+
+
+
+
+
+
+
+   
