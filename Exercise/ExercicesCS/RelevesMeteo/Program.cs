@@ -110,12 +110,6 @@ namespace RelevesMeteo
                 float pluie = float.Parse(infos2[7], culture);
 
 
-                //int mois = int.Parse.(infos2[0]) + "/" + int.Parse.(infos2[1]);
-                //int tMin = int.Parse(infos2[2]);
-                //int tMax = int.Parse(infos2[3]);
-                //int soleil = int.Parse(infos2[4]);
-                //int pluie = int.Parse(infos2[5]);
-
                 Console.WriteLine($"{moisAnnee,-7} | {tMin,6} | {tMax,6} | {soleil,7} | {pluie,10}");
             }
 
