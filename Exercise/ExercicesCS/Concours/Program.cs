@@ -2,6 +2,8 @@
 using System.IO;
 using System.Globalization;
 using Concours;
+using System.Security.Cryptography.X509Certificates;
+using System.Reflection.Metadata.Ecma335;
 
 namespace Concours
 {
@@ -10,7 +12,7 @@ namespace Concours
         /// <summary>
         /// mettre nullable pour eviter le soulignement
         /// </summary>
-        public static (string nomComplet, double moyenne)[]? Etudiants;
+       
 
         static void Main()
         {
@@ -19,8 +21,8 @@ namespace Concours
 
             if (File.Exists(cheminFichier))
             {
-                ChargerDonnees(cheminFichier);
-                AfficherEtudiants();
+                DAL.ChargerDonnees(cheminFichier);
+                DAL.AfficherEtudiants();
                 Console.WriteLine();
                 Console.WriteLine("Résultats du concours :\n");
                 AfficherResultatsConcours(cheminFichier);
@@ -29,35 +31,38 @@ namespace Concours
             {
                 Console.WriteLine("Fichier introuvable !");
             }
+            //attendre une touche et vider l'écran
+            Console.WriteLine("\nAppuyer sur une touche pour continuer ...");
+            Console.ReadKey();
+            Console.Clear();
+
+            //Tableau avec les nom des étudiants sortants
+            string[] sortants = { "Léa Douglas", "Claude Cartier", "Justin Leduc" };
+
+            //remplacer les admis et récupérer les nouveaux
+            List<string> nouveaux = DAL.RemplacerEtudiantsAdmis(sortants);
+            for (int i = 0; i < nouveaux.Count && i < sortants.Length; i++)
+            {
+                Console.WriteLine($"Remplacement de {sortants[i]} par {nouveaux[i]}");
+                //Console.WriteLine($"{nomSortant} trouvé mais non admis, donc non remplacé");
+            }
+            //affichage des remplacements
+
+
+            //reaffichage des resultats avec la nouvelle mise à jour
+            Console.WriteLine("\nNouveaux résultats du concours");
+            AfficherResultatsConcours(cheminFichier);
+
+            Console.WriteLine("\n-----------------------------------------------");
+
 
             Console.ReadKey();
+
         }
 
-        //charge le f iche des étudiants dans de tableau de tuples
-        public static void ChargerDonnees(string chemin)
-        {
-            string[] lignes = File.ReadAllLines(chemin);
-            Etudiants = new (string, double)[lignes.Length - 1];
 
-            for (int i = 1; i < lignes.Length; i++) // Commencer à 1 pour sauter l'en-tête
-            {
-                string[] infos = lignes[i].Split(';');
-                string nomComplet = infos[1] + " " + infos[0]; // Prénom Nom et infos et le nom de tableau de renvoi
-                double moyenne = double.Parse(infos[4].Replace(',', '.'), CultureInfo.InvariantCulture);
 
-                Etudiants[i - 1] = (nomComplet, moyenne);
-            }
-        }
 
-        public static void AfficherEtudiants()
-        {
-            Console.WriteLine("Liste des étudiants :\n");
-
-            foreach (var (nom, moyenne) in Etudiants)
-            {
-                Console.WriteLine($"{nom} : {moyenne} / 20");
-            }
-        }
 
         public static void AfficherResultatsConcours(string cheminFichier)
         {
@@ -68,21 +73,22 @@ namespace Concours
             }
 
             string[] lignes = File.ReadAllLines(cheminFichier);
-            const int NbAdmis = 50;
-            int compteurAdmis = 0;
+            //const int NbAdmis = 50;
+            //int compteurAdmis = 0;
 
-            if (Etudiants == null) return;
+            if (DAL.Etudiants == null) return;
             {
 
-                foreach (var (nom, moyenne) in Etudiants)
+                foreach (var (nom, moyenne, statut) in DAL.Etudiants)
                 {
                     var mention = Notation.GetMention(moyenne);
-                    string res = "";
-                    if (moyenne >= 10 && compteurAdmis < NbAdmis)
-                    {
-                        res = "Admis";
-                        compteurAdmis++;
-                    }
+                    //string res = "";
+                    //if (moyenne >= 10 && compteurAdmis < NbAdmis)
+                    //{
+                    //res = "Admis";
+                    //    compteurAdmis++;
+                    //}
+                    string res = statut.HasFlag(Statuts.Admis) ? "Admis" : "";
                     Console.WriteLine($"{nom,-20} : {moyenne,5:N1}  {mention.Item2,-12} {res}");
 
                     //string res = moyenne >= 10 ? "Admis" : "";
@@ -91,9 +97,34 @@ namespace Concours
                 }
             }
 
+            
 
 
 
+
+        }
+        public static void AfficherEtudiantsEtrangerAdmis(string cheminFichier)
+        {
+            if (DAL.Etudiants == null)
+            {
+                Console.WriteLine("Aucune donnée trouvée");
+                return;
+            }
+            Console.WriteLine("Etudiants étrangers admis : ");
+            Console.WriteLine();
+
+            int compteur = 0;
+
+            foreach (var (nom, moyenne, Statut) in DAL.Etudiants)
+            {
+                if (Statut.HasFlag(Statuts.Etranger) && Statut.HasFlag(Statuts.Admis))
+                {
+                    Console.WriteLine(nom);
+                    compteur++;
+                }
+            }
+            //Console.WriteLine($"\nTotal : {compteur} étudiant{(compteur > 1 ? "s" : "")} étrangers admis");
+            Console.WriteLine($"\nTotal : {compteur} étudiant etrangers admis");
         }
     }
 }
