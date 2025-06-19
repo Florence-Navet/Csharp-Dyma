@@ -18,7 +18,7 @@ namespace Concours
 
         public static void AfficherEtudiants()
         {
-            Console.WriteLine("Liste des étudiants :\n");
+            Program.AfficherTexte("Liste des étudiants :\n", ConsoleColor.Green);
 
             foreach (var (nom, moyenne, statut) in Etudiants)
             {

@@ -24,7 +24,7 @@ namespace Concours
                 DAL.ChargerDonnees(cheminFichier);
                 DAL.AfficherEtudiants();
                 Console.WriteLine();
-                Console.WriteLine("Résultats du concours :\n");
+                AfficherTexte("Résultats du concours :\n", ConsoleColor.Cyan);
                 AfficherResultatsConcours(cheminFichier);
             }
             else
@@ -32,7 +32,7 @@ namespace Concours
                 Console.WriteLine("Fichier introuvable !");
             }
             //attendre une touche et vider l'écran
-            Console.WriteLine("\nAppuyer sur une touche pour continuer ...");
+            AfficherTexte("\nAppuyer sur une touche pour continuer ...", ConsoleColor.Cyan);
             Console.ReadKey();
             Console.Clear();
 
@@ -43,14 +43,14 @@ namespace Concours
             List<string> nouveaux = DAL.RemplacerEtudiantsAdmis(sortants);
             for (int i = 0; i < nouveaux.Count && i < sortants.Length; i++)
             {
-                Console.WriteLine($"Remplacement de {sortants[i]} par {nouveaux[i]}");
+                AfficherTexte($"\nRemplacement de {sortants[i]} par {nouveaux[i]}", ConsoleColor.Blue);
                 //Console.WriteLine($"{nomSortant} trouvé mais non admis, donc non remplacé");
             }
             //affichage des remplacements
 
 
             //reaffichage des resultats avec la nouvelle mise à jour
-            Console.WriteLine("\nNouveaux résultats du concours");
+            AfficherTexte("\nNouveaux résultats du concours", ConsoleColor.Yellow);
             AfficherResultatsConcours(cheminFichier);
 
             Console.WriteLine("\n-----------------------------------------------");
@@ -110,7 +110,7 @@ namespace Concours
                 Console.WriteLine("Aucune donnée trouvée");
                 return;
             }
-            Console.WriteLine("Etudiants étrangers admis : ");
+            AfficherTexte("Etudiants étrangers admis : ", ConsoleColor.Red);
             Console.WriteLine();
 
             int compteur = 0;
@@ -123,10 +123,28 @@ namespace Concours
                     compteur++;
                 }
             }
-            //Console.WriteLine($"\nTotal : {compteur} étudiant{(compteur > 1 ? "s" : "")} étrangers admis");
+        
             Console.WriteLine($"\nTotal : {compteur} étudiant etrangers admis");
         }
+
+     
+        public static void AfficherTexte(string texte, ConsoleColor couleur)
+        {
+                ConsoleColor consoleOrig = Console.ForegroundColor;
+                Console.ForegroundColor = couleur;
+                Console.WriteLine(texte);
+                Console.ForegroundColor = consoleOrig;
+
+
+     
+            Console.WriteLine(); // retour à la ligne
+
+
+
+
+        }
     }
+    
 }
 
 
