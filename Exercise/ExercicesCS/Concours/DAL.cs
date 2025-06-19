@@ -15,15 +15,17 @@ namespace Concours
     internal class DAL
     {
         public static (string nomComplet, double moyenne, Statuts statut)[]? Etudiants;
+        public const int NbAdmis = 50;
 
         public static void AfficherEtudiants()
         {
             Program.AfficherTexte("Liste des étudiants :\n", ConsoleColor.Green);
 
-            foreach (var (nom, moyenne, statut) in Etudiants)
+            foreach (var (nom, moyenne, statut) in Etudiants ?? Array.Empty<(string, double, Statuts)>())
             {
                 Console.WriteLine($"{nom} : {moyenne} / 20");
             }
+
         }
 
 
@@ -39,12 +41,12 @@ namespace Concours
                 string nomComplet = infos[1] + " " + infos[0]; // Prénom Nom
                 double moyenne = double.Parse(infos[4].Replace(',', '.'), CultureInfo.InvariantCulture);
 
-                Statuts statut = Statuts.Aucun;
-                if (infos[2] == "O") statut |= Statuts.Etranger;
-                if (infos[3] == "O") statut |= Statuts.Boursier;
-                if (moyenne >= 12) statut |= Statuts.Admis;
+                Statuts st = Statuts.Aucun;
+                if (infos[2] == "O") st |= Statuts.Etranger;
+                if (infos[3] == "O") st |= Statuts.Boursier;
+                if (moyenne >= 12) st |= Statuts.Admis;
 
-                Etudiants[i - 1] = (nomComplet, moyenne, statut);
+                Etudiants[i - 1] = (nomComplet, moyenne, st);
             }
         }
         public static List<string> RemplacerEtudiantsAdmis(params string[] nomsSortants)

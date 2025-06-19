@@ -74,22 +74,31 @@ namespace Concours
 
             string[] lignes = File.ReadAllLines(cheminFichier);
             //const int NbAdmis = 50;
-            //int compteurAdmis = 0;
+           
 
             if (DAL.Etudiants == null) return;
             {
-
+                int compteurAdmis = 0;
                 foreach (var (nom, moyenne, statut) in DAL.Etudiants)
                 {
-                    var mention = Notation.GetMention(moyenne);
+                    if (statut.HasFlag(Statuts.Admis))
+                    {
+                        compteurAdmis++;
+                        if (compteurAdmis > DAL.NbAdmis)
+                            break;
+
+                        var mention = Notation.GetMention(moyenne);
+                        string res = statut.HasFlag(Statuts.Admis) ? "Admis" : "";
+                        Console.WriteLine($"{nom,-20} : {moyenne,5:N1}  {mention.Item2,-12} {res}");
+                    }
+                    
                     //string res = "";
                     //if (moyenne >= 10 && compteurAdmis < NbAdmis)
                     //{
                     //res = "Admis";
                     //    compteurAdmis++;
                     //}
-                    string res = statut.HasFlag(Statuts.Admis) ? "Admis" : "";
-                    Console.WriteLine($"{nom,-20} : {moyenne,5:N1}  {mention.Item2,-12} {res}");
+
 
                     //string res = moyenne >= 10 ? "Admis" : "";
                     //Console.WriteLine($"{nom,-20} : {moyenne,5:N1}  {mention.Item2,-12} {res}");
