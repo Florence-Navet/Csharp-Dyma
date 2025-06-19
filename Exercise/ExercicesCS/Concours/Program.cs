@@ -24,8 +24,20 @@ namespace Concours
                 DAL.ChargerDonnees(cheminFichier);
                 DAL.AfficherEtudiants();
                 Console.WriteLine();
+                Console.ReadKey();
+                Console.Clear();
+                AfficherTexte("Résultats du etudiants etrangers admis :\n", ConsoleColor.Blue);
+                AfficherEtudiantsEtrangerAdmis(cheminFichier);
+                Console.ReadKey();
+                Console.Clear();
+                AfficherTexte("Résultats du etudiants frnçais admis :\n", ConsoleColor.Blue);
+                AfficherEtudiantsEtrangerAdmis(cheminFichier);
+                Console.ReadKey();
+                Console.Clear();
                 AfficherTexte("Résultats du concours :\n", ConsoleColor.Cyan);
                 AfficherResultatsConcours(cheminFichier);
+                Console.ReadKey();
+                Console.Clear();
             }
             else
             {
@@ -37,15 +49,22 @@ namespace Concours
             Console.Clear();
 
             //Tableau avec les nom des étudiants sortants
-            string[] sortants = { "Léa Douglas", "Claude Cartier", "Justin Leduc" };
+            //string[] sortants = { "Léa Douglas", "Claude Cartier", "Justin Leduc" };
+            string[] remplacés = { "Léa Douglas", "Claude Cartier", "Justin Leduc" };
 
             //remplacer les admis et récupérer les nouveaux
-            List<string> nouveaux = DAL.RemplacerEtudiantsAdmis(sortants);
-            for (int i = 0; i < nouveaux.Count && i < sortants.Length; i++)
+            //List<string> nouveaux = DAL.RemplacerEtudiantsAdmis(sortants);
+            string[] remplaçants = DAL.RemplacerEtudiantsAdmis(remplacés);
+            for (int r = 0; r < remplacés.Length ; r++)
             {
-                AfficherTexte($"\nRemplacement de {sortants[i]} par {nouveaux[i]}", ConsoleColor.Blue);
-                //Console.WriteLine($"{nomSortant} trouvé mais non admis, donc non remplacé");
+                AfficherTexte($"\nRemplacement de {remplacés[r]} par {remplaçants[r]}", ConsoleColor.Blue);
             }
+
+            //for (int i = 0; i < nouveaux.Count && i < sortants.Length; i++)
+            //{
+            //    AfficherTexte($"\nRemplacement de {sortants[i]} par {nouveaux[i]}", ConsoleColor.Blue);
+            //Console.WriteLine($"{nomSortant} trouvé mais non admis, donc non remplacé");
+
             //affichage des remplacements
 
 
@@ -74,22 +93,31 @@ namespace Concours
 
             string[] lignes = File.ReadAllLines(cheminFichier);
             //const int NbAdmis = 50;
-            //int compteurAdmis = 0;
+           
 
             if (DAL.Etudiants == null) return;
             {
-
+                int compteurAdmis = 0;
                 foreach (var (nom, moyenne, statut) in DAL.Etudiants)
                 {
-                    var mention = Notation.GetMention(moyenne);
+                    if (statut.HasFlag(Statuts.Admis))
+                    {
+                        compteurAdmis++;
+                        if (compteurAdmis > DAL.NbAdmis)
+                            break;
+
+                        var mention = Notation.GetMention(moyenne);
+                        string res = statut.HasFlag(Statuts.Admis) ? "Admis" : "";
+                        Console.WriteLine($"{nom,-20} : {moyenne,5:N1}  {mention.Item2,-12} {res}");
+                    }
+                    
                     //string res = "";
                     //if (moyenne >= 10 && compteurAdmis < NbAdmis)
                     //{
                     //res = "Admis";
                     //    compteurAdmis++;
                     //}
-                    string res = statut.HasFlag(Statuts.Admis) ? "Admis" : "";
-                    Console.WriteLine($"{nom,-20} : {moyenne,5:N1}  {mention.Item2,-12} {res}");
+
 
                     //string res = moyenne >= 10 ? "Admis" : "";
                     //Console.WriteLine($"{nom,-20} : {moyenne,5:N1}  {mention.Item2,-12} {res}");
@@ -127,7 +155,27 @@ namespace Concours
             Console.WriteLine($"\nTotal : {compteur} étudiant etrangers admis");
         }
 
-     
+        static void AfficherEtudiantsFrançaisBoursiers()
+        {
+            if (DAL.Etudiants == null) return;
+
+            AfficherTexte("Etudiants français boursiers :\n", ConsoleColor.Gray);
+            int cpt = 0;
+
+            for (int i = 0; i < DAL.Etudiants.Length; i++)
+            {
+                if (!DAL.Etudiants[i].statut.HasFlag(Statuts.Etranger) &
+                    DAL.Etudiants[i].statut.HasFlag(Statuts.Boursier))
+                {
+                    cpt++;
+                    Console.WriteLine($"{DAL.Etudiants[i].nomComplet,-20}");
+                }
+            }
+
+            AfficherTexte($"\nTotal : {cpt} étudiants français boursiers", ConsoleColor.DarkGreen);
+        }
+
+
         public static void AfficherTexte(string texte, ConsoleColor couleur)
         {
                 ConsoleColor consoleOrig = Console.ForegroundColor;
