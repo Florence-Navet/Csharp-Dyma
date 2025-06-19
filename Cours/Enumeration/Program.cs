@@ -1,16 +1,23 @@
-﻿namespace Enumerations
+﻿
+namespace Enumerations
 {
     
     internal class Program
     {
+
+
         static void Main(string[] args)
         {
             //Tailles taille = Tailles.M;
 
-    
-            DemoEnumsPerso.TesterConversion(); 
+
+
+            DemoEnumsPerso.TesterConversion();
             DemoEnumsPerso.TesterInterpretation();
             DemoEnumsPerso.TesterInterpretationEntier(40);
+
+            DemoEnumsFlags.TesterEnumFlags();
+
 
 
 
