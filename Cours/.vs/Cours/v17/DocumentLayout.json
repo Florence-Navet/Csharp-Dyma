@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\enola\\Desktop\\LAPLATEFORMEEXERCICE\\LAPLATEFORME2025\\Csharp-Dyma\\Cours\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{493B751D-B76F-40B8-A1FF-2A2F8703E3DA}|Enumeration\\Enumeration.csproj|c:\\users\\enola\\desktop\\laplateformeexercice\\laplateforme2025\\csharp-dyma\\cours\\enumeration\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{493B751D-B76F-40B8-A1FF-2A2F8703E3DA}|Enumeration\\Enumeration.csproj|solutionrelative:enumeration\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BD75C09C-4F42-4DDC-A4F3-2BF35B797CF4}|POO\\POO.csproj|c:\\users\\enola\\desktop\\laplateformeexercice\\laplateforme2025\\csharp-dyma\\cours\\poo\\comptebancaire.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD75C09C-4F42-4DDC-A4F3-2BF35B797CF4}|POO\\POO.csproj|solutionrelative:poo\\comptebancaire.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{493B751D-B76F-40B8-A1FF-2A2F8703E3DA}|Enumeration\\Enumeration.csproj|c:\\users\\enola\\desktop\\laplateformeexercice\\laplateforme2025\\csharp-dyma\\cours\\enumeration\\demoenumsflag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{493B751D-B76F-40B8-A1FF-2A2F8703E3DA}|Enumeration\\Enumeration.csproj|solutionrelative:enumeration\\demoenumsflag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BD75C09C-4F42-4DDC-A4F3-2BF35B797CF4}|POO\\POO.csproj|c:\\users\\enola\\desktop\\laplateformeexercice\\laplateforme2025\\csharp-dyma\\cours\\poo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD75C09C-4F42-4DDC-A4F3-2BF35B797CF4}|POO\\POO.csproj|solutionrelative:poo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,32 +18,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "DemoEnumsFlag.cs",
-              "DocumentMoniker": "C:\\Users\\enola\\Desktop\\LAPLATEFORMEEXERCICE\\LAPLATEFORME2025\\Csharp-Dyma\\Cours\\Enumeration\\DemoEnumsFlag.cs",
-              "RelativeDocumentMoniker": "Enumeration\\DemoEnumsFlag.cs",
-              "ToolTip": "C:\\Users\\enola\\Desktop\\LAPLATEFORMEEXERCICE\\LAPLATEFORME2025\\Csharp-Dyma\\Cours\\Enumeration\\DemoEnumsFlag.cs",
-              "RelativeToolTip": "Enumeration\\DemoEnumsFlag.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "CompteBancaire.cs",
+              "DocumentMoniker": "C:\\Users\\enola\\Desktop\\LAPLATEFORMEEXERCICE\\LAPLATEFORME2025\\Csharp-Dyma\\Cours\\POO\\CompteBancaire.cs",
+              "RelativeDocumentMoniker": "POO\\CompteBancaire.cs",
+              "ToolTip": "C:\\Users\\enola\\Desktop\\LAPLATEFORMEEXERCICE\\LAPLATEFORME2025\\Csharp-Dyma\\Cours\\POO\\CompteBancaire.cs",
+              "RelativeToolTip": "POO\\CompteBancaire.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAQwCsAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-19T09:56:01.047Z",
+              "WhenOpened": "2025-06-20T06:13:30.557Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\enola\\Desktop\\LAPLATEFORMEEXERCICE\\LAPLATEFORME2025\\Csharp-Dyma\\Cours\\Enumeration\\Program.cs",
-              "RelativeDocumentMoniker": "Enumeration\\Program.cs",
-              "ToolTip": "C:\\Users\\enola\\Desktop\\LAPLATEFORMEEXERCICE\\LAPLATEFORME2025\\Csharp-Dyma\\Cours\\Enumeration\\Program.cs",
-              "RelativeToolTip": "Enumeration\\Program.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAwwBIAAAAtAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\enola\\Desktop\\LAPLATEFORMEEXERCICE\\LAPLATEFORME2025\\Csharp-Dyma\\Cours\\POO\\Program.cs",
+              "RelativeDocumentMoniker": "POO\\Program.cs",
+              "ToolTip": "C:\\Users\\enola\\Desktop\\LAPLATEFORMEEXERCICE\\LAPLATEFORME2025\\Csharp-Dyma\\Cours\\POO\\Program.cs",
+              "RelativeToolTip": "POO\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-18T12:17:33.088Z",
+              "WhenOpened": "2025-06-20T05:52:00.285Z",
               "EditorCaption": ""
             }
           ]
