@@ -155,7 +155,7 @@ namespace Concours
             Console.WriteLine($"\nTotal : {compteur} étudiant etrangers admis");
         }
 
-        static void AfficherEtudiantsFrançaisBoursiers()
+        public static void AfficherEtudiantsFrançaisBoursiers()
         {
             if (DAL.Etudiants == null) return;
 
@@ -175,7 +175,11 @@ namespace Concours
             AfficherTexte($"\nTotal : {cpt} étudiants français boursiers", ConsoleColor.DarkGreen);
         }
 
-
+        /// <summary>
+        /// Affiche le texte dans difeeentes couleur
+        /// </summary>
+        /// <param name="texte"></param>
+        /// <param name="couleur"></param>
         public static void AfficherTexte(string texte, ConsoleColor couleur)
         {
                 ConsoleColor consoleOrig = Console.ForegroundColor;
