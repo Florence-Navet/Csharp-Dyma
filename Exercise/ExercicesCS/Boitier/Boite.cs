@@ -6,7 +6,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Boitier
+namespace Boites
 {
     public enum Matieres
     {
@@ -88,6 +88,56 @@ namespace Boitier
             Etiqueter(dest);
             Fragile = f;
         }
+
+        //public void Comparer(Boite boite1, Boite boite2)
+        //{
+        //    if (boite1.Hauteur == boite2.Hauteur &&
+        //        boite1.Largeur == boite2.Largeur &&
+        //        boite1.Longueur == boite2.Longueur)
+        //    {
+        //        Console.WriteLine($" Les deux boites sont de meme dimansions.");
+        //        return;
+        //    } else
+        //    {
+        //        Console.WriteLine($"Les dimensions de la boîte sont : {boite1.Volume} cm³, " +
+        //            $"{boite1.Largeur} cm, {boite1.Hauteur} cm, {boite1.Longueur} cm");
+
+
+
+        //        Console.WriteLine($"Les dimension de la boite 1 sont {boite2.Volume} cm3" +  
+        //           $"{boite2.Largeur} cm, {boite2.Hauteur}cm, {boite2.Longueur}cm.");
+        //    }
+        //}
+
+        public static bool Comparer(Boite boite1, Boite boite2)
+        {
+            return(boite1.Hauteur == boite2.Hauteur &&
+                boite1.Largeur == boite2.Largeur &&
+                boite1.Longueur == boite2.Longueur &&
+                boite1.Matiere == boite2.Matiere);
+
+        }
+        //public bool Comparer(Boite autreBoite)
+        //{
+        //    return this.Hauteur == autreBoite.Hauteur &&
+        //        this.Largeur == autreBoite.Largeur &&
+        //        this.Longueur == autreBoite.Longueur &&
+        //        this.Matiere == autreBoite.Matiere;
+
+        //}
+        //public bool Comparer(Boite boite1)
+        //{
+        //    return (boite1.Hauteur == Hauteur &&
+        //        boite1.Largeur == Largeur &&
+        //        boite1.Longueur == Longueur &&
+        //        boite1.Matiere == Matiere);
+        //}
+
+        public bool Comparer(Boite boite1)
+        {
+            return Comparer(boite1, this);
+        }
+
 
         #endregion
 
