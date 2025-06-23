@@ -1,42 +1,53 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace POO
 {
     internal class CompteBancaire
     {
-        #region Champs privés (invisibles en dehors de la classe) ~~   #region Champs privés (accessibles uniquement à l’intérieur de la classe)~~
+        #region Champs privés
+        private const decimal PLAFOND_MAXI = 1000m;
         private readonly long _numero;
         private decimal _solde;
         private const decimal TAUX_AGIOS = 0.15m;
-        public static readonly decimal TAUX_INTERET = 0.2m; //mieux pour les public
+        public static readonly decimal TAUX_INTERET = 0.2m;
+        private static decimal _tauxAgios;
+        private decimal _plafondRetrait;
         #endregion
 
-        #region Champs publics (accessibles de partout)
-        public string Libelle;
+        #region Propriétés publiques
+        public long Numero => _numero;
+
+        public string Libelle { get; set; } = string.Empty;
+
+        public decimal Solde => _solde;
+
+        public decimal PlafondRetrait
+        {
+            get { return _plafondRetrait; }
+            set
+            {
+                if (value <= PLAFOND_MAXI)
+                    _plafondRetrait = value;
+                else
+                    throw new ArgumentOutOfRangeException(nameof(PlafondRetrait), "Valeur de plafond trop élevée");
+            }
+        }
         #endregion
 
-        // Contructeur
+        #region Constructeur
         public CompteBancaire(long num)
         {
-            _numero = num; // Initialise le numéro du compte
+            _numero = num;
             Libelle = "Compte N°" + num;
-
-           
         }
+        #endregion
 
         #region Méthodes publiques
-        // Crédite le compte du montant spécifié
         public void Crediter(decimal montant)
         {
             _solde += montant;
         }
 
-        // Débite le compte du montant spécifié
         public void Debiter(decimal montant)
         {
             _solde -= montant;
@@ -44,13 +55,25 @@ namespace POO
                 _solde -= _solde * TAUX_AGIOS;
         }
 
-        // Renvoie la valeur du solde courant
+        public void Debiter(decimal montant, string libelle)
+        {
+            Debiter(montant);
+            // Gestion du libellé si nécessaire
+        }
+
+        public void Debiter(decimal montant, string libelle, DateOnly dateEffet)
+        {
+            Debiter(montant, libelle);
+            // Gestion de la date d'effet si nécessaire
+        }
+
         public decimal GetSolde()
         {
             return _solde;
         }
         #endregion
-        #region Méthodes protégées (accessibles à l’intérieur de la classe et de ses dérivées)
+
+        #region Méthodes protégées
         protected virtual decimal CalculerInterets()
         {
             decimal interets = _solde * 0.005m;
