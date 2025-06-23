@@ -18,7 +18,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalendrierPerpetuel_solutio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Concours", "Concours\Concours.csproj", "{F7133876-119E-46C0-ADB7-91DF35C0EBC9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boitier", "Boitier\Boitier.csproj", "{11F7F824-BB6D-4744-8D3F-6BD0887C2E47}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boites", "Boitier\Boites.csproj", "{11F7F824-BB6D-4744-8D3F-6BD0887C2E47}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -6,7 +6,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Boitier
+namespace Boites
 {
     public enum Matieres
     {
@@ -16,28 +16,66 @@ namespace Boitier
         Metal
     }
     internal class Boite
+
     {
+
+        #region Champs et propriétés statiques
+
+        
+
+        // Propriété statique en lecture seule
+        //public static int NbBoites => _nbBoites;
+
+        #endregion
+
+
+        #region Constructeurs
+
+        public Boite(double hauteur, double largeur, double longueur)
+        {
+            Hauteur = hauteur;
+            Largeur = largeur;
+            Longueur = longueur;
+            NbBoites++;
+        }
+
+        public Boite(double hauteur, double largeur, double longueur, Matieres matiere) : 
+            this(hauteur, largeur, longueur)
+        {
+            Matiere = matiere;
+        }
+        #endregion
+
+        #region Proprietes
+
+
         //juste en lecteur donc juste le get
 
-        public double Hauteur { get; } = 30.0;
+        public double Hauteur { get; set; } = 30.0;
         public double Largeur { get; } = 30.0;
         public double Longueur { get; } = 30.0;
+
+        public static int NbBoites { get; private set; }
+
+
+        public Matieres Matiere { get; } = Matieres.Carton;
+     
 
         //propriété Volume en lecture qui retourne le volume
         public double Volume => Hauteur * Largeur;
         // Champ privé associé à la propriété en lecture seule
         private string _destinataire = string.Empty;
 
-      
-
-        //Propriete en lecture seule initialisé à carton
-        public Matieres Matiere { get; } = Matieres.Carton;
 
         //Créer une propriete Destinaire de type string en lecture seule
         public string Destinataire { get; private set; } = string.Empty;
         //créer une propriete fragile en lecture seule
         public bool Fragile { get; private set; }
 
+        #endregion
+
+
+        #region Methodes publiques
 
         //Créer une methode publique Etiqueter permettant
         //d'affecter la valeur de la propriete Destinataire
@@ -51,11 +89,57 @@ namespace Boitier
             Fragile = f;
         }
 
+        //public void Comparer(Boite boite1, Boite boite2)
+        //{
+        //    if (boite1.Hauteur == boite2.Hauteur &&
+        //        boite1.Largeur == boite2.Largeur &&
+        //        boite1.Longueur == boite2.Longueur)
+        //    {
+        //        Console.WriteLine($" Les deux boites sont de meme dimansions.");
+        //        return;
+        //    } else
+        //    {
+        //        Console.WriteLine($"Les dimensions de la boîte sont : {boite1.Volume} cm³, " +
+        //            $"{boite1.Largeur} cm, {boite1.Hauteur} cm, {boite1.Longueur} cm");
 
-        //créer ensuite une surchage permettant d'affectant
-        //les valeurs des proprietes Destinataires et Fragile
 
 
+        //        Console.WriteLine($"Les dimension de la boite 1 sont {boite2.Volume} cm3" +  
+        //           $"{boite2.Largeur} cm, {boite2.Hauteur}cm, {boite2.Longueur}cm.");
+        //    }
+        //}
+
+        public static bool Comparer(Boite boite1, Boite boite2)
+        {
+            return(boite1.Hauteur == boite2.Hauteur &&
+                boite1.Largeur == boite2.Largeur &&
+                boite1.Longueur == boite2.Longueur &&
+                boite1.Matiere == boite2.Matiere);
+
+        }
+        //public bool Comparer(Boite autreBoite)
+        //{
+        //    return this.Hauteur == autreBoite.Hauteur &&
+        //        this.Largeur == autreBoite.Largeur &&
+        //        this.Longueur == autreBoite.Longueur &&
+        //        this.Matiere == autreBoite.Matiere;
+
+        //}
+        //public bool Comparer(Boite boite1)
+        //{
+        //    return (boite1.Hauteur == Hauteur &&
+        //        boite1.Largeur == Largeur &&
+        //        boite1.Longueur == Longueur &&
+        //        boite1.Matiere == Matiere);
+        //}
+
+        public bool Comparer(Boite boite1)
+        {
+            return Comparer(boite1, this);
+        }
+
+
+        #endregion
 
 
     }
