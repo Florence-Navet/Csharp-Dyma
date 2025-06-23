@@ -1,4 +1,5 @@
 ﻿using System.Numerics;
+using System.Runtime.CompilerServices;
 using System.Text;
 
 namespace POO
@@ -15,6 +16,7 @@ namespace POO
             // Instancie un compte bancaire et initialise son numéro
             long numero2 = 8456122;
             CompteBancaire compte2 = new CompteBancaire(numero2);
+            
 
 
             // Les 2 lignes suivantes provoqueraient des erreurs,
@@ -33,6 +35,8 @@ namespace POO
             compte1.Crediter(800m);
             compte1.Debiter(60m);
             decimal solde1 = compte1.GetSolde();
+            compte1.Debiter(123, "achat voiture", new DateOnly(2026, 06, 01));
+            Console.WriteLine($"Le solde du compte {compte1} est de {solde1:C2}");
 
             // Récupère le solde courant via une méthode publique
             Console.WriteLine($"Le solde du compte {numero} est de {solde:C2}");
