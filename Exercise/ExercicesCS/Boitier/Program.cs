@@ -20,6 +20,7 @@
             //4.afficher si contenu fragile ou pas
             Console.WriteLine($"Destinataire : {maBoite.Destinataire}");
             Console.WriteLine($"Contenu fragile : {(maBoite.Fragile ? "Oui" : "Non")}");
+            Console.WriteLine($"Boîte destinée à {b1.Destinataire}, contenu {(maBoite.Fragile ? "fragile" : "non fragile")}");
         }
     }
 }
