@@ -9,9 +9,9 @@ namespace Boites
     internal class Client
 
     {
-        public int NrClient { get; set; }
-        public required string Nom { get; init; }
-        public required string Prenom { get; init; }
-        public required string Adresse { get; init; }
+        public required long NrClient { get; init; }//non modifiable donc init
+        public required string Nom { get; set; } //modifiable en dehors de la classe donc get set
+        public required string Prenom { get; set; }
+        public required string Adresse { get; set; }
     }
 }

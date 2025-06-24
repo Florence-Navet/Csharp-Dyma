@@ -12,6 +12,16 @@ namespace Boites
             Boite maBoite = new Boite(15, 12, 10);
             Console.WriteLine($"Nombre total de boites crées : {Boite.NbBoites}");
 
+            //Etiquetage d'une boite sans classe client
+            //maBoite.Etiqueter("Flo, 19, rue des fleurs, - 83000 Toulon", 456789, true);
+            //if (maBoite.EtiquetteColis != null) {
+            //    Console.WriteLine($"""
+            //        Colis N° : {maBoite.EtiquetteColis.NumeroColis}
+            //        Destinataire : {maBoite.Destinataire}
+            //        {(maBoite.Fragile ? "Fragile" : "Non fragile")}
+            //        """);
+            //}
+
 
             //2.Affiche volume et matiere de la boite
             Console.WriteLine($"Le volume de la boite est de {maBoite.Volume} cm3");
@@ -52,24 +62,26 @@ namespace Boites
                 Adresse = "3 rue du Paradis - 13007 Marseille"
             };
             Boite boite1 = new Boite(20, 15, 10, Matieres.Carton);
-            boite1.Etiqueter(nouveauClient, false, 123456789);
+            boite1.Etiqueter(nouveauClient, 123456789, false);
 
             if (boite1.EtiquetteColis != null)
             {
-                Console.WriteLine($"Colis Numero : {boite1.EtiquetteColis.NumeroColis}");
-                Console.WriteLine($"Destinaire : {boite1.EtiquetteColis.Client}");
-                Console.WriteLine($"{(boite1.Fragile ? "Fragile" : "Non fragile")}");
+                Console.WriteLine($"""
+                    colis N° : {boite1.EtiquetteColis.NumeroColis}
+                    Destinataire : {nouveauClient.Nom}\n{nouveauClient.Prenom}\n {nouveauClient.Adresse}
+                    {(boite1.Fragile ? "Fragile" : "Non Fragile")}
+                    """);
             }
 
 
-       
+
             //Etiquette e1 = new Etiquette
-            ////{
-            ////    NumeroColis = 1235,
-            ////    Client = "Melle Adeline Patenne,\n7, rue de La Plateforme,\n13007 Marseille",
-            ////    Couleur = Couleurs.Vert,
-            ////    Format = Formats.M
-            ////};
+            //{
+            //    NumeroColis = 1235,
+            //    Client = "Melle Adeline Patenne,\n7, rue de La Plateforme,\n13007 Marseille",
+            //    Couleur = Couleurs.Vert,
+            //    Format = Formats.M
+            //};
 
 
 
