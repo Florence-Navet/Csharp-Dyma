@@ -64,11 +64,11 @@ namespace Boites
         //propriété Volume en lecture qui retourne le volume
         public double Volume => Hauteur * Largeur;
         // Champ privé associé à la propriété en lecture seule
-        private string _destinataire = string.Empty;
+        private string destinataire;
 
 
         //Créer une propriete Destinaire de type string en lecture seule
-        public string Destinataire { get; private set; } = string.Empty;
+        public Etiquette EtiquetteColis { get; private set; }
         //créer une propriete fragile en lecture seule
         public bool Fragile { get; private set; }
 
@@ -79,14 +79,21 @@ namespace Boites
 
         //Créer une methode publique Etiqueter permettant
         //d'affecter la valeur de la propriete Destinataire
-        public void Etiqueter(string dest)
+        public void Etiqueter(Client client, long NumeroColis)
         {
-           Destinataire = dest;
+            EtiquetteColis = new Etiquette {
+                NumeroColis = NumeroColis,
+                Client = $"{client.Nom},{client.Prenom},  {client.Adresse}",
+                
+                Couleur = Couleurs.Blanc,
+                Format = Formats.XL
+
+            };
         }
-        public void Etiqueter(string dest, bool f)
+        public void Etiqueter(Client client, bool f, long NumeroColis)
         {
-            Etiqueter(dest);
-            Fragile = f;
+            Etiqueter(client, NumeroColis);
+                Fragile = f;
         }
 
         //public void Comparer(Boite boite1, Boite boite2)

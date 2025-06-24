@@ -17,9 +17,11 @@ namespace Boites
 
     {
         //lecture seule initialisables à l'aide d'un initialiseurs et tte obligatoires
-        public required string Texte { get; init; } = string.Empty;
+        public required string Client { get; init; } = string.Empty;
         public required Couleurs Couleur { get; init; }
         public required Formats Format { get; init; }
+
+        public required long NumeroColis { get; init; }
 
 
     }
