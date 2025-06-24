@@ -21,7 +21,7 @@ namespace Boites
 
         #region Champs et propriétés statiques
 
-        
+
 
         // Propriété statique en lecture seule
         //public static int NbBoites => _nbBoites;
@@ -39,7 +39,7 @@ namespace Boites
             NbBoites++;
         }
 
-        public Boite(double hauteur, double largeur, double longueur, Matieres matiere) : 
+        public Boite(double hauteur, double largeur, double longueur, Matieres matiere) :
             this(hauteur, largeur, longueur)
         {
             Matiere = matiere;
@@ -59,16 +59,16 @@ namespace Boites
 
 
         public Matieres Matiere { get; } = Matieres.Carton;
-     
+
 
         //propriété Volume en lecture qui retourne le volume
         public double Volume => Hauteur * Largeur;
         // Champ privé associé à la propriété en lecture seule
-        private string _destinataire = string.Empty;
+        private string destinataire;
 
 
         //Créer une propriete Destinaire de type string en lecture seule
-        public string Destinataire { get; private set; } = string.Empty;
+        public Etiquette? EtiquetteColis { get; private set; }//juste c
         //créer une propriete fragile en lecture seule
         public bool Fragile { get; private set; }
 
@@ -79,13 +79,38 @@ namespace Boites
 
         //Créer une methode publique Etiqueter permettant
         //d'affecter la valeur de la propriete Destinataire
-        public void Etiqueter(string dest)
+        //public void Etiqueter(Client client, long NumeroColis)
+        //{
+        //    EtiquetteColis = new Etiquette {
+        //        NumeroColis = NumeroColis,
+        //        Client = $"{client.Nom},{client.Prenom},  {client.Adresse}",
+
+        //        Couleur = Couleurs.Blanc,
+        //        Format = Formats.XL
+
+        //    };
+        //}
+        #endregion
+        #region Méthodes publiques
+        public void Etiqueter(Client dest, long numColis)
         {
-           Destinataire = dest;
+            EtiquetteColis = new Etiquette
+            {
+                Destinataire = dest,
+                NumeroColis = numColis,
+                Couleur = Couleurs.Blanc,
+                Format = Formats.XL
+            };
         }
-        public void Etiqueter(string dest, bool f)
+
+        //public void Etiqueter(Client client, bool f, long NumeroColis)
+        //{
+        //    Etiqueter(client, NumeroColis);
+        //        Fragile = f;
+        //}
+        public void Etiqueter(Client dest, long numColis, bool f)
         {
-            Etiqueter(dest);
+            Etiqueter(dest, numColis);
             Fragile = f;
         }
 
@@ -111,7 +136,7 @@ namespace Boites
 
         public static bool Comparer(Boite boite1, Boite boite2)
         {
-            return(boite1.Hauteur == boite2.Hauteur &&
+            return (boite1.Hauteur == boite2.Hauteur &&
                 boite1.Largeur == boite2.Largeur &&
                 boite1.Longueur == boite2.Longueur &&
                 boite1.Matiere == boite2.Matiere);
@@ -143,9 +168,9 @@ namespace Boites
 
 
     }
-      
 
 
 
-    }
 
+
+}
