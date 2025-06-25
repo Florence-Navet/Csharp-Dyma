@@ -253,6 +253,13 @@ namespace Boites
             }
             return false;
         }
+
+
+        /// <summary>
+        /// Transferer les articles d'une boite à une autre
+        /// </summary>
+        /// <param name="autreBoite"></param>
+        /// <returns>Nbre d'article tranferes</returns>
         public int TransfererVers(Boite autreBoite)
         {
             int nbTransferts = 0;
