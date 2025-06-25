@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel.Design;
 using System.Linq;
 using System.Runtime.CompilerServices;
@@ -21,6 +22,7 @@ namespace Boites
     internal class Boite
 
     {
+        private List<Article> _articles;
 
         #region Champs et propriétés statiques
 
@@ -39,6 +41,7 @@ namespace Boites
             Hauteur = hauteur;
             Largeur = largeur;
             Longueur = longueur;
+            _articles = new List<Article>();
             NbBoites++;
         }
 
@@ -56,50 +59,73 @@ namespace Boites
 
         public double Hauteur { get; set; } = 30.0;
         public double Largeur { get; set; } = 30.0;
+       
         public double Longueur { get; set; } = 30.0;
+        public Matieres Matieres { get; } = Matieres.Carton;
+        public double Volume => Hauteur * Largeur * Longueur;
+        public Etiquette? EtiquetteColis {  get; private set; }
+        public bool Fragile { get; set; }
+        public ReadOnlyCollection<Article> Articles => _articles.AsReadOnly();
+        private string destinataire;
 
-        public static int NbBoites { get; private set; }
 
-        private readonly List<Article> _articles = new(); // liste interne
-        public IReadOnlyList<Article> articles => _articles.AsReadOnly(); // lecture seule externe
 
+
+        //public static int NbBoites { get; private set; }
+
+        //private readonly List<Article> _articles = new(); // liste interne
+        //public IReadOnlyList<Article> articles => _articles.AsReadOnly(); // lecture seule externe
+
+
+        //public string Description
+        //{
+        //    get
+        //    {
+        //        StringBuilder sb = new StringBuilder();
+        //        sb.AppendLine($"Boite  de volume de {Volume} en {Matiere} contenant :");
+        //        if (_articles.Count == 0)
+        //        {
+        //            sb.AppendLine(" - Aucun article n'est trouvé.");
+        //        }
+        //        else
+        //        {
+        //            foreach (var article in _articles)
+        //            {
+        //                sb.AppendLine($"- Lot de : {article.Libelle}");
+        //            }
+        //        }
+        //        return sb.ToString();
+        //    }
+
+        //}
         public string Description
         {
             get
             {
-                StringBuilder sb = new StringBuilder();
-                sb.AppendLine($"Boite  de volume de {Volume} en {Matiere} contenant :");
-                if (_articles.Count == 0)
+                string desc = $"Boite de {Volume} en {Matiere} contenant: \n";
+                foreach (var article in _articles)
                 {
-                    sb.AppendLine(" - Aucun article n'est trouvé.");
+                    desc += $" - {article.Libelle}\n";
                 }
-                else
-                {
-                    foreach (var article in _articles)
-                    {
-                        sb.AppendLine($"- Lot de : {article.Libelle}");
-                    }
-                }
-                return sb.ToString();
+                return desc;
             }
-
         }
 
 
-
+        public static int NbBoites {  get; private set; }
         public Matieres Matiere { get; } = Matieres.Carton;
 
 
         //propriété Volume en lecture qui retourne le volume
-        public double Volume => Hauteur * Largeur * Longueur ;
+        //public double Volume => Hauteur * Largeur * Longueur ;
         // Champ privé associé à la propriété en lecture seule
-        private string destinataire;
+        
 
 
         //Créer une propriete Destinaire de type string en lecture seule
-        public Etiquette? EtiquetteColis { get; private set; }//juste c
+        //public Etiquette? EtiquetteColis { get; private set; }//juste c
         //créer une propriete fragile en lecture seule
-        public bool Fragile { get; private set; }
+        //public bool Fragile { get; private set; }
 
         #endregion
 
@@ -193,18 +219,38 @@ namespace Boites
         }
 
 
+        //public bool TryAddArticle(Article article)
+        //{
+        //    double volumeDisponible = Volume;
+        //    double volumeArticles = _articles.Sum(a => a.Volume);
+
+        //    // ✅ ici, on utilise l'objet passé en paramètre
+        //    if (volumeArticles + article.Volume <= volumeDisponible)
+        //    {
+        //        _articles.Add(article);
+        //        return true;
+        //    }
+
+        //    return false;
+        //}
+
+        /// <summary>
+        /// Tente d'ajoute un article dans la boite si la place le permet
+        /// </summary>
+        /// <param name="article"></param>
+        /// <returns>True si l'article a été ajoute sinon False</returns>
         public bool TryAddArticle(Article article)
         {
-            double volumeDisponible = Volume;
-            double volumeArticles = _articles.Sum(a => a.Volume);
-
-            // ✅ ici, on utilise l'objet passé en paramètre
-            if (volumeArticles + article.Volume <= volumeDisponible)
+            double volumeDisponible = 0;
+            foreach (Article a in _articles)
+            {
+                volumeDisponible += a.Volume;
+            }
+            if (volumeDisponible + article.Volume <= Volume)
             {
                 _articles.Add(article);
                 return true;
             }
-
             return false;
         }
         public int TransfererVers(Boite autreBoite)

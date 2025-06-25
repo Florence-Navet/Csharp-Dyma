@@ -189,7 +189,7 @@ namespace Boites
                 Console.WriteLine("Article 1 ajouté");
             else
                 Console.WriteLine("Article 1 non ajouté");
-            //Console.WriteLine(maBoite2.Description);
+            Console.WriteLine(maBoite2.Description);
 
 
             Article a4 = new Article("un rétroprojecteur", 1000);
@@ -198,7 +198,7 @@ namespace Boites
                 Console.WriteLine("Article 2 ajouté");
             else
                 Console.WriteLine("Article 2 non ajouté");
-            //Console.WriteLine(maBoite2.Description);
+            Console.WriteLine(maBoite2.Description);
 
 
             Article a5 = new Article("Un canapé convertible", 2000);
