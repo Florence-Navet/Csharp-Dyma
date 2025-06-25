@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\enola\\OneDrive\\Desktop\\Githubplateforme\\2025\\C#\\Cours\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{47517129-6614-4ACE-9769-C6196CB00863}|POO2\\POO2.csproj|c:\\users\\enola\\onedrive\\desktop\\githubplateforme\\2025\\c#\\cours\\poo2\\model\\club.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{47517129-6614-4ACE-9769-C6196CB00863}|POO2\\POO2.csproj|solutionrelative:poo2\\model\\club.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{47517129-6614-4ACE-9769-C6196CB00863}|POO2\\POO2.csproj|c:\\users\\enola\\onedrive\\desktop\\githubplateforme\\2025\\c#\\cours\\poo2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{47517129-6614-4ACE-9769-C6196CB00863}|POO2\\POO2.csproj|solutionrelative:poo2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47517129-6614-4ACE-9769-C6196CB00863}|POO2\\POO2.csproj|c:\\users\\enola\\onedrive\\desktop\\githubplateforme\\2025\\c#\\cours\\poo2\\model\\club.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47517129-6614-4ACE-9769-C6196CB00863}|POO2\\POO2.csproj|solutionrelative:poo2\\model\\club.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{47517129-6614-4ACE-9769-C6196CB00863}|POO2\\POO2.csproj|c:\\users\\enola\\onedrive\\desktop\\githubplateforme\\2025\\c#\\cours\\poo2\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -22,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -63,26 +63,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\enola\\OneDrive\\Desktop\\Githubplateforme\\2025\\C#\\Cours\\POO2\\Program.cs",
               "RelativeDocumentMoniker": "POO2\\Program.cs",
               "ToolTip": "C:\\Users\\enola\\OneDrive\\Desktop\\Githubplateforme\\2025\\C#\\Cours\\POO2\\Program.cs",
               "RelativeToolTip": "POO2\\Program.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAAAEQAAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAADcAAAAAAAAAAAAQwEQAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-25T05:29:39.99Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Club.cs",
               "DocumentMoniker": "C:\\Users\\enola\\OneDrive\\Desktop\\Githubplateforme\\2025\\C#\\Cours\\POO2\\Model\\Club.cs",
               "RelativeDocumentMoniker": "POO2\\Model\\Club.cs",
-              "ToolTip": "C:\\Users\\enola\\OneDrive\\Desktop\\Githubplateforme\\2025\\C#\\Cours\\POO2\\Model\\Club.cs*",
-              "RelativeToolTip": "POO2\\Model\\Club.cs*",
-              "ViewState": "AgIAABMAAAAAAAAAAAAkwB4AAAAUAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\enola\\OneDrive\\Desktop\\Githubplateforme\\2025\\C#\\Cours\\POO2\\Model\\Club.cs",
+              "RelativeToolTip": "POO2\\Model\\Club.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAiwCsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-25T05:23:45.533Z",
               "EditorCaption": ""

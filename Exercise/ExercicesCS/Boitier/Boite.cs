@@ -6,6 +6,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace Boites
 {
     public enum Matieres
@@ -31,7 +32,7 @@ namespace Boites
 
         #region Constructeurs
 
-        public Boite(double hauteur, double largeur, double longueur)
+        public Boite (double hauteur, double largeur, double longueur)
         {
             Hauteur = hauteur;
             Largeur = largeur;
@@ -52,17 +53,43 @@ namespace Boites
         //juste en lecteur donc juste le get
 
         public double Hauteur { get; set; } = 30.0;
-        public double Largeur { get; } = 30.0;
-        public double Longueur { get; } = 30.0;
+        public double Largeur { get; set; } = 30.0;
+        public double Longueur { get; set; } = 30.0;
 
         public static int NbBoites { get; private set; }
+
+        private readonly List<Article> _articles = new(); // liste interne
+        public IReadOnlyList<Article> articles => _articles.AsReadOnly(); // lecture seule externe
+
+        public string Description
+        {
+            get
+            {
+                StringBuilder sb = new StringBuilder();
+                sb.AppendLine($"Boite  de volume de {Volume} en {Matiere} contenant :");
+                if (_articles.Count == 0)
+                {
+                    sb.AppendLine(" - Aucun article n'est trouvé.");
+                }
+                else
+                {
+                    foreach (var article in _articles)
+                    {
+                        sb.AppendLine($"- Lot de : {article.Libelle}");
+                    }
+                }
+                return sb.ToString();
+            }
+
+        }
+
 
 
         public Matieres Matiere { get; } = Matieres.Carton;
 
 
         //propriété Volume en lecture qui retourne le volume
-        public double Volume => Hauteur * Largeur;
+        public double Volume => Hauteur * Largeur * Longueur ;
         // Champ privé associé à la propriété en lecture seule
         private string destinataire;
 
@@ -164,13 +191,31 @@ namespace Boites
         }
 
 
-        #endregion
+        public bool TryAddArticle(Article article)
+        {
+            double volumeDisponible = Volume;
+            double volumeArticles = _articles.Sum(a => a.Volume);
+
+            // ✅ ici, on utilise l'objet passé en paramètre
+            if (volumeArticles + article.Volume <= volumeDisponible)
+            {
+                _articles.Add(article);
+                return true;
+            }
+
+            return false;
+        }
+
 
 
     }
 
-
-
+    #endregion
 
 
 }
+
+
+
+
+
