@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,14 +25,20 @@ namespace POO2.Model
     
     internal class Club
     {
+        private List<Joueur> _Joueurs;
+        //public List<Joueur> Joueurs { get; }
         public string Nom { get; }
         public string Ville { get; set; } = string.Empty;
-        public List<Joueur> Joueurs { get; }
+        public ReadOnlyCollection<Joueur> Joueurs => Joueurs.AsReadOnly();
 
         public Club(string nom)
         {
             Nom = nom;
-            Joueurs = new List<Joueur>();
+            //Joueurs = new List<Joueur>();
+            _Joueurs = new List<Joueur>();
+            _Joueurs.Add(new Joueur("Patenne", "Adeline"));
+            _Joueurs.Add(new Joueur("Mousquet", "Kévin"));
+            _Joueurs.Add(new Joueur("Tadoukepa-Misri", "Saya"));
         }
     }
 }
