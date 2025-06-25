@@ -181,17 +181,16 @@ namespace Boites
 
             Console.WriteLine("####Nouveaux Articles######");
 
-            
 
-            Article a3 = new Article("Un ordinateur", 4000);
-            if (myBoite2.TryAddArticle(a3))
-            {
-                Console.WriteLine("Article bien ajouté !");
-            }
+
+            Article a3 = new Article("un ordinateuer", 500);
+
+            if (maBoite2.TryAddArticle(a3))
+                Console.WriteLine("Article 1 ajouté");
             else
-            {
-                Console.WriteLine("Article non ajouté (pas assez d’espace)");
-            }
+                Console.WriteLine("Article 1 non ajouté");
+            //Console.WriteLine(maBoite2.Description);
+
 
             Article a4 = new Article("un rétroprojecteur", 1000);
 
@@ -199,7 +198,7 @@ namespace Boites
                 Console.WriteLine("Article 2 ajouté");
             else
                 Console.WriteLine("Article 2 non ajouté");
-            Console.WriteLine(maBoite2.Description);
+            //Console.WriteLine(maBoite2.Description);
 
 
             Article a5 = new Article("Un canapé convertible", 2000);
@@ -207,7 +206,13 @@ namespace Boites
                 Console.WriteLine("Article 3 ajouté");
             else
                 Console.WriteLine("Article 3 non ajouté");
+
+
+            Console.WriteLine("------Nouvelle --boite------");
             Console.WriteLine(maBoite2.Description);
+
+
+
 
 
 
