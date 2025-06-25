@@ -156,7 +156,7 @@ namespace Boites
 
             if (boite1.TryAddArticle(a2))
             {
-                Console.WriteLine("Articile bien ajouté :" );
+                Console.WriteLine("Article bien ajouté :" );
             }else
             {
                 Console.WriteLine("Article non ajouté");
@@ -183,7 +183,7 @@ namespace Boites
 
 
 
-            Article a3 = new Article("un ordinateuer", 500);
+            Article a3 = new Article("un ordinateur", 500);
 
             if (maBoite2.TryAddArticle(a3))
                 Console.WriteLine("Article 1 ajouté");
@@ -210,6 +210,50 @@ namespace Boites
 
             Console.WriteLine("------Nouvelle --boite------");
             Console.WriteLine(maBoite2.Description);
+
+
+            Console.WriteLine("\nAppuyer sur une touche pour exercice suivant ...");
+            Console.ReadKey();
+            Console.Clear();
+
+            Console.WriteLine("------Exercice 3------");
+            Boite boite3 = new Boite(10, 10, 10);
+            Boite boite4 = new Boite(20, 20, 20);
+
+            //creation d'articles
+            Console.WriteLine();
+            Article a7 = new Article ("Livre", 50);
+            Article a8 = new Article ("Stylo", 150); ;
+            Article a9 = new Article ("Lampe", 20);
+            Article a10 = new Article ("Bureau", 200);
+
+            //Ajoute dans boite 3
+            boite3.TryAddArticle(a7);
+            boite3.TryAddArticle(a8);
+            boite3.TryAddArticle(a9);
+            boite3.TryAddArticle(a10);
+            Console.WriteLine("Contenu initial des boites :");
+            Console.WriteLine(boite3.Description);
+            Console.WriteLine(boite4.Description);
+
+            //transfert vers boite 4
+            Console.WriteLine();
+            Console.WriteLine("Transfert en cours");
+
+            int Transfert = boite3.TransfererVers(boite4);
+
+            Console.WriteLine($"Nombre d'aticles transferes : {Transfert}");
+            Console.WriteLine();
+
+            Console.WriteLine("Contenu après transfer :");
+            Console.WriteLine("boite 3 :");
+            Console.WriteLine(boite3.Description);
+            Console.WriteLine("boite 4 :");
+            Console.WriteLine(boite4.Description);
+
+
+
+
 
 
 

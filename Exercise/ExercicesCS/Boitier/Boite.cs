@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.Design;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Runtime.ConstrainedExecution;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
@@ -204,6 +206,29 @@ namespace Boites
             }
 
             return false;
+        }
+        public int TransfererVers(Boite autreBoite)
+        {
+            int nbTransferts = 0;
+
+            // On parcourt la liste des articles à l'envers (du dernier au premier)
+            for (int i = _articles.Count - 1; i >= 0; i--)
+            {
+                var article = _articles[i];
+
+                if (autreBoite.TryAddArticle(article))
+                {
+                    _articles.RemoveAt(i);
+                    nbTransferts++;
+                }
+                else
+                {
+                    // Plus de place dans la boîte destination, on arrête le transfert
+                    break;
+                }
+            }
+
+            return nbTransferts;
         }
 
 
