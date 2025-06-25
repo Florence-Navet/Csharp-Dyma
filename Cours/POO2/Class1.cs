@@ -15,7 +15,7 @@ namespace POO2
         {
             Console.WriteLine();
 
-            StringBuilder sb;
+            //StringBuilder sb;
 
             XmlSerializer xs;
         }

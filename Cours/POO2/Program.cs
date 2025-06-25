@@ -30,7 +30,7 @@ namespace POO2
             OL.Joueurs.Add(j1);
             Joueur j2 = new Joueur("Bonnevie", "Kayne");
             OL.Joueurs.Add(j2);
-            Joueur j3 = new Joueur("Silva", "Henrique");
+            Joueur j3 = new Joueur("Silva", "Henrique");//syntaxe plus condense
             OL.Joueurs.Add(j3);
 
             // Parcourt la liste 
@@ -38,13 +38,20 @@ namespace POO2
             {
                 Console.WriteLine(OL.Joueurs[i].Nom);
             }
+            //insertion d'éléments au milieu de la liste
+            Joueur j4 = new Joueur("Patenne", "Adeline");
+            OL.Joueurs.Insert(0, j4);// ajoute le joueur en 2eme premiere
 
             // Ajoute un joueur en première position dans la liste
-            Joueur j4 = new Joueur("Lopes", "Anthony");
-            OL.Joueurs.Insert(0, j4);
+            Joueur j5 = new Joueur("Lopes", "Anthony");
+            OL.Joueurs.Insert(0, j5);
 
             // Supprime le dernier joueur de la liste
             OL.Joueurs.RemoveAt(OL.Joueurs.Count - 1);
+
+           // OL.Joueurs.RemoveRange()Debut et fin en parametre
+           //Ol.Joueurs.Remove(J1);
+           //Ol.Joueurs.Clear(); on vide la liste
 
             Console.WriteLine();
             foreach (Joueur joueur in OL.Joueurs)
@@ -57,6 +64,9 @@ namespace POO2
 
             // Récupère le premier joueur dont le nom commence par Bo
             Joueur? j = OL.Joueurs.Find(j => j.Nom.StartsWith("Bo"));
+
+            // Récupère le dernier joueur dont le nom commence par Bo
+            Joueur? j5 = OL.Joueurs.FindLast(j => j.Nom.StartsWith("Bo"));
 
             // Vérifie si un joueur est présent dans la liste
             bool present = OL.Joueurs.Contains(j3);
