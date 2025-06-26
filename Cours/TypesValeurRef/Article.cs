@@ -12,8 +12,11 @@ namespace TypesValeurRef
 		public string Libelle { get; set; }
 		public Fournisseur? Fournisseur { get; set; }
 
-
-		public Article(int id, string libelle)
+        public Article()
+        {
+            
+        }
+        public Article(int id, string libelle)
 		{
 			Id = id;
 			Libelle = libelle;
@@ -25,7 +28,8 @@ namespace TypesValeurRef
 		public long SIRET { get; set; }
 		public string? Nom { get; set; } = string.Empty;
 
-		public Fournisseur(long siret, string? nom)
+
+        public Fournisseur(long siret, string? nom)
 		{
 			SIRET = siret;
 			Nom = nom;

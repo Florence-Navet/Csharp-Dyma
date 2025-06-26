@@ -12,7 +12,17 @@ namespace TypesValeurRef
 			//TesterEgalitéTypeValeur();
 			//TesterEgalitéTypeRef();
 			//TesterChaines();
-			//TesterOperateurNull();
+			TesterOperateurNull();
+
+
+			//var remplace Article - var est un racourci de syntaxe
+			var ar = new Article(1, "Truc");
+
+			Article a0 = new();
+			Article a1 = new(12, "truc");
+			Article a2 = new(id: 12, libelle:"truc");
+
+
 		}
 
 		static void TesterCopieTypeValeur()
