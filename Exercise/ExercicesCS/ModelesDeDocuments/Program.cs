@@ -39,6 +39,7 @@ namespace ModelesDeDocuments
             string[] nomsModèles = { "Modèle A", "Modèle B", "Modèle C" };
 
             for (int i = 0; i < nomsModèles.Length; i++) {
+                
                 var doc = Document.CreerDepuisModele(nomsModèles[i]);
                 AfficherDocument(doc);
             }
