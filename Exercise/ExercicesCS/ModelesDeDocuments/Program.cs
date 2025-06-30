@@ -10,8 +10,9 @@ namespace ModelesDeDocuments
             Console.WriteLine();
 
             // Création du tableau de 3 personnes, la première est null
-            Personne?[] personnes = new Personne?[3];
-            personnes[0] = null;
+            //Personne?[] personnes = new Personne?[3];
+            var personnes = new Personne[3];
+            //personnes[0] = null;
             personnes[1] = new Personne { Prenom = "Julien", Nom = "Mousquet" };
             personnes[2] = new Personne { Prenom = "Tristan", Nom = "Mousquet" };
 
@@ -39,6 +40,7 @@ namespace ModelesDeDocuments
             string[] nomsModèles = { "Modèle A", "Modèle B", "Modèle C" };
 
             for (int i = 0; i < nomsModèles.Length; i++) {
+                
                 var doc = Document.CreerDepuisModele(nomsModèles[i]);
                 AfficherDocument(doc);
             }
@@ -91,7 +93,7 @@ namespace ModelesDeDocuments
             }
             else
             {
-                Console.WriteLine("Document introuvable");
+                Console.WriteLine("Document introuvable nulle part");
             }
         }
     }
