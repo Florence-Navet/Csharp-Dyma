@@ -13,7 +13,7 @@ namespace Boites
     public enum Couleurs { Blanc, Bleu, Vert, Jaune, Orange, Rouge, Marron }
     public enum Formats { XS, S, L, M, XL }
 
-    internal class Etiquette
+    public class Etiquette
 
     {
         //lecture seule initialisables à l'aide d'un initialiseurs et tte obligatoires

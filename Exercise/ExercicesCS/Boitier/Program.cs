@@ -4,7 +4,7 @@ using System.Security.Cryptography.X509Certificates;
 
 namespace Boites
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {

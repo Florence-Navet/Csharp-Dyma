@@ -19,7 +19,7 @@ namespace Boites
         Bois,
         Metal
     }
-    internal class Boite
+    public class Boite
 
     {
         private List<Article> _articles;
@@ -57,10 +57,10 @@ namespace Boites
 
         //juste en lecteur donc juste le get
 
-        public double Hauteur { get; set; } = 30.0;
-        public double Largeur { get; set; } = 30.0;
+        public double Hauteur { get; set; }
+        public double Largeur { get; set; }
        
-        public double Longueur { get; set; } = 30.0;
+        public double Longueur { get; set; }
         public Matieres Matieres { get; } = Matieres.Carton;
         public double Volume => Hauteur * Largeur * Longueur;
         public Etiquette? EtiquetteColis {  get; private set; }

@@ -1,4 +1,4 @@
-﻿namespace POO
+﻿namespace POOprof
 {
 	public class CompteBancaire
 	{
