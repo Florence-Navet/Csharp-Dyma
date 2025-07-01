@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Boites
 {
-    internal class Client
+    public class Client
 
     {
         public required long NrClient { get; init; }//non modifiable donc init

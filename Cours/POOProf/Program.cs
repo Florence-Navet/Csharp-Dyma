@@ -2,9 +2,9 @@
 using System.Text;
 
 
-namespace POO
+namespace POOprof
 {
-	internal class Program
+	public class Program
 	{
 		static void Main(string[] args)
 		{
