@@ -26,6 +26,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Debogage", "Debogage\Deboga
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boites_Tests", "Boites_Tests\Boites_Tests.csproj", "{7B3A7686-AFD7-4879-9725-9A3761F274A0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DistributeurBoissons", "DistributeurBoissons\DistributeurBoissons.csproj", "{83CBF9B9-A7B2-4273-83F6-344275B5568C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -68,6 +70,10 @@ Global
 		{7B3A7686-AFD7-4879-9725-9A3761F274A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7B3A7686-AFD7-4879-9725-9A3761F274A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7B3A7686-AFD7-4879-9725-9A3761F274A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83CBF9B9-A7B2-4273-83F6-344275B5568C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83CBF9B9-A7B2-4273-83F6-344275B5568C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83CBF9B9-A7B2-4273-83F6-344275B5568C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83CBF9B9-A7B2-4273-83F6-344275B5568C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
