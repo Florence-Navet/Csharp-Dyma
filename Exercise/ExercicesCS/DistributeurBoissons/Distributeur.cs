@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -66,7 +67,7 @@ namespace DistributeurBoissons
 
 
         /// <summary>
-        /// Recharge le distributeur avec le nombre d'unités spécifié
+        /// Recharge le distributeur avec le nombre d'unités spécifiéa  
         /// pour le stock d'indice spécifié ou pour tous les stocks si indice = -1
         /// </summary>
         /// <param name="nbUnits">Nombre d'unités de recharge</param>
@@ -76,6 +77,7 @@ namespace DistributeurBoissons
         public void Recharger(int nbUnits, int indiceStock = -1)
         {
             // TODO : vérifier les valeurs des paramètres
+            //new ArgumentOutOfRangeException pour les deux
             if (nbUnits < 0 || nbUnits > 100)
             {
                 throw new UnitesIncorrectesException("Le nombre d'unites doit être compris entre 0 et 100");
@@ -115,15 +117,18 @@ namespace DistributeurBoissons
 
         // Vérifie si le code distributeur de la carte est le bon
         // et émet une exception si ce n'est pas le cas
+        
         public void ValiderCarte(Carte carte)
         {
             if (carte == null)
             {
                 throw new ArgumentNullException(nameof(carte), "La carte ne peut pas être null");
+                
             }
 
             if (carte.CodeDistributeur != CODE_DISTRI)
             {
+                ////UnauthorizedAccessException   pouvait être utilise
                 throw new CarteNonValideException("La carte n'est pas valide pour ce distrbuteur");
             }
         }
@@ -132,19 +137,20 @@ namespace DistributeurBoissons
         // et émet une exception si ce n'est pas le cas
         public void VérifierStocks(TypesBoissons typeBoisson)
         {
-            int index = (int)typeBoisson;
+            //int index = (int)typeBoisson;
 
             //verifier si stock boisson demandée
+            //InvalidOperationException
 
-            if (_stocks[index] <= 0)
+            if (_stocks[(int)typeBoisson] == 0)
             {
                 throw new StockInsuffisantException($"Stock de {typeBoisson} insuffisant.");
             }
-            if (_stocks[EAU] <= 0)
+            if (_stocks[EAU] == 0)
             {
                 throw new StockInsuffisantException("Le stock en eau est insuffisant");
             } 
-            if (_stocks[GOBELETS] <= 0)
+            if (_stocks[GOBELETS] == 0)
             {
                 throw new StockInsuffisantException("Le stock en gobelets st insuffisant");
             }
@@ -152,6 +158,7 @@ namespace DistributeurBoissons
 
         // Débite la carte du montant demandé
         // ou émet une exception si le solde est insuffisant
+        //ArgumentException
         public void DébiterCarte(Carte carte, decimal montant)
         {
             if (carte.Solde < montant) 
