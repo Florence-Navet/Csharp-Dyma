@@ -30,6 +30,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DistributeurBoissons", "Dis
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DistributeurBoissonTest", "DistributeurBoissonTest\DistributeurBoissonTest.csproj", "{21BF843B-167D-403D-9D94-4B580FD4523D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Facturation", "Facturation\Facturation.csproj", "{622E1E8C-89F2-4260-ADDB-490F53CD38C3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -80,9 +82,16 @@ Global
 		{21BF843B-167D-403D-9D94-4B580FD4523D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{21BF843B-167D-403D-9D94-4B580FD4523D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{21BF843B-167D-403D-9D94-4B580FD4523D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{622E1E8C-89F2-4260-ADDB-490F53CD38C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{622E1E8C-89F2-4260-ADDB-490F53CD38C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{622E1E8C-89F2-4260-ADDB-490F53CD38C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{622E1E8C-89F2-4260-ADDB-490F53CD38C3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{622E1E8C-89F2-4260-ADDB-490F53CD38C3} = {9C8CB701-102D-CF49-A3E0-89AC09D42C2C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {575EE9E5-8F88-4393-B658-96B91B3648B0}
