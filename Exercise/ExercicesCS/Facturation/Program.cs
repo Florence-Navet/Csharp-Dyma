@@ -42,7 +42,31 @@ namespace Facturation
             Console.WriteLine("Etapes :");
 
             foreach (var étape in prestationLT.Etapes)
-                Console.WriteLine($"- {étape.Libellé} du {étape.DateDébut:dd/MM/yy} au {étape.DateFin:dd/MM/yy} ({étape.Avancement:P0})");
+                Console.WriteLine($"- {étape.Libellé} du {étape.DateDébut:dd/MM/yy} au {étape.DateFin:dd/MM/yy} " +
+                    $"({étape.Avancement:P0})");
+
+            Console.WriteLine();
+
+
+            Console.WriteLine("\nAppuyer sur une touche pour continuer ...");
+            Console.ReadKey();
+            Console.Clear();
+
+
+            Console.WriteLine("\n=======================");
+            Console.WriteLine("Génération des factures");
+            Console.WriteLine("=======================\n");
+
+            // 📦 Facture classique pour un particulier
+            var factureClassique = new Facture(particulier, prestaSimple, new DateTime(2024, 5, 25));
+            Console.WriteLine(factureClassique.Editer());
+
+            // 📦 Facture de situation pour une entreprise
+            var factureSituation = new FactureSituation(entreprise, prestationLT, new DateTime(2024, 7, 10));
+            Console.WriteLine(factureSituation.Editer());
+
         }
+
+
     }
 }

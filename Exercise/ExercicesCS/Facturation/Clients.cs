@@ -44,6 +44,8 @@ namespace Facturation
                 Nom = nom;
                 Prénom = prénom;
             }
+   
+
         }
 
 
@@ -63,6 +65,9 @@ namespace Facturation
             {
                 return $"""
 			{base.ToString()}
+			Référence : {Id}
+			{NomComplet}
+			Adresse : {Adresse}
 			SIRET : {SIRET:### ### ### #####}
 			""";
             }
