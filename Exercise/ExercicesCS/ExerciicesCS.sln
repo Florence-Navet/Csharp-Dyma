@@ -32,6 +32,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DistributeurBoissonTest", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Facturation", "Facturation\Facturation.csproj", "{622E1E8C-89F2-4260-ADDB-490F53CD38C3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "Servi ces\Services.csproj", "{14A205A3-36D4-40A3-8221-8E20F7802330}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -86,6 +88,10 @@ Global
 		{622E1E8C-89F2-4260-ADDB-490F53CD38C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{622E1E8C-89F2-4260-ADDB-490F53CD38C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{622E1E8C-89F2-4260-ADDB-490F53CD38C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14A205A3-36D4-40A3-8221-8E20F7802330}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14A205A3-36D4-40A3-8221-8E20F7802330}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14A205A3-36D4-40A3-8221-8E20F7802330}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14A205A3-36D4-40A3-8221-8E20F7802330}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
