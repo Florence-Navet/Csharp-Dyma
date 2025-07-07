@@ -1,6 +1,10 @@
 ﻿using Services;
+using Services.TestClient; 
+using Services.Interfaces;
+using Services.Test;
 
-namespace Servi_ces.UI
+
+namespace Services.UI
 {
     class Program
     {
@@ -20,8 +24,9 @@ namespace Servi_ces.UI
                 Console.Clear();
                 Console.WriteLine("========= ACCUEIL =========");
                 Console.WriteLine("0. Quitter l'application");
-                Console.WriteLine("1. Factures simples");
-                Console.WriteLine("2. Factures de situation");
+                Console.WriteLine("1. Factures simples ");
+                Console.WriteLine("2. Factures de situation ");
+
                 Console.Write("Votre choix ? ");
                 string choix = Console.ReadLine();
                 Console.Clear();
@@ -34,19 +39,20 @@ namespace Servi_ces.UI
                         continuer = false;
                         break;
                     case "1":
-                        pageActive = new PageFacture
+                        pageActive = new PageFacture(new ServiceFacture())
                         {
                             Titre = "Facture simple",
                             Parente = accueil
                         };
                         break;
                     case "2":
-                        pageActive = new PageFactureSituation
+                        pageActive = new PageFactureSituation(new ServiceFacture())
                         {
                             Titre = "Factures de situation",
                             Parente = accueil
                         };
                         break;
+             
                     default:
                         Console.WriteLine("Choix invalide !");
                         break;
@@ -54,10 +60,14 @@ namespace Servi_ces.UI
 
                 if (pageActive != null)
                 {
+                    Console.WriteLine("\nAppuyez sur une touche pour afficher la page...");
+                    Console.ReadKey();            
+                    Console.Clear();              
                     pageActive.Afficher();
-                    Console.WriteLine("\nAppuyez sur une touche pour revenir au menu...");
-                    Console.ReadKey();
                 }
+
+                Console.WriteLine("\nAppuyez sur une touche pour revenir au menu...");
+                Console.ReadKey();
             }
         }
     }

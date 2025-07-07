@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Servi_ces.UI
+namespace Services.UI
 {
     public interface IPage
     {
-        IPage Parente { get; set; }
+        IPage? Parente { get; set; }
 
         string Titre { get; set; }
 

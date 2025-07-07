@@ -1,12 +1,12 @@
 ﻿using System;
 
-namespace Servi_ces.UI
+namespace Services.UI
 {
     public abstract class Page : IPage
     {
-        public IPage Parente { get; set; }
+        public IPage? Parente { get; set; }
 
-        public string Titre { get; set; }
+        public string Titre { get; set; } = string.Empty;
 
         public virtual void Afficher()
         {
