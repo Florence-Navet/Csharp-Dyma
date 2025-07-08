@@ -1,4 +1,4 @@
-# c-Dyma et .NET  
+# C# et .NET sur Dyma  
 Cours Dyma C#  
 1. Quizz sur les capitales
 2. Edition de factures en utilisant le polymorphisme  
