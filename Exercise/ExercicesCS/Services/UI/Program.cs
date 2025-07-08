@@ -41,14 +41,14 @@ namespace Services.UI
                     case "1":
                         pageActive = new PageFacture(new ServiceFacture())
                         {
-                            Titre = "Facture simple",
+                            //Titre = "Facture simple",
                             Parente = accueil
                         };
                         break;
                     case "2":
                         pageActive = new PageFactureSituation(new ServiceFacture())
                         {
-                            Titre = "Factures de situation",
+                            //Titre = "Factures de situation",
                             Parente = accueil
                         };
                         break;

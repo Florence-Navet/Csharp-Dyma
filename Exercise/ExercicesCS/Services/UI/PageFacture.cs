@@ -17,14 +17,14 @@ namespace Services.UI
         public override void Executer()
         {
 
-            Console.WriteLine("Page de Facture !");
-            Console.WriteLine("-------------------------------");
+            Console.WriteLine("***Nouvelle Facture Particulier ***");
+            Console.WriteLine("-----------------------------------");
 
             // Utilise l'objet injecté
-            DemoUtils.TesterFacturation(_serviceFacture);
+            DemoUtils.TesterFactureSimple(_serviceFacture);
 
-           
-            
+
+
 
         }
     }

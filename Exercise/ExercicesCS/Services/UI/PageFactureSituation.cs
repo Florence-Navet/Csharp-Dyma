@@ -24,10 +24,10 @@ namespace Services.UI
 
         public override void Executer()
         {
-            Console.WriteLine("Pages de Factures de situation!");
-            Console.WriteLine("-------------------------------");
-            DemoUtils.TesterFacturation(_serviceFacture);
-           
+            Console.WriteLine("***Nouvelle Facture Entreprise ***");
+            Console.WriteLine("-----------------------------------");
+            DemoUtils.TesterFactureSituation();
+
         }
     }
 }

@@ -11,7 +11,7 @@ namespace Services.UI
         public virtual void Afficher()
         {
             Console.WriteLine(Titre);
-            Console.WriteLine("-----------------------");
+            Console.WriteLine("-----------------------------------");
             Executer();
         }
 

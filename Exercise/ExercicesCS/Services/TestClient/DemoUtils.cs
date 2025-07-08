@@ -36,30 +36,64 @@ namespace Services.Test
                 Console.WriteLine($"- {étape.Libellé} du {étape.DateDébut:dd/MM/yy} au {étape.DateFin:dd/MM/yy} ({étape.Avancement:P0})");
         }
 
-        public static void TesterFacturation(IServiceFacture facture)
+        public static void TesterFactureSimple(IServiceFacture facture)
         {
+            //Console.WriteLine("***Nouvelle Facture Particulier ***");
+
             var particulier = new Particulier(Civilités.Mr, "Dupont", "Eric", "29 rue de la liberté - 88000 Epinal");
             var dt0 = new DateTime(2024, 5, 15);
             var presta = new Prestation(particulier.Id, dt0, "Déclaration de revenus 2023", 300m);
-            //var facture = new ServiceFacture();
+
             facture.Client = particulier;
             facture.Prestation = presta;
             facture.DateCréation = dt0.AddDays(10);
 
-
             Console.WriteLine(facture.Editer());
+        }
+
+        public static void TesterFactureSituation()
+        {
+            
 
             var entreprise = new Entreprise("Microsoft France", 32773318400516, "19 rue du bois fleuri 75015 Paris");
             var dt = new DateTime(2024, 1, 1);
             var plt = new PrestationLT(entreprise.Id, dt, "Compta trimestrielle", 2000m);
 
+            // Ajouter les 4 étapes et générer 4 factures
             for (int i = 1; i <= 4; i++)
             {
                 DateTime dateFinEtape = dt.AddMonths(3 * i).AddDays(-1);
                 plt.AjouterEtapes(dateFinEtape, i / 4f, $"Compta du trimestre {i}");
+
                 var fs = new FactureSituation(entreprise, plt, dateFinEtape.AddDays(10));
                 Console.WriteLine(fs.Editer());
             }
         }
+
+        //public static void TesterFacturation(IServiceFacture facture)
+        //{
+        //    var particulier = new Particulier(Civilités.Mr, "Dupont", "Eric", "29 rue de la liberté - 88000 Epinal");
+        //    var dt0 = new DateTime(2024, 5, 15);
+        //    var presta = new Prestation(particulier.Id, dt0, "Déclaration de revenus 2023", 300m);
+        //    //var facture = new ServiceFacture();
+        //    facture.Client = particulier;
+        //    facture.Prestation = presta;
+        //    facture.DateCréation = dt0.AddDays(10);
+
+
+        //    Console.WriteLine(facture.Editer());
+
+        //    var entreprise = new Entreprise("Microsoft France", 32773318400516, "19 rue du bois fleuri 75015 Paris");
+        //    var dt = new DateTime(2024, 1, 1);
+        //    var plt = new PrestationLT(entreprise.Id, dt, "Compta trimestrielle", 2000m);
+
+        //    for (int i = 1; i <= 4; i++)
+        //    {
+        //        DateTime dateFinEtape = dt.AddMonths(3 * i).AddDays(-1);
+        //        plt.AjouterEtapes(dateFinEtape, i / 4f, $"Compta du trimestre {i}");
+        //        var fs = new FactureSituation(entreprise, plt, dateFinEtape.AddDays(10));
+        //        Console.WriteLine(fs.Editer());
+        //    }
+        //}
     }
 }
