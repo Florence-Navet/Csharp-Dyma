@@ -5,3 +5,4 @@ Exercices d'application
 3. Test unitaires  
 4. Exercices sur les gestions d'erreurrs  
 5. Interfaces et gestion de dépendances
+6. Union et jointure  
