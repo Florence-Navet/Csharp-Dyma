@@ -1,40 +1,119 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="Services.PageFacture">
-    <Position X="3.25" Y="3.25" Width="1.5" />
+  <Class Name="Services.Client" Collapsed="true">
+    <Position X="5.5" Y="2.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>PageFacture.cs</FileName>
+      <HashCode>AAACAAAAAAAAAAAEAAAAAgAAAAAAAECAAAAAQAAAAAA=</HashCode>
+      <FileName>Clients.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Services.Particulier" Collapsed="true">
+    <Position X="4.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAgAAACAAAAAAACAAAQAAAAA=</HashCode>
+      <FileName>Clients.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Services.PageFactureSituation">
-    <Position X="5.5" Y="3.25" Width="2" />
+  <Class Name="Services.Entreprise" Collapsed="true">
+    <Position X="6.5" Y="3.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>PageFactureSituation.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAgAAEAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Clients.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Services.PageAccueil">
-    <Position X="1" Y="3.25" Width="1.5" />
+  <Class Name="Services.ServiceFacture" Collapsed="true">
+    <Position X="1.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IACAAAAAAAACAAQAAAAQAAAAAAAAAQAAAIABAEAAAgQ=</HashCode>
+      <FileName>Facturaton.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Services.FactureSituation" Collapsed="true">
+    <Position X="1.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>Facturaton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Services.TestClient.PageClientPresta" Collapsed="true">
+    <Position X="10.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PageClientPresta.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Services.Prestation" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="10.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAAAAAEAAAAAAABAAAAgAAAAAAABAAAAAA=</HashCode>
+      <FileName>Prestation.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Services.Test.DemoUtils" Collapsed="true">
+    <Position X="0.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAABAAA=</HashCode>
+      <FileName>TestClient\DemoUtils.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Services.PageAccueil" Collapsed="true">
+    <Position X="9" Y="1" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>UI\PageAccueil.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Services.Page" BaseTypeListCollapsed="true">
-    <Position X="3.75" Y="0.5" Width="1.5" />
+  <Class Name="Services.UI.PageFacture" Collapsed="true">
+    <Position X="12.5" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAABAAABQAAAAAAAAAAAAAAAAgAAAAA=</HashCode>
-      <FileName>Page.cs</FileName>
+      <HashCode>AAAAAAgAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UI\PageFacture.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Interface Name="Services.IPage">
-    <Position X="8.5" Y="0.5" Width="1.5" />
+  <Class Name="Services.UI.PageFactureSituation" Collapsed="true">
+    <Position X="9" Y="2" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAAAgAAAAA=</HashCode>
-      <FileName>IPage.cs</FileName>
+      <HashCode>AAAAAAgAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UI\PageFactureSituation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Services.Interfaces.IClient" Collapsed="true">
+    <Position X="9" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>Interfaces\IClient.cs</FileName>
     </TypeIdentifier>
   </Interface>
+  <Interface Name="Services.Interfaces.IPrestation" Collapsed="true">
+    <Position X="3.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAAAAAAAAAAAAABAAAAgAAAAAAABAAAAAA=</HashCode>
+      <FileName>Interfaces\IPrestation.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Services.Interfaces.IPrestationLT" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IPrestationLT.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Services.Interfaces.IServiceFacture" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAQAAAAAAAAAQAAAAAAAAAAAgQ=</HashCode>
+      <FileName>Interfaces\IServiceFacture.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="Services.Civilités" Collapsed="true">
+    <Position X="9" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAQAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>Clients.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
   <Font Name="Segoe UI" Size="10" />
 </ClassDiagram>
