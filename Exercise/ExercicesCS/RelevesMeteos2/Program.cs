@@ -64,28 +64,63 @@ namespace RelevésMétéo2
         {
             Console.WriteLine($"Statistiques trimestrielles entre {liste.Keys[0]:MMM yyyy} et {liste.Keys[^1]:MMM yyyy} :\n");
 
-            var stats = new Dictionary<(int année, int trimestre), (float sommeTemp, float sommePluie, int nb)>();
+            //var stats = new Dictionary<(int année, int trimestre), (float sommeTemp, float sommePluie, int nb)>();
+
+            Dictionary<string, (float tempMoyenne, float pluieCumulée)> stats = new();
+            float cumulTemp = 0f, cumulPluie = 0f;
+            int nbMois = 0;
 
             foreach (var kvp in liste)
             {
                 var relevé = kvp.Value;
-                int trimestre = (relevé.Mois - 1) / 3 + 1;
-                var clé = (relevé.Année, trimestre);
+                cumulTemp += relevé.Tmoy;
+                cumulPluie += relevé.Pluie;
+                nbMois++;
 
-                if (!stats.ContainsKey(clé))
-                    stats[clé] = (0, 0, 0);
+                // Si c’est la fin d’un trimestre (mois divisible par 3), on stocke les données
+                if (relevé.Mois % 3 == 0)
+                {
+                    int trimestre = (relevé.Mois - 1) / 3 + 1;
+                    string clé = $"T{trimestre}-{relevé.Année}";
 
-                var (sTemp, sPluie, count) = stats[clé];
-                stats[clé] = (sTemp + relevé.Tmoy, sPluie + relevé.Pluie, count + 1);
+                    float moyenneTemp = cumulTemp / nbMois;
+                    stats[clé] = (moyenneTemp, cumulPluie);
+
+                    // Remise à zéro des cumuls
+                    cumulTemp = 0f;
+                    cumulPluie = 0f;
+                    nbMois = 0;
+                }
             }
 
+            // Affichage
             foreach (var clé in stats.Keys)
             {
-                var (sTemp, sPluie, count) = stats[clé];
-                float moyTemp = sTemp / count;
-                float cumulPluie = sPluie;
-                Console.WriteLine($"T{clé.trimestre}-{clé.année} : {moyTemp,5:N1} °C, {cumulPluie,6:N1} mm");
+                var (moyTemp, pluieTotale) = stats[clé];
+                Console.WriteLine($"{clé} : {moyTemp,5:N1} °C, {pluieTotale,6:N1} mm");
             }
+
+
+            //foreach (var kvp in liste)
+            //{
+            //    var relevé = kvp.Value;
+            //    int trimestre = (relevé.Mois - 1) / 3 + 1;
+            //    var clé = (relevé.Année, trimestre);
+
+            //    if (!stats.ContainsKey(clé))
+            //        stats[clé] = (0, 0, 0);
+
+            //    var (sTemp, sPluie, count) = stats[clé];
+            //    stats[clé] = (sTemp + relevé.Tmoy, sPluie + relevé.Pluie, count + 1);
+            //}
+
+            //foreach (var clé in stats.Keys)
+            //{
+            //    var (sTemp, sPluie, count) = stats[clé];
+            //    float moyTemp = sTemp / count;
+            //    float cumulPluie = sPluie;
+            //    Console.WriteLine($"T{clé.trimestre}-{clé.année} : {moyTemp,5:N1} °C, {cumulPluie,6:N1} mm");
+            //}
         }
     }
 }
