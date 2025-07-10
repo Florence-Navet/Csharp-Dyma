@@ -36,6 +36,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "Services\Servic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RelevesMeteos2", "RelevesMeteos2\RelevesMeteos2.csproj", "{055FDFF5-7C11-42F7-B8D7-63E0F267BBD0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComparateurListes", "ComparateurListes\ComparateurListes.csproj", "{E42E623B-500C-4C41-BDD8-030E97B9D842}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -98,6 +100,10 @@ Global
 		{055FDFF5-7C11-42F7-B8D7-63E0F267BBD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{055FDFF5-7C11-42F7-B8D7-63E0F267BBD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{055FDFF5-7C11-42F7-B8D7-63E0F267BBD0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E42E623B-500C-4C41-BDD8-030E97B9D842}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E42E623B-500C-4C41-BDD8-030E97B9D842}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E42E623B-500C-4C41-BDD8-030E97B9D842}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E42E623B-500C-4C41-BDD8-030E97B9D842}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
