@@ -17,6 +17,7 @@ namespace RelevésMétéo2
                 Console.WriteLine("=== MENU PRINCIPAL ===");
                 Console.WriteLine("1. Afficher tous les relevés mensuels");
                 Console.WriteLine("2. Afficher les statistiques trimestrielles");
+                Console.WriteLine("3. CalculerStats1");
                 Console.WriteLine("0. Quitter");
                 Console.Write("\nVotre choix : ");
                 string choix = Console.ReadLine();
@@ -40,6 +41,12 @@ namespace RelevésMétéo2
                     case "2":
                         Console.Clear();
                         AfficherStatsTrimestrielles(liste);
+                        Pause();
+                        break;
+
+                    case "3":
+                        Console.Clear();
+                        CalculerStats1();
                         Pause();
                         break;
 
@@ -122,5 +129,55 @@ namespace RelevésMétéo2
             //    Console.WriteLine($"T{clé.trimestre}-{clé.année} : {moyTemp,5:N1} °C, {cumulPluie,6:N1} mm");
             //}
         }
+
+        static void CalculerStats1()
+        {
+            IList<RelevéMensuel> relevés = DAL.GetRelevésMensuels().Values;
+
+            //1. Mois où la T° minimale a été <= 0C et le vent >= 80km/h
+            var req1 = from rel in relevés
+                       where rel.Tmin <= 0 && rel.Vent >= 80
+                       select rel;
+            
+
+            //2.releves de l'année 2022 par T° moyenne décroissante
+            var req2 = from rel in relevés
+                       where rel.Année == 2022
+                       orderby rel.Tmoy descending
+                       select rel;
+
+            //3. Température maximale
+            RelevéMensuel req3 = (from rel in relevés
+                                  orderby rel.Tmax
+                                  select rel).Last();
+
+            Console.WriteLine("Mois où la T° min a été <= 0°C et le vent >= 80 km/h :");
+
+           foreach (RelevéMensuel rel in req1)
+            { 
+                Console.WriteLine($"{rel.Mois:00}/{rel.Année} : {rel.Tmin}°C, {rel.Vent} km/h");
+                
+            }
+            Console.WriteLine();
+
+            Console.WriteLine("Relevés de l'année 2022 par T° décroissante");
+            foreach (RelevéMensuel rel in req2)
+            {
+                Console.WriteLine($"{rel.Mois:00}/{rel.Année} : {rel.Tmin}°C, {rel.Vent} km/h");
+                
+            }
+            Console.WriteLine();
+            
+            Console.WriteLine("Temperature maximale");
+            Console.WriteLine($"T° max atteinte en {req3.Mois}/{req3.Année} : {req3.Tmax} °C");
+
+
+        }
+
+        static void CalculerStats2() 
+        {
+            
+        }
     }
+  
 }
