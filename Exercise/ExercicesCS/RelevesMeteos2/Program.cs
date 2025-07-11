@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 
 namespace RelevésMétéo2
@@ -18,6 +19,7 @@ namespace RelevésMétéo2
                 Console.WriteLine("1. Afficher tous les relevés mensuels");
                 Console.WriteLine("2. Afficher les statistiques trimestrielles");
                 Console.WriteLine("3. CalculerStats1");
+                Console.WriteLine("4. CalculerStats2");
                 Console.WriteLine("0. Quitter");
                 Console.Write("\nVotre choix : ");
                 string choix = Console.ReadLine();
@@ -47,6 +49,12 @@ namespace RelevésMétéo2
                     case "3":
                         Console.Clear();
                         CalculerStats1();
+                        Pause();
+                        break;
+
+                    case "4":
+                        Console.Clear();
+                        CalculerStats2();
                         Pause();
                         break;
 
@@ -174,9 +182,65 @@ namespace RelevésMétéo2
 
         }
 
-        static void CalculerStats2() 
+        static void CalculerStats2()
         {
-            
+
+            var relevés = DAL.GetRelevésMensuels().Values;
+            //1. Durée moyenne d'ensoleillement des mois de juillet(F1 pour un chiffre après la virgule
+
+            float soleil = (from rel in relevés
+                            where rel.Mois == 07
+                            select rel.Soleil).Average();
+
+            Console.WriteLine($"Durée moyenne d'ensoleilemment des mois de juillet : {soleil:F1} h");
+            Console.WriteLine();
+
+            //2. Cumul de pluie par année
+
+            var req4 = from rel in relevés
+                       group rel by rel.Année into anneeGroup
+                       orderby anneeGroup.Key
+                       select new
+                       {
+                           Annee = anneeGroup.Key,
+                           cumulPluie = anneeGroup.Sum(r => r.Pluie)
+                       };
+
+            foreach (var item in req4)
+            {
+                Console.WriteLine($"Année : {item.Annee}, Cumul de pluie : {item.cumulPluie:F1}");
+            }
+            Console.WriteLine();
+
+            //3.Température moyenne et cumul de pluie par trimestre
+
+            var req5 = from rel in relevés
+                       group rel by $"T{rel.Mois / 3 + 1} - {rel.Année}" into GroupAnnée
+                       select (GroupAnnée.Key, GroupAnnée.Average(rel => rel.Tmoy), GroupAnnée.Sum(r => r.Pluie));
+
+
+            Console.WriteLine("Température moyenne et cumul de pluie par Trimestre : \n");
+
+            foreach ((string trimestre, float TempMoyenne, float PluieCumulée) in req5)
+            {
+                Console.WriteLine($"{trimestre} : {TempMoyenne, 5:N1} °C, {PluieCumulée, 6:N1} mm.");
+            }
+
+            //4. classement temp années par temp décroissantes que années avec 12 Temp
+
+            var req6 = from rel in relevés
+                       group rel by rel.Année into groupes
+                       orderby groupes.Average(rel => rel.Tmoy) descending
+                       where groupes.Count() == 12
+                       select (groupes.Key, groupes.Average(rel => rel.Tmoy));
+
+            Console.WriteLine("\n Classement des années par température moyenne : ");
+
+            foreach ((int année, float temp) in req6)
+            {
+                Console.WriteLine($"{année} : {temp:N1} °C.");
+            }
+
         }
     }
   
