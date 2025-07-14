@@ -48,6 +48,8 @@ namespace Bibliotheque
         public static void ExporterEnCSV(List<Livre> livres, string chemin)
         {
             using StreamWriter writer = new(chemin, false, Encoding.UTF8);
+
+            //ligne entete
             writer.WriteLine("ISBN;Titre;Auteur;Image;Publication;Description");
             foreach (Livre l in livres)
             {
