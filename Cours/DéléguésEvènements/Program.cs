@@ -6,10 +6,10 @@ namespace DéléguésEvènements
 	{
 		static void Main(string[] args)
 		{
-			TesterParamètreFonction();
+			//TesterParamètreFonction();
 			//TesterVisitesVéto();
 			//TesterExpresionsLambda();
-			//TesterEvènement();
+			TesterEvènement();
 		}
 
 		static void TesterParamètreFonction()
