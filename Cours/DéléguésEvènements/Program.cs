@@ -7,9 +7,9 @@ namespace DéléguésEvènements
 		static void Main(string[] args)
 		{
 			//TesterParamètreFonction();
-			//TesterVisitesVéto();
+			TesterVisitesVéto();
 			//TesterExpresionsLambda();
-			TesterEvènement();
+			//TesterEvènement();
 		}
 
 		static void TesterParamètreFonction()
