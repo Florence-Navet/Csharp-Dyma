@@ -44,6 +44,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MenusActions", "MenusAction
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestionStock", "GestionStock\GestionStock.csproj", "{579E5BD7-5601-4518-8E2A-3813E1449DFA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TelechargeurImages", "TelechargeurImages\TelechargeurImages.csproj", "{BBE13511-C374-48A3-B143-63D2F3DBC59D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -122,6 +124,10 @@ Global
 		{579E5BD7-5601-4518-8E2A-3813E1449DFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{579E5BD7-5601-4518-8E2A-3813E1449DFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{579E5BD7-5601-4518-8E2A-3813E1449DFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBE13511-C374-48A3-B143-63D2F3DBC59D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBE13511-C374-48A3-B143-63D2F3DBC59D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBE13511-C374-48A3-B143-63D2F3DBC59D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBE13511-C374-48A3-B143-63D2F3DBC59D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
