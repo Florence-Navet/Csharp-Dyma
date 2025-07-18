@@ -57,9 +57,9 @@ namespace ProgAsychrone
 		{
 			// Lance 3 tâches en parallèle et leur associe un numéro
 			Dictionary<Task<HeuresSoleil?>, int> taches = new();
-			//taches.Add(WebAPI.GetHeuresSoleilAsync(48.8534, 2.3486, 1), 1);
+			taches.Add(WebAPI.GetHeuresSoleilAsync(48.8534, 2.3486, 1), 1);
 			taches.Add(WebAPI.GetHeuresSoleilAsync(1000, 0, 2), 2); // cette tâche provoque une erreur
-																					  //taches.Add(WebAPI.GetHeuresSoleilAsync(44.84044, -0.5805, 3), 3);
+			taches.Add(WebAPI.GetHeuresSoleilAsync(44.84044, -0.5805, 3), 3);
 
 			while (taches.Any())
 			{

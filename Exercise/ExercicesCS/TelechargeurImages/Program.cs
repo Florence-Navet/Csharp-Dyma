@@ -33,10 +33,15 @@ namespace TelechargeurImages
             {
                 Console.WriteLine(img);
             }
-
-
+            Stopwatch sw = new();
+            sw.Start();
             //await TelechargerImagesUneParUne(urls);
-            await TelechargerImagesEnParalleleAsync(urls);
+            //await TelechargerImagesEnParalleleAsync(urls);
+           
+            await TelechargerImagesEnParallele2Async(urls);
+            sw.Stop();
+            Console.WriteLine($"\nTemps d'execution : {sw.ElapsedMilliseconds} ms");
+            sw.Reset();
         }
         public static async Task TelechargerImagesUneParUne(string[] urls)
         {
@@ -83,7 +88,7 @@ namespace TelechargeurImages
                     try
                     {
                         string nom = await tache;
-                        Console.WriteLine($"Images {tache}");
+                        Console.WriteLine($"Images telechargées {nom}");
                         Interlocked.Increment(ref ok);
                     }
                     catch (Exception ex)
@@ -104,5 +109,33 @@ namespace TelechargeurImages
             Console.WriteLine($"{erreur} échec(s)");
         }
 
+
+        private static async Task TelechargerImagesEnParallele2Async(string[] urls)
+        {
+            // Lance les tâches pour télécharger et enregistrer les images
+            List<Task<string>> taches = new();
+            foreach (string url in urls)
+            {
+                taches.Add(Telechargeur.TelechargerImageAsync(url));
+            }
+
+            // ...puis affiche leurs résultats dans l'ordre où elles se terminent
+            while (taches.Any())
+            {
+                Task<string> tache = await Task.WhenAny(taches);
+                try
+                {
+                    Console.WriteLine("Image téléchargée : " + tache.Result);
+                }
+                catch (AggregateException ae)
+                {
+                    foreach (Exception e in ae.InnerExceptions)
+                    {
+                        Console.WriteLine($"Image non téléchargée : {e.Message}");
+                    }
+                }
+                taches.Remove(tache);
+            }
+        }
     }
 }
