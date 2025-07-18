@@ -15,7 +15,8 @@ namespace TelechargeurImages
         public static async Task<string[]> GetUrllsImages(string url)
         {
             //using HttpClient client = new HttpClient();
-        
+
+            //recupération du code html de la page
             HttpResponseMessage reponse = await client.GetAsync(url);
             reponse.EnsureSuccessStatusCode();
             string html = await reponse.Content.ReadAsStringAsync();
@@ -48,7 +49,7 @@ namespace TelechargeurImages
             using Stream stream = await client.GetStreamAsync(url);
 
             //charger depuis le flux
-            using var image = await Image.LoadAsync(stream);
+           Image img = await Image.LoadAsync(stream);
 
             //Extraire un nom de fichier propre depuis URL
             string nomFichier = Path.GetFileNameWithoutExtension(url);
@@ -61,7 +62,7 @@ namespace TelechargeurImages
             string cheminComplet = Path.Combine(Directory.GetCurrentDirectory(), nomFichier);
 
             //Enregistre l'image en Webp
-            await image.SaveAsWebpAsync(cheminComplet);
+            await img.SaveAsWebpAsync(cheminComplet);
 
             //Retourner juste le nom du fichier (ou chemin complet)
             return nomFichier;
