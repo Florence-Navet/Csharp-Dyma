@@ -34,9 +34,9 @@ namespace TelechargeurImages
                 Console.WriteLine(img);
             }
 
-  
-            await TelechargerImagesUneParUne(urls);
-            //await TelechargerImagesEnParallele(urls);
+
+            //await TelechargerImagesUneParUne(urls);
+            await TelechargerImagesEnParalleleAsync(urls);
         }
         public static async Task TelechargerImagesUneParUne(string[] urls)
         {
@@ -64,28 +64,39 @@ namespace TelechargeurImages
             Console.WriteLine($"{erreur} échec(s)");
         }
 
-        public static async Task TelechargerImagesEnParallele(string[] urls)
+        public static async Task TelechargerImagesEnParalleleAsync(string[] urls)
         {
             Stopwatch chrono = Stopwatch.StartNew();
             int ok = 0, erreur = 0;
 
-            var taches = urls.Select(async url =>
+            List<Task<string>> taches = new();
+            foreach (string url in urls)
             {
-                try
-                {
-                    string nom = await Telechargeur.TelechargerImageAsync(url);
-                    Console.WriteLine($"Images {nom}");
-                    Interlocked.Increment(ref ok);
-                }
-                catch (Exception ex)
-                {
+                taches.Add(Telechargeur.TelechargerImageAsync(url));
+            }
 
-                    Console.WriteLine($"Erreur pour {url} : {ex.Message}");
-                    Interlocked.Increment(ref ok);
+            //..puis attends leurs resultat et les affiche dans l'ordre de la liste
 
-                }
-            });
-            await Task.WhenAll(taches);
+            foreach (Task<string> tache in taches)
+            {
+                {
+                    try
+                    {
+                        string nom = await tache;
+                        Console.WriteLine($"Images {tache}");
+                        Interlocked.Increment(ref ok);
+                    }
+                    catch (Exception ex)
+                    {
+
+                        Console.WriteLine($"Erreur pour {tache} : {ex.Message}");
+                        Interlocked.Increment(ref ok);
+
+                    }
+                };
+            }
+          
+            //await Task.WhenAll(taches);
 
             chrono.Stop();
             Console.WriteLine($"\nTemps total : {chrono.ElapsedMilliseconds} ms");

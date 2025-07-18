@@ -38,9 +38,7 @@ namespace TelechargeurImages
 
         public static async Task<string> TelechargerImageAsync(string url)
         {
-            //forcer une erreur
-            if (url.Contains("alouette"))
-                throw new Exception("Téléchargement interdit pour les alouettes");
+
 
 
             using HttpClient client = new HttpClient();
@@ -60,6 +58,10 @@ namespace TelechargeurImages
 
             //chemin fichier dans dossier travail (deja defini via currentdirectory)
             string cheminComplet = Path.Combine(Directory.GetCurrentDirectory(), nomFichier);
+
+            //forcer une erreur
+            if (url.Contains("alouette"))
+                throw new Exception("Téléchargement interdit pour les alouettes");
 
             //Enregistre l'image en Webp
             await img.SaveAsWebpAsync(cheminComplet);
