@@ -16,10 +16,10 @@ namespace ProgAsychrone
 
 		static async Task Main(string[] args)
 		{
-			await LancerTachesParallelesAsync();
+			//LancerTachesParallelesAsync();
 			//await LancerTachesParalleles2Async();
 			//await TesterDomaineAsync("stackoverflow");
-			//await LancerTacheAutreThreadAsync();
+			await LancerTacheAutreThreadAsync();
 			//await LancerTacheDuréeMaxiAsync();
 			//await LancerTacheAnnulableAsync();
 		}

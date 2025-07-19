@@ -8,7 +8,7 @@ using System.Text.RegularExpressions;
 
 namespace TelechargeurImages
 {
-    
+
     public static class Telechargeur
     {
         private static readonly HttpClient client = new HttpClient();
@@ -47,11 +47,13 @@ namespace TelechargeurImages
             using Stream stream = await client.GetStreamAsync(url);
 
             //charger depuis le flux
-           Image img = await Image.LoadAsync(stream);
+            Image img = await Image.LoadAsync(stream);
+            
+
 
             //Extraire un nom de fichier propre depuis URL
             string nomFichier = Path.GetFileNameWithoutExtension(url);
-            if (string.IsNullOrWhiteSpace(nomFichier)) 
+            if (string.IsNullOrWhiteSpace(nomFichier))
                 nomFichier = "image" + Guid.NewGuid().ToString("N");
 
             nomFichier += ".webp";
@@ -69,7 +71,44 @@ namespace TelechargeurImages
             //Retourner juste le nom du fichier (ou chemin complet)
             return nomFichier;
         }
+        public static async Task<string> TelechargerImageAsync(string url, CancellationToken jetonAnnul)
+        {
+            jetonAnnul.ThrowIfCancellationRequested();
 
+            using HttpClient client = new HttpClient();
 
+            //Télécharger l'image en mémoire (flux)
+            using Stream stream = await client.GetStreamAsync(url, jetonAnnul);
+
+            //charger depuis le flux
+            Image img = await Image.LoadAsync(stream, jetonAnnul);
+            // Simule un délai pour pouvoir annuler avec Échap
+            await Task.Delay(1000, jetonAnnul);
+
+            //Extraire un nom de fichier propre depuis URL
+            string nomFichier = Path.GetFileNameWithoutExtension(url);
+            if (string.IsNullOrWhiteSpace(nomFichier))
+                nomFichier = "image" + Guid.NewGuid().ToString("N");
+
+            nomFichier += ".webp";
+
+            //chemin fichier dans dossier travail (deja defini via currentdirectory)
+            string cheminComplet = Path.Combine(Directory.GetCurrentDirectory(), nomFichier);
+
+            //forcer une erreur
+            if (url.Contains("alouette"))
+                throw new Exception("Téléchargement interdit pour les alouettes");
+
+            //Enregistre l'image en Webp
+            await img.SaveAsWebpAsync(cheminComplet, jetonAnnul);
+
+            //Retourner juste le nom du fichier (ou chemin complet)
+            return nomFichier;
+        }
     }
 }
+
+
+
+    
+
