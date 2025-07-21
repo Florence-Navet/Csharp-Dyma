@@ -13,7 +13,7 @@ namespace ClassesEtendues
 			//TesterAttributSerialisation();
 			//TesterAttributsValidation();
 
-			//AfficherInfosType();
+			AfficherInfosType();
 			//ListerMembresType();
 			//ListerValeursPropriétés();
 			//ListerAttributsDePropriété();

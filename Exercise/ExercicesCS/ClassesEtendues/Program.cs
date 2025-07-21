@@ -22,6 +22,8 @@
 
             Console.WriteLine();
 
+            //renvoie les valeurs d'une enumeration sous formem de tableau
+            //typeof pour recupérer le type
             foreach (Status stat in Enum.GetValues(typeof(Status)))
             {
                 Console.WriteLine(stat.ToDisplayString());
