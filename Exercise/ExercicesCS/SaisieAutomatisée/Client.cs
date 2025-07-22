@@ -1,5 +1,4 @@
-﻿
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.Runtime.CompilerServices;
 
 namespace SaisieAutomatisée;
@@ -12,13 +11,29 @@ public abstract class ValidationBase
     /// <param name="value">Valeur à valider</param>
     /// <param name="propertyName">Nom de la propriété si pas déterminé automatiquement</param>
     /// <exception cref="ValidationException">valeur de propriété non valide</exception>
-    public void ValidateProperty(object value, [CallerMemberName] string? propertyName = null)
+    public bool ValidateProperty(object value, [CallerMemberName] string? propertyName = null)
     {
-        ValidationContext context = new(this);
+        ValidationContext context = new(this)
+        {
+            MemberName = propertyName
+        };
         context.MemberName = propertyName;
-        Validator.ValidateProperty(value, context);
+        //Validator.ValidateProperty(value, context);
         // La ligne précédente lève une ValidationException si la valeur n'est pas valide
+        try
+        {
+            Validator.ValidateProperty(value, context);
+            return true;
+        }
+        catch (ValidationException ex)
+        {
+            Console.WriteLine($" Erreur de validation sur '{propertyName}' : {ex.Message}");
+            return false;
+        }
     }
+
+  
+
 }
 
 public class Client : ValidationBase
@@ -70,28 +85,23 @@ public class Client : ValidationBase
     [Display(Prompt = "Date de naissance")]
     [CustomValidation(typeof(ValidationHelper), nameof(ValidationHelper.CheckBirthDate))]
     public DateTime DateNais
-    { get => _dateNais;
+    {
+        get => _dateNais;
         set
         {
             ValidateProperty(value);
             _dateNais = value;
-        } 
+        }
     }
 }
 
-public static  class ValidationHelper 
-{ 
+public static class ValidationHelper
+{
     public static ValidationResult? CheckBirthDate(DateTime dt)
     {
         if (dt < new DateTime(1900, 1, 1) || dt > DateTime.Today)
-            return new ValidationResult($"La dae de naissance doit être comprise entre le 01/01/1900" +
-                $"et le {DateTime.Today:d}");
+            return new ValidationResult($"La date de naissance doit être comprise entre le 01/01/1900 et le {DateTime.Today:d}");
 
         return ValidationResult.Success;
     }
 }
-
-
-
-
-
