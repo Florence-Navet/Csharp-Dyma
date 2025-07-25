@@ -34,6 +34,8 @@ namespace ClassificationPeriodique
 
                 //TableauPeriodique.AfficherDetailElement(num);
                 ConsoleColor couleurOrig = Console.ForegroundColor;
+
+                //appelle de la couleur en mettant recuperant la coulelur dans le dictionnaire
                 Console.ForegroundColor = TableauPeriodique.GetCouleurEtat(TableauPeriodique.Elements[num].CodeEtat);
                 Console.WriteLine(TableauPeriodique.GetDetailElement(num));
                 Console.ForegroundColor = couleurOrig;
@@ -79,21 +81,21 @@ namespace ClassificationPeriodique
             }
             return num;
         }
-        public static void TesterCouleurs()
-        {
-            TestEtat(34, 'S');
-            TestEtat(35, 'L');
-            TestEtat(36, 'G');
-            TestEtat(109, '?');
-            Console.ResetColor();
-        }
+        //public static void TesterCouleurs()
+        //{
+        //    TestEtat(34, 'S');
+        //    TestEtat(35, 'L');
+        //    TestEtat(36, 'G');
+        //    TestEtat(109, '?');
+        //    Console.ResetColor();
+        //}
 
-        public static void TestEtat(int numero, char etat)
-        {
-            ConsoleColor couleur = TableauPeriodique.GetCouleurEtat(etat);
-            Console.ForegroundColor = couleur;
-            Console.WriteLine($"Élément n°{numero} - État : {etat} → Couleur : {couleur}");
-        }
+        //public static void TestEtat(int numero, char etat)
+        //{
+        //    ConsoleColor couleur = TableauPeriodique.GetCouleurEtat(etat);
+        //    Console.ForegroundColor = couleur;
+        //    Console.WriteLine($"Élément n°{numero} - État : {etat} → Couleur : {couleur}");
+        //}
 
 
 
