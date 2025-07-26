@@ -26,7 +26,7 @@ namespace ClassificationPeriodique
             //TesterCouleurs();
             Console.WriteLine("🔧 Transformation du fichier HTML en cours...");
             TableauPeriodique.TransformerFichier();
-            Console.WriteLine(" Fichier épuré généré : TableauPeriodique_epure.html");
+            Console.WriteLine(" Fichier épuré généré : TableauPeriodique_modifié.html");
 
 
 
