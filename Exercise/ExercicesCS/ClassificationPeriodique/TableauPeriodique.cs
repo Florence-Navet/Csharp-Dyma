@@ -1,9 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Xml.Linq;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace ClassificationPeriodique
 {
@@ -149,8 +153,150 @@ namespace ClassificationPeriodique
 
 
 
+        #endregion
+        #region Partie 2
+
+        //charge le contenu du fichier html
+        public static void ChargerFichierHtml() 
+        {
+            string html = File.ReadAllText("TableauPeriodique.html");
+
+            //1. charger les familles
+            // <td bgcolor="#F66" align="center">Métaux Alcalins</td>
+
+            /*<td veut j'enlève la ballisde <td
+             * cree un groupe nommé couleur : bgcolor="(?<couleur>)
+             puis #[A-F0-9]+ pour les couleurs puis
+            on enleve le align_center
+            [^>] tout sauf
+            * repété autant que nécessaire
+            > fin de la balise
+            (?<nom>...) groupe nomme nom[^<] a la place des points
+            [^<]+ tout sauf le texte visible
+            </td> reconnaitre la fin de la balise
+
+            */
 
 
+            string fam= @"<td bgcolor=""(?<couleur>#[A-F0-9]+)""align=""center"">(?<nom>[^<]+)</td>";
+
+            //string fam = "<td bgcolor="(?<couleur>#[A-F0-9]+)"[^>]*>(?<nom>[^<]+)</td>";
+            short f = 0;
+
+            foreach (Match match in Regex.Matches(html, fam, RegexOptions.IgnoreCase))
+            {
+                Famille famille = new Famille
+                {
+                    Id = ++f,
+                    Nom = match.Groups[2].Value,
+                    Couleur = match.Groups[1].Value,
+                };
+            }
+            /*regex :
+            <span style="color:black">Solide</span>
+
+             */
+
+            // Charge les états
+
+            string eta = @"<span style=""color:(?<couleur>#?[A-Fa-f0-9]+|[a-zA-Z]+)"">(?<nom>[^<]+)</span>";
+            foreach (Match match in Regex.Matches(html, eta, RegexOptions.IgnoreCase))
+            {
+                Etat état = new Etat
+                {
+                    Code = match.Groups[2].Value[0],
+                    Nom = match.Groups[2].Value,
+                    Couleur = match.Groups[1].Value
+                };
+
+                Etats.Add(état.Code, état);
+            }
+
+            //2. charge mes élements
+            /*
+             <td style="...background-color:#A0FFA0;...">
+                1
+                    <br><big><b><a href="/wiki/Hydrogène" title="Hydrogène"> H </a></b></big>
+                </td>
+            */
+
+
+
+            string elem = @"<td style="".*background-color:(#\w+);.*;color:(\w+);"">\s*(\d+)\s*<br><big><b><a href=.*\s+title=""(\w+)"">\s*(\w+)\s*</a></b></big>\s*</td>";
+
+
+            ;
+
+            foreach (Match match in Regex.Matches(html, elem, RegexOptions.IgnoreCase)) 
+            {
+                Element e = new Element
+                {
+                    NumFamille = GetCodeFamille(match.Groups[1].Value),
+                    CodeEtat = GetCodeEtat(match.Groups[2].Value),
+                    NumAtomique = short.Parse(match.Groups[3].Value),
+                    Nom = match.Groups[4].Value,
+                    Symbole = match.Groups[5].Value
+
+                };
+                Elements.Add(e.NumAtomique, e);
+            }
+
+        }
+        public static char GetCodeEtat(string couleur) => couleur switch
+        {
+           "black" => 'S',
+            "blue" => 'L',
+            "red" => 'G',
+            _ => '?'
+           
+              
+        };
+
+        public static short GetCodeFamille(string couleurHtml) => couleurHtml.ToUpper() switch
+        {
+            "#F66"    => 1,  // Métax Alcalins
+            "#F6CFA1" => 2,  // Métaux alcalino-terreux
+            "#FFBFFF" => 3,  // Lanthanides
+            "#FF99CC" => 4,  // Actinides
+            "#FFC0C0" => 5,  // Métaux de transition
+            "#CCC"    => 6,  // Métaux pauvres
+            "#CC9"    => 7,  // Métalloïdes
+            "#A0FFA0" => 8,  // Autres non-métaux
+            "#FF9"    => 9,  // Halogènes
+            "#C0E8FF" => 10, // Gaz nobles
+            "#F7F8FF" => 11, // Éléments non classés
+            _         => -1  // Couleur inconnue 
+        };
+
+        public static void TransformerFichier()
+        {
+            string html = File.ReadAllText("TableauPeriodique.html");
+
+            //regex pour capturer le style complet et extraire uniquement le background
+            /*transformer ça : 
+             <td style="text-align:center;line-height:1.4;background-color:#A0FFA0;border:1px solid black;color:black;">
+            en 
+            ça :
+            <td style="background-color:#A0FFA0;">
+
+*/
+
+
+            string background = @"<td\s+style=""[^""]*background-color:(?<bgcolor>#[A-Fa-f0-9]+)[^""]*""[^>]*>";
+
+            string nouveauHtml = Regex.Replace(html, background, match =>
+            {
+                string couleur = match.Groups["bgcolor"].Value;
+                return $@"<td style=""background-color:{couleur}"">";
+            }, 
+            
+            RegexOptions.IgnoreCase);
+
+            //sauvegarde dans un nouveau fichier
+
+            File.WriteAllText("TableauPeriodique_modifié.html", nouveauHtml);
+
+}
 
         #endregion
 
