@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.Design;
 using System.Runtime.InteropServices;
+using System.Text;
 
 namespace ClassificationPeriodique
 {
@@ -7,6 +8,8 @@ namespace ClassificationPeriodique
     {
         static void Main(string[] args)
         {
+            Console.OutputEncoding = Encoding.UTF8;
+
             Console.WriteLine("Classification Périodique des éléments");
 
             TableauPeriodique.ChargerFichierTxt();
@@ -21,6 +24,9 @@ namespace ClassificationPeriodique
 
 
             //TesterCouleurs();
+            Console.WriteLine("🔧 Transformation du fichier HTML en cours...");
+            TableauPeriodique.TransformerFichier();
+            Console.WriteLine(" Fichier épuré généré : TableauPeriodique_epure.html");
 
 
 
